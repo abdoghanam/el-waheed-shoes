@@ -47,3 +47,6 @@ src/app/(payload)/admin/[[...segments]]/custom.scss
 *.db
 *.db-*
 database.db
+
+.vercel
+.env*

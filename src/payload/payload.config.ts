@@ -22,9 +22,9 @@ import { Footer } from './globals/Footer'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
-const databaseUri = process.env.DATABASE_URI
+const databaseUri = process.env.DATABASE_URI || process.env.POSTGRES_PRISMA_URL || process.env.POSTGRES_URL
 
-const dbAdapter = databaseUri
+const dbAdapter = databaseUri && !databaseUri.startsWith('file:')
   ? postgresAdapter({
       pool: {
         connectionString: databaseUri,
