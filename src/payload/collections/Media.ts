@@ -10,7 +10,6 @@ export const Media: CollectionConfig = {
   upload: {
     staticDir: 'media',
     mimeTypes: ['image/*'],
-    fileSize: 10 * 1024 * 1024,
   },
   access: {
     create: adminOnly,

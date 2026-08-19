@@ -24,7 +24,7 @@ function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3)
 }
 
-function AnimatedCounter({ target, suffix, inView }: { target: number; suffix: string; inView: boolean }) {
+function AnimatedCounter({ target, suffix, inView, locale }: { target: number; suffix: string; inView: boolean; locale?: Locale }) {
   const [display, setDisplay] = useState(0)
 
   useEffect(() => {
@@ -55,7 +55,7 @@ function AnimatedCounter({ target, suffix, inView }: { target: number; suffix: s
 
   return (
     <span className="text-3xl sm:text-4xl font-bold text-white drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-      {formatNumber(display, lang)}
+      {formatNumber(display, locale)}
       <span className="text-gold">{suffix}</span>
     </span>
   )
@@ -77,7 +77,7 @@ export default function Stats({ lang }: { lang?: Locale }) {
             <div className="mx-auto mb-3 h-8 w-8 sm:h-10 sm:w-10 relative">
               <Image src={stat.icon} alt="" fill className="object-contain" />
             </div>
-            <AnimatedCounter target={stat.value} suffix={stat.suffix} inView={inView} />
+            <AnimatedCounter target={stat.value} suffix={stat.suffix} inView={inView} locale={lang} />
             <div className="mt-2 text-sm text-gray-500 font-medium">
               {dict.stats[labelKeys[i]]}
             </div>

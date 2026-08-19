@@ -160,7 +160,7 @@ export default function CapabilitiesPage({ lang }: { lang: Locale }) {
         />
       </Section>
 
-      <Section dark={false} ref={ref}>
+      <Section dark={false}>
         <SectionGrid cols={4}>
           {stats.map((stat) => (
             <div key={stat.label} className="card text-center">
