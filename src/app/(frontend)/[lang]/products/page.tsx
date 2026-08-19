@@ -36,12 +36,18 @@ export default async function Products({
   const { lang } = await params
   const validLang = (locales.includes(lang as Locale) ? lang : 'en') as Locale
 
-  const payload = await getPayload({ config })
-  const result = await payload.find({
-    collection: 'products',
-    depth: 2,
-    limit: 100,
-  })
+  let products: ProductDoc[] = []
+  try {
+    const payload = await getPayload({ config })
+    const result = await payload.find({
+      collection: 'products',
+      depth: 2,
+      limit: 100,
+    })
+    products = result.docs as ProductDoc[]
+  } catch {
+    // Database may not be ready during initial deployment
+  }
 
   return (
     <>
@@ -51,7 +57,7 @@ export default async function Products({
           { name: validLang === 'ar' ? 'المنتجات' : 'Products', url: `/${validLang}/products` },
         ])}
       />
-      <ProductsPageClient products={result.docs as ProductDoc[]} lang={validLang} />
+      <ProductsPageClient products={products} lang={validLang} />
     </>
   )
 }

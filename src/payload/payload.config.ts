@@ -2,6 +2,7 @@ import { buildConfig } from 'payload'
 import { sqliteAdapter } from '@payloadcms/db-sqlite'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -21,10 +22,9 @@ import { Footer } from './globals/Footer'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
-const usePostgres = process.env.VERCEL || process.env.USE_POSTGRES
 const databaseUri = process.env.DATABASE_URI
 
-const dbAdapter = usePostgres && databaseUri
+const dbAdapter = databaseUri
   ? postgresAdapter({
       pool: {
         connectionString: databaseUri,
@@ -35,6 +35,8 @@ const dbAdapter = usePostgres && databaseUri
         url: 'file:' + path.resolve(dirname, '..', '..', 'database.db'),
       },
     })
+
+const blobToken = process.env.BLOB_READ_WRITE_TOKEN
 
 export default buildConfig({
   admin: {
@@ -75,5 +77,12 @@ export default buildConfig({
     outputFile: path.resolve(dirname, '..', 'payload-types.ts'),
   },
   db: dbAdapter,
-  plugins: [],
+  plugins: blobToken
+    ? [
+        vercelBlobStorage({
+          collection: 'media',
+          token: blobToken,
+        }),
+      ]
+    : [],
 })
