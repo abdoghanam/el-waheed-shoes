@@ -82,7 +82,7 @@ const faqData: Record<FAQVariant, FAQItem[]> = {
       },
       answer: {
         en: 'Yes, we provide complete private label services including custom packaging, labeling, hang tags, and branded boxes.',
-        ar: 'نعم، نقدم خدمات العلامة الخاصة الكاملة بما في ذلك التعبئة المخصصة والوضع والبطاقات المعلقة والboxes branded.',
+        ar: 'نعم، نقدم خدمات العلامة الخاصة الكاملة بما في ذلك التعبئة المخصصة والوضع والبطاقات المعلقة والمغلفات المعتمدة.',
       },
     },
     {

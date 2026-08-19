@@ -47,7 +47,7 @@ const pastEvents = [
     locationEn: 'Frankfurt, Germany',
     locationAr: 'فرانكفورت، ألمانيا',
     resultEn: 'Met 12 potential distributors',
-    resultAr: 'ت眺منا مع ١٢ موزعاً محتملاً',
+    resultAr: 'قابلنا ١٢ موزعاً محتملاً',
   },
   {
     nameEn: 'Shoe Electronics Fair',

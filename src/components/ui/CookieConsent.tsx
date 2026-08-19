@@ -49,6 +49,9 @@ export default function CookieConsent() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: '100%', opacity: 0 }}
           transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+          role="dialog"
+          aria-modal="true"
+          aria-label={lang === 'ar' ? 'إشعارات ملفات تعريف الارتباط' : 'Cookie consent'}
           className="fixed bottom-0 inset-x-0 z-[100] bg-gray-950/90 backdrop-blur-lg border-t border-gold/20"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">

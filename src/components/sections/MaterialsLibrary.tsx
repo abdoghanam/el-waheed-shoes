@@ -73,7 +73,7 @@ const materials: Material[] = [
     name: 'Rubber',
     nameAr: 'مطاط',
     description: 'Superior grip, weather resistance, flexibility',
-    descriptionAr: 'ممتاز الت grip، مقاومة الطقس، المرونة',
+    descriptionAr: 'تماس ممتاز، مقاومة الطقس، المرونة',
     tags: ['Standard'],
     tagsAr: ['عادي'],
     pattern: 'repeating-radial-gradient(circle at 5px 5px, #555 0px, #555 2px, #444 2px, #444 4px)',
@@ -97,7 +97,7 @@ export function MaterialsLibrary({ lang }: { lang?: Locale }) {
       <SectionHeader
         label={isAr ? 'مواد عالية الجودة' : 'QUALITY MATERIALS'}
         title={isAr ? 'مكتبة المواد لدينا' : 'Our Material Library'}
-        description={isAr ? 'مواد فاخرة من مورجين موثوقين حول العالم' : 'Premium materials sourced from trusted suppliers worldwide'}
+        description={isAr ? 'مواد فاخرة من موردين موثوقين حول العالم' : 'Premium materials sourced from trusted suppliers worldwide'}
         align="center"
       />
 

@@ -46,7 +46,7 @@ export async function generateMetadata({
     title: validLang === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions',
     description:
       validLang === 'ar'
-        ? 'الأسئلة الشائعة عن شركة الوليد أحذية وخدماتنا'
+        ? 'الأسئلة الشائعة عن شركة الوحيد للاحذية وخدماتنا'
         : 'Frequently asked questions about EL WAHEED SHOES and our services.',
   }
 }

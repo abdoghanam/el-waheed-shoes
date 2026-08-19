@@ -208,6 +208,7 @@ export default function Header({ lang }: { lang: Locale }) {
             onClick={() => setMobileOpen(true)}
             className="lg:hidden p-2 -mr-1 text-text-secondary hover:text-white min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label={isAr ? 'فتح القائمة' : 'Open menu'}
+            aria-expanded={mobileOpen}
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />

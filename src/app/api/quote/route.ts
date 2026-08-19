@@ -57,6 +57,7 @@ export async function POST(request: NextRequest) {
       message: String(sanitized.message),
       priority: 'high',
     },
+    overrideAccess: true,
   })
 
   return NextResponse.json(

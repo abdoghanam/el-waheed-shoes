@@ -15,7 +15,7 @@ export async function generateMetadata({
     title: validLang === 'ar' ? 'الجودة' : 'Quality',
     description:
       validLang === 'ar'
-        ? 'معايير الجودة الصارمة في مصنع الوليد أحذية'
+        ? 'معايير الجودة الصارمة في مصنع الوحيد للاحذية'
         : 'Strict quality standards at EL WAHEED SHOES factory.',
     alternates: {
       languages: {

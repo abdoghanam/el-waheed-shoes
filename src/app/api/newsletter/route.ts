@@ -49,6 +49,7 @@ export async function POST(request: NextRequest) {
         message: 'Newsletter subscription',
         priority: 'low',
       },
+      overrideAccess: true,
     })
   }
 

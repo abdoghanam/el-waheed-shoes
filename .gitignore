@@ -29,7 +29,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files
-.env*.local
+.env*
 
 # vercel
 .vercel
@@ -49,4 +49,3 @@ src/app/(payload)/admin/[[...segments]]/custom.scss
 database.db
 
 .vercel
-.env*

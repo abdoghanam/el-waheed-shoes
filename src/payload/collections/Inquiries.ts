@@ -4,11 +4,11 @@ export const Inquiries: CollectionConfig = {
   slug: 'inquiries',
   admin: {
     useAsTitle: 'companyName',
-    description: 'Customer quote requests and inquiries',
+    description: 'Customer quote requests and inquiries — only admins can read/update/delete. Public creation is handled by /api/contact and /api/quote with rate limiting.',
     defaultColumns: ['companyName', 'contactPerson', 'country', 'status', 'priority', 'createdAt'],
   },
   access: {
-    create: () => true,
+    create: ({ req: { user } }) => !!user,
     read: ({ req: { user } }) => user?.role === 'admin',
     update: ({ req: { user } }) => user?.role === 'admin',
     delete: ({ req: { user } }) => user?.role === 'admin',

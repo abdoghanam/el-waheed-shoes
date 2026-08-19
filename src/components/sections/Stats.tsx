@@ -15,8 +15,9 @@ const stats = [
 
 const labelKeys = ['years', 'workers', 'production', 'factory'] as const
 
-function formatNumber(n: number): string {
-  return n >= 1000 ? n.toLocaleString('en-US') : String(n)
+function formatNumber(n: number, locale?: Locale): string {
+  if (n >= 1000) return n.toLocaleString(locale === 'ar' ? 'ar-EG' : 'en-US')
+  return String(n)
 }
 
 function easeOutCubic(t: number): number {
@@ -54,7 +55,7 @@ function AnimatedCounter({ target, suffix, inView }: { target: number; suffix: s
 
   return (
     <span className="text-3xl sm:text-4xl font-bold text-white drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-      {formatNumber(display)}
+      {formatNumber(display, lang)}
       <span className="text-gold">{suffix}</span>
     </span>
   )

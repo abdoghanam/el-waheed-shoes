@@ -66,7 +66,7 @@ const pages = [
   { title: { en: 'Manufacturing Process', ar: 'عملية التصنيع' }, description: { en: 'From raw materials to finished shoes', ar: 'من المواد الخام إلى الأحذية النهائية' }, href: '/manufacturing' },
   { title: { en: 'Factory Capabilities', ar: 'قدرات المصنع' }, description: { en: 'State-of-the-art facility', ar: 'منشأة متطورة' }, href: '/capabilities' },
   { title: { en: 'Quality Control', ar: 'مراقبة الجودة' }, description: { en: 'Our commitment to excellence', ar: 'التزامنا بالتميز' }, href: '/quality' },
-  { title: { en: 'OEM & Private Label', ar: 'تصنيع الأورج والعلامة الخاصة' }, description: { en: 'Custom manufacturing services', ar: 'خدمات تصنيع مخصصة' }, href: '/oem' },
+  { title: { en: 'OEM & Private Label', ar: 'OEM والعلامة التجارية الخاصة' }, description: { en: 'Custom manufacturing services', ar: 'خدمات تصنيع مخصصة' }, href: '/oem' },
   { title: { en: 'Contact', ar: 'اتصل بنا' }, description: { en: 'Get in touch with our team', ar: 'تواصل مع فريقنا' }, href: '/contact' },
   { title: { en: 'Gallery', ar: 'المعرض' }, description: { en: 'Factory and product photos', ar: 'صور المصنع والمنتجات' }, href: '/gallery' },
   { title: { en: 'Blog', ar: 'المدونة' }, description: { en: 'Industry insights and news', ar: 'رؤى وأخبار الصناعة' }, href: '/blog' },
@@ -172,7 +172,7 @@ export function SearchPage({ lang, query }: { lang: Locale; query: string }) {
               {results.map((result, i) => (
                 <Link
                   key={`${result.href}-${i}`}
-                  href={result.href}
+                  href={`/${lang}${result.href}`}
                   className="group card block"
                 >
                   <span className="label-tag block mb-2">

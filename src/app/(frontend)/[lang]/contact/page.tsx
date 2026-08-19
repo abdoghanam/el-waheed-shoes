@@ -47,7 +47,7 @@ export async function generateMetadata({
     title: validLang === 'ar' ? 'اتصل بنا' : 'Contact Us',
     description:
       validLang === 'ar'
-        ? 'تواصل مع شركة الوليد أحذية للاستفسارات وطلبات التسعير'
+        ? 'تواصل مع شركة الوحيد للاحذية للاستفسارات وطلبات التسعير'
         : 'Contact EL WAHEED SHOES for inquiries and quote requests.',
     alternates: {
       languages: {

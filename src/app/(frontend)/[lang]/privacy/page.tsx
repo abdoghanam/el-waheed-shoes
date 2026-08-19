@@ -13,7 +13,7 @@ export async function generateMetadata({
     title: validLang === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy',
     description:
       validLang === 'ar'
-        ? 'سياسة الخصوصية لشركة الوليد أحذية'
+        ? 'سياسة الخصوصية لشركة الوحيد للاحذية'
         : 'Privacy Policy for EL WAHEED SHOES.',
   }
 }

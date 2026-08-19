@@ -18,7 +18,7 @@ export async function generateMetadata({
     title: validLang === 'ar' ? 'التصنيع' : 'Manufacturing',
     description:
       validLang === 'ar'
-        ? 'اكتشف خطوط الإنتاج المتطورة في مصنع الوليد أحذية'
+        ? 'اكتشف خطوط الإنتاج المتطورة في مصنع الوحيد للاحذية'
         : 'Explore the advanced production lines at EL WAHEED SHOES factory.',
     alternates: {
       languages: {

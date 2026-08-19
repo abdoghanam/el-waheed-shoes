@@ -18,7 +18,7 @@ export async function generateMetadata({
     title: validLang === 'ar' ? 'من نحن' : 'About Us',
     description:
       validLang === 'ar'
-        ? 'تعرّف على شركة الوليد أحذية وقصتنا في صناعة الأحذية المصرية'
+        ? 'تعرّف على شركة الوحيد للاحذية وقصتنا في صناعة الأحذية المصرية'
         : 'Learn about EL WAHEED SHOES and our story in Egyptian footwear manufacturing.',
     alternates: {
       languages: {

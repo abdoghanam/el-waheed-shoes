@@ -15,7 +15,7 @@ export async function generateMetadata({
     title: validLang === 'ar' ? 'انضم إلى فريقنا' : 'Careers | EL WAHEED SHOES',
     description:
       validLang === 'ar'
-        ? 'انضم إلى فريق شركة الوليد أحذية - وظائف شاغرة ومزايا مميزة'
+        ? 'انضم إلى فريق شركة الوحيد للاحذية - وظائف شاغرة ومزايا مميزة'
         : 'Join the EL WAHEED SHOES team - job openings and employee benefits.',
     alternates: {
       languages: {

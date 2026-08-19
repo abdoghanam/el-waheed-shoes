@@ -13,7 +13,7 @@ export async function generateMetadata({
     title: validLang === 'ar' ? 'شروط الخدمة' : 'Terms of Service',
     description:
       validLang === 'ar'
-        ? 'شروط الخدمة لشركة الوليد أحذية'
+        ? 'شروط الخدمة لشركة الوحيد للاحذية'
         : 'Terms of Service for EL WAHEED SHOES.',
   }
 }

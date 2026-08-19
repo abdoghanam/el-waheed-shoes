@@ -15,7 +15,7 @@ export async function generateMetadata({
     title: validLang === 'ar' ? 'القدرات' : 'Capabilities',
     description:
       validLang === 'ar'
-        ? 'قدرات التصنيع المتنوعة في مصنع الوليد أحذية'
+        ? 'قدرات التصنيع المتنوعة في مصنع الوحيد للاحذية'
         : 'Diverse manufacturing capabilities at EL WAHEED SHOES factory.',
     alternates: {
       languages: {
