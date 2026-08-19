@@ -3,8 +3,10 @@
 import { useState, useMemo } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
+import { siteImages } from '@/lib/images'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Section, SectionHeader, SectionGrid } from '@/components/ui/Section'
 
@@ -83,47 +85,19 @@ const categories = [
 
 function BlogSVG() {
   return (
-    <svg viewBox="0 0 400 200" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="200" fill="#111" />
-      <rect x="20" y="20" width="360" height="160" rx="8" stroke="#D4AF37" strokeWidth="1" strokeOpacity="0.3" />
-      <rect x="40" y="50" width="120" height="10" rx="5" fill="#D4AF37" fillOpacity="0.4" />
-      <rect x="40" y="70" width="200" height="6" rx="3" fill="#555" />
-      <rect x="40" y="82" width="180" height="6" rx="3" fill="#444" />
-      <rect x="40" y="94" width="160" height="6" rx="3" fill="#333" />
-    </svg>
+    <div className="relative w-full h-full">
+      <Image src={siteImages.blog.manufacturing} alt="" fill className="object-cover" />
+    </div>
   )
 }
 
 function BlogThumbnailSVG({ index }: { index: number }) {
-  const patterns = [
-    () => (
-      <svg viewBox="0 0 400 200" className="w-full h-full" fill="none">
-        <rect width="400" height="200" fill="#111" />
-        <rect x="20" y="20" width="360" height="160" rx="8" stroke="#D4AF37" strokeWidth="1" strokeOpacity="0.2" />
-        <rect x="30" y="30" width="100" height="8" rx="4" fill="#D4AF37" fillOpacity="0.4" />
-        <rect x="30" y="50" width="200" height="5" rx="2.5" fill="#444" />
-        <rect x="30" y="62" width="170" height="5" rx="2.5" fill="#333" />
-      </svg>
-    ),
-    () => (
-      <svg viewBox="0 0 400 200" className="w-full h-full" fill="none">
-        <rect width="400" height="200" fill="#0f0f0f" />
-        <rect x="30" y="30" width="340" height="140" rx="8" stroke="#D4AF37" strokeWidth="1" strokeOpacity="0.15" />
-        <rect x="40" y="45" width="80" height="8" rx="4" fill="#D4AF37" fillOpacity="0.3" />
-        <rect x="40" y="60" width="180" height="4" rx="2" fill="#555" />
-      </svg>
-    ),
-    () => (
-      <svg viewBox="0 0 400 200" className="w-full h-full" fill="none">
-        <rect width="400" height="200" fill="#0d0d0d" />
-        <rect x="25" y="25" width="350" height="150" rx="8" stroke="#D4AF37" strokeWidth="1" strokeOpacity="0.2" />
-        <rect x="35" y="40" width="90" height="8" rx="4" fill="#D4AF37" fillOpacity="0.35" />
-        <rect x="35" y="55" width="190" height="4" rx="2" fill="#4a4a4a" />
-      </svg>
-    ),
-  ]
-
-  return patterns[index % patterns.length]()
+  const images = [siteImages.blog.leather, siteImages.blog.quality, siteImages.blog.export]
+  return (
+    <div className="relative w-full h-full">
+      <Image src={images[index % images.length]} alt="" fill className="object-cover" />
+    </div>
+  )
 }
 
 export default function BlogPage({ lang }: { lang?: Locale }) {

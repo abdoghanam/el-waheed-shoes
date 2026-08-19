@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { type Locale } from '@/lib/i18n'
+import { getCsrfToken, csrfHeaders } from '@/lib/csrf-client'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Section, SectionHeader, SectionGrid } from '@/components/ui/Section'
 
@@ -70,9 +71,10 @@ export default function TradeShowsPage({ lang }: { lang: Locale }) {
     e.preventDefault()
     setStatus('sending')
     try {
+      const csrf = await getCsrfToken()
       const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...csrfHeaders(csrf) },
         body: JSON.stringify({
           contactPerson: form.name,
           email: form.email,

@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
+import { getProductImage } from '@/lib/images'
 import { SizeGuide } from '@/components/ui/SizeGuide'
 import { useQuote } from '@/lib/QuoteContext'
 
@@ -18,12 +19,12 @@ const fallbackColors = [
 ]
 
 const fallbackImages: Record<string, string> = {
-  'casual-shoes': '/images/products/shoe-casual.svg',
-  'formal-shoes': '/images/products/shoe-formal.svg',
-  'sport-shoes': '/images/products/shoe-sport.svg',
-  'safety-boots': '/images/products/shoe-safety.svg',
-  sandals: '/images/products/shoe-sandal.svg',
-  boots: '/images/products/shoe-boot.svg',
+  'casual-shoes': getProductImage('casual-shoes'),
+  'formal-shoes': getProductImage('formal-shoes'),
+  'sport-shoes': getProductImage('sport-shoes'),
+  'safety-boots': getProductImage('safety-boots'),
+  sandals: getProductImage('sandals'),
+  boots: getProductImage('boots'),
 }
 
 const relatedProducts = [

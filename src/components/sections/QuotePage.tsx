@@ -4,6 +4,7 @@ import { useState, useRef } from 'react'
 import { motion } from 'motion/react'
 import { type Locale } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
+import { getCsrfToken, csrfHeaders } from '@/lib/csrf-client'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Section, SectionHeader } from '@/components/ui/Section'
 
@@ -34,8 +35,10 @@ export default function QuotePage({ lang }: { lang: Locale }) {
         formData.append('file', selectedFile)
       }
 
-      const res = await fetch('/api/inquiries', {
+      const csrf = await getCsrfToken()
+      const res = await fetch('/api/quote', {
         method: 'POST',
+        headers: csrfHeaders(csrf),
         body: formData,
       })
       if (res.ok) {

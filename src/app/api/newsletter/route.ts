@@ -3,16 +3,21 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { rateLimit, getClientIp, RATE_LIMITS } from '@/lib/rate-limit'
 import { sanitize, validateEmail } from '@/lib/validate'
+import { validateCsrfToken } from '@/lib/csrf'
 
 export async function POST(request: NextRequest) {
   const ip = getClientIp(request)
-  const { allowed, remaining } = rateLimit(`newsletter:${ip}`, RATE_LIMITS.newsletter)
+  const { allowed, remaining } = await rateLimit(`newsletter:${ip}`, RATE_LIMITS.newsletter)
 
   if (!allowed) {
     return NextResponse.json(
       { error: 'Too many requests. Please try again later.' },
       { status: 429, headers: { 'X-RateLimit-Remaining': '0' } }
     )
+  }
+
+  if (!validateCsrfToken(request)) {
+    return NextResponse.json({ error: 'Invalid CSRF token' }, { status: 403 })
   }
 
   let body: Record<string, unknown>

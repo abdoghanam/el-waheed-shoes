@@ -2,8 +2,10 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
+import { siteImages } from '@/lib/images'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Section, SectionHeader, SectionGrid } from '@/components/ui/Section'
 
@@ -332,10 +334,9 @@ export default function BlogDetail({
               className="group card overflow-hidden"
             >
               <div className="aspect-video mb-4 overflow-hidden rounded-lg">
-                <svg viewBox="0 0 400 160" className="w-full h-full" fill="none">
-                  <rect width="400" height="160" fill="#111" />
-                  <rect x="15" y="15" width="370" height="130" rx="6" stroke="#D4AF37" strokeWidth="1" strokeOpacity="0.15" />
-                </svg>
+                <div className="relative w-full h-full">
+                  <Image src={siteImages.blog.quality} alt="" fill className="object-cover" />
+                </div>
               </div>
               <span className="label-tag block mb-2">
                 {rel.categoryLabel[lang]}

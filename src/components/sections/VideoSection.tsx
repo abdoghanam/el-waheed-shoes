@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
+import { siteImages } from '@/lib/images'
 
 export default function VideoSection({ lang }: { lang?: Locale }) {
   const isAr = (lang || 'en') === 'ar'
@@ -35,7 +36,7 @@ export default function VideoSection({ lang }: { lang?: Locale }) {
           >
             <div className="relative aspect-video">
               <Image
-                src="/images/factory/factory-overview.svg"
+                src={siteImages.factory.overview}
                 alt="Factory tour preview"
                 fill
                 className="object-cover"

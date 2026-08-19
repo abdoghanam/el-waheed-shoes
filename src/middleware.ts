@@ -25,7 +25,7 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
     "style-src 'self' 'unsafe-inline'; " +
     "img-src 'self' data: blob: https:; " +
     "font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; " +
-    "connect-src 'self' https://*.vercel.app https://www.google-analytics.com; " +
+    "connect-src 'self' https://*.vercel.app https://www.google-analytics.com https://www.googletagmanager.com; " +
     "frame-ancestors 'none'; " +
     "frame-src 'self' https://www.google.com https://www.google.com/maps; " +
     "object-src 'none'; " +

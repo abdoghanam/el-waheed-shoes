@@ -3,16 +3,18 @@
 import { useRef, useState, useEffect, useCallback } from 'react'
 import { motion, useMotionValue, useTransform, animate } from 'motion/react'
 import { type Locale } from '@/lib/i18n'
+import { siteImages } from '@/lib/images'
+import Image from 'next/image'
 
 const galleryItems = [
-  { title: { en: 'Factory Exterior', ar: 'مبنى المصنع' }, src: '/images/factory/exterior.svg', color: '#1a1a2e' },
-  { title: { en: 'Production Line', ar: 'خط الإنتاج' }, src: '/images/process/production-line.svg', color: '#16213e' },
-  { title: { en: 'Leather Cutting', ar: 'قص الجلد' }, src: '/images/process/leather-cutting.svg', color: '#0f3460' },
-  { title: { en: 'Stitching Detail', ar: 'تفاصيل الخياطة' }, src: '/images/process/stitching.svg', color: '#1a1a2e' },
-  { title: { en: 'Quality Inspection', ar: 'فحص الجودة' }, src: '/images/process/quality-inspection.svg', color: '#16213e' },
-  { title: { en: 'Finished Products', ar: 'المنتجات النهائية' }, src: '/images/factory/finished-products.svg', color: '#0f3460' },
-  { title: { en: 'Packaging Area', ar: 'منطقة التعبئة' }, src: '/images/factory/packaging.svg', color: '#1a1a2e' },
-  { title: { en: 'Shipping Dock', ar: 'رصيف الشحن' }, src: '/images/factory/shipping.svg', color: '#16213e' },
+  { title: { en: 'Factory Exterior', ar: 'مبنى المصنع' }, src: siteImages.factory.exterior, color: '#1a1a2e' },
+  { title: { en: 'Production Line', ar: 'خط الإنتاج' }, src: siteImages.factory.productionLine, color: '#16213e' },
+  { title: { en: 'Leather Cutting', ar: 'قص الجلد' }, src: siteImages.factory.leatherCutting, color: '#0f3460' },
+  { title: { en: 'Stitching Detail', ar: 'تفاصيل الخياطة' }, src: siteImages.factory.stitching, color: '#1a1a2e' },
+  { title: { en: 'Quality Inspection', ar: 'فحص الجودة' }, src: siteImages.factory.qualityInspection, color: '#16213e' },
+  { title: { en: 'Finished Products', ar: 'المنتجات النهائية' }, src: siteImages.factory.finishedProducts, color: '#0f3460' },
+  { title: { en: 'Packaging Area', ar: 'منطقة التعبئة' }, src: siteImages.factory.packaging, color: '#1a1a2e' },
+  { title: { en: 'Shipping Dock', ar: 'رصيف الشحن' }, src: siteImages.factory.shipping, color: '#16213e' },
 ]
 
 export default function HorizontalGallery({ lang }: { lang: Locale }) {
@@ -98,17 +100,7 @@ export default function HorizontalGallery({ lang }: { lang: Locale }) {
                 transition={{ type: 'spring', stiffness: 400, damping: 25 }}
               >
                 <div className="relative w-[300px] sm:w-[350px] aspect-[4/3] rounded-2xl overflow-hidden border border-white/5 group/card">
-                  <svg viewBox="0 0 400 300" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="400" height="300" fill={item.color} />
-                    <rect x="20" y="20" width="360" height="260" rx="8" fill="none" stroke="rgba(212,175,55,0.15)" strokeWidth="1" />
-                    <text x="200" y="130" textAnchor="middle" fill="rgba(212,175,55,0.4)" fontSize="14" fontFamily="sans-serif">
-                      {isAr ? item.title.ar : item.title.en}
-                    </text>
-                    <rect x="150" y="145" width="100" height="4" rx="2" fill="rgba(212,175,55,0.2)" />
-                    <circle cx="200" cy="170" r="3" fill="rgba(212,175,55,0.3)" />
-                    <line x1="100" y1="200" x2="300" y2="200" stroke="rgba(212,175,55,0.1)" strokeWidth="1" />
-                    <line x1="120" y1="220" x2="280" y2="220" stroke="rgba(212,175,55,0.08)" strokeWidth="1" />
-                  </svg>
+                  <Image src={item.src} alt={isAr ? item.title.ar : item.title.en} fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">
                     <span className="text-gold text-xs font-medium tracking-wider uppercase">

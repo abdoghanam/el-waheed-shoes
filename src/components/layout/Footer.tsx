@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
+import { siteImages } from '@/lib/images'
 import { dictionaries } from '@/lib/dictionaries'
 
 export default function Footer({ lang }: { lang: Locale }) {
@@ -14,7 +15,7 @@ export default function Footer({ lang }: { lang: Locale }) {
       <div className="section-narrow px-4 md:px-6 py-12 md:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           <div className="lg:col-span-4">
-            <Image src="/logo.svg" alt="EL WAHEED SHOES" width={130} height={30} className="mb-6 h-7 w-auto" />
+            <Image src={siteImages.logo.horizontal} alt="EL WAHEED SHOES" width={130} height={30} className="mb-6 h-7 w-auto" />
             <p className="body-sm max-w-xs mb-8">
               {dict.footer.tagline}
             </p>

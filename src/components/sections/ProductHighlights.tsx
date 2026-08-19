@@ -4,12 +4,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
+import { siteImages } from '@/lib/images'
 import { Section, SectionHeader } from '@/components/ui/Section'
 
 const categories = [
-  { key: 'casual', icon: '/images/products/shoe-casual.svg', en: 'Casual Shoes', ar: 'كاجوال' },
-  { key: 'sport', icon: '/images/products/shoe-sport.svg', en: 'Sport Shoes', ar: 'رياضية' },
-  { key: 'formal', icon: '/images/products/shoe-formal.svg', en: 'Formal Shoes', ar: 'رسمي' },
+  { key: 'casual', icon: siteImages.products.casual, en: 'Casual Shoes', ar: 'كاجوال' },
+  { key: 'sport', icon: siteImages.products.sport, en: 'Sport Shoes', ar: 'رياضية' },
+  { key: 'formal', icon: siteImages.products.formal, en: 'Formal Shoes', ar: 'رسمي' },
 ]
 
 export default function ProductHighlights({ lang }: { lang: Locale }) {

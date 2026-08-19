@@ -1,5 +1,6 @@
 import { type Locale } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
+import { getProductImage } from '@/lib/images'
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { ProductDetailClient } from './ProductDetailClient'
@@ -31,8 +32,8 @@ export default async function ProductDetail({
   const productSizes = (product?.availableSizes || []).map((s: any) => s.size)
   const productColors = (product?.availableColors || []).map((c: any) => ({ name: c.name, hex: c.hex }))
   const featuredImageUrl = product?.featuredImage && typeof product.featuredImage !== 'number'
-    ? product.featuredImage.url || '/images/products/shoe-casual.svg'
-    : '/images/products/shoe-casual.svg'
+    ? product.featuredImage.url || getProductImage(slug)
+    : getProductImage(slug)
   const categorySlug = product?.category && typeof product.category !== 'number'
     ? product.category.slug
     : ''

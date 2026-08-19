@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
+import { getProductImage } from '@/lib/images'
 import type { Product, Category, Media } from '@/payload-types'
 
 type ProductDoc = Product & {
@@ -21,8 +22,8 @@ export function ProductsGrid({ products, lang }: { products: ProductDoc[]; lang:
   const [quickView, setQuickView] = useState<ProductDoc | null>(null)
 
   const getMediaUrl = (img: number | Media | null | undefined): string => {
-    if (!img || typeof img === 'number') return '/images/products/shoe-casual.svg'
-    return img.url || '/images/products/shoe-casual.svg'
+    if (!img || typeof img === 'number') return getProductImage('casual-shoes')
+    return img.url || getProductImage('casual-shoes')
   }
 
   const getCategorySlug = (cat: number | Category): string => {

@@ -28,6 +28,9 @@ const dbAdapter = databaseUri && !databaseUri.startsWith('file:')
   ? postgresAdapter({
       pool: {
         connectionString: databaseUri,
+        ssl: {
+          rejectUnauthorized: false,
+        },
       },
     })
   : sqliteAdapter({

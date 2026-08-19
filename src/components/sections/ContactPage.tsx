@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { type Locale } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
+import { getCsrfToken, csrfHeaders } from '@/lib/csrf-client'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Section, SectionHeader } from '@/components/ui/Section'
 import FAQ from './FAQ'
@@ -18,9 +19,10 @@ export default function ContactPage({ lang }: { lang: Locale }) {
     const form = new FormData(e.currentTarget)
 
     try {
-      const res = await fetch('/api/inquiries', {
+      const csrf = await getCsrfToken()
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...csrfHeaders(csrf) },
         body: JSON.stringify({
           companyName: form.get('company'),
           country: form.get('country'),

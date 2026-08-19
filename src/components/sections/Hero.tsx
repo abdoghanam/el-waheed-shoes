@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
+import { siteImages } from '@/lib/images'
 
 export default function Hero({ lang }: { lang?: Locale }) {
   const dict = dictionaries[lang || 'en']
@@ -18,13 +19,13 @@ export default function Hero({ lang }: { lang?: Locale }) {
           muted
           loop
           playsInline
-          poster="/images/hero-bg.svg"
+          poster={siteImages.hero}
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         >
           <source src="/videos/hero-factory.mp4" type="video/mp4" />
         </video>
         <Image
-          src="/images/hero-bg.svg"
+          src={siteImages.hero}
           alt=""
           fill
           className="object-cover opacity-20"

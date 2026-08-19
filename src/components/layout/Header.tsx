@@ -7,15 +7,16 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'motion/react'
 import { type Locale, localeNames, locales } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
+import { siteImages } from '@/lib/images'
 import TopBar from './TopBar'
 
 const productCategories = [
-  { key: 'casual', icon: '/images/products/shoe-casual.svg', desc: { en: 'Everyday comfort & style', ar: 'راحة وأناقة يومية' }, href: '/products?category=casual' },
-  { key: 'sport', icon: '/images/products/shoe-sport.svg', desc: { en: 'Athletic & performance', ar: 'رياضية وأداء عالي' }, href: '/products?category=sport' },
-  { key: 'formal', icon: '/images/products/shoe-formal.svg', desc: { en: 'Professional & elegant', ar: 'مهنية وأنيقة' }, href: '/products?category=formal' },
-  { key: 'safety', icon: '/images/products/shoe-safety.svg', desc: { en: 'Industrial protection', ar: 'حماية صناعية' }, href: '/products?category=safety' },
-  { key: 'sandal', icon: '/images/products/shoe-sandal.svg', desc: { en: 'Casual & open design', ar: 'تصميم مفتوح' }, href: '/products?category=sandal' },
-  { key: 'boot', icon: '/images/products/shoe-boot.svg', desc: { en: 'Durable & sturdy', ar: 'متينة وصلبة' }, href: '/products?category=boot' },
+  { key: 'casual', icon: siteImages.products.casual, desc: { en: 'Everyday comfort & style', ar: 'راحة وأناقة يومية' }, href: '/products?category=casual' },
+  { key: 'sport', icon: siteImages.products.sport, desc: { en: 'Athletic & performance', ar: 'رياضية وأداء عالي' }, href: '/products?category=sport' },
+  { key: 'formal', icon: siteImages.products.formal, desc: { en: 'Professional & elegant', ar: 'مهنية وأنيقة' }, href: '/products?category=formal' },
+  { key: 'safety', icon: siteImages.products.safety, desc: { en: 'Industrial protection', ar: 'حماية صناعية' }, href: '/products?category=safety' },
+  { key: 'sandal', icon: siteImages.products.sandal, desc: { en: 'Casual & open design', ar: 'تصميم مفتوح' }, href: '/products?category=sandal' },
+  { key: 'boot', icon: siteImages.products.boot, desc: { en: 'Durable & sturdy', ar: 'متينة وصلبة' }, href: '/products?category=boot' },
 ]
 
 export default function Header({ lang }: { lang: Locale }) {
@@ -82,7 +83,7 @@ export default function Header({ lang }: { lang: Locale }) {
         <div className="section-narrow px-4 md:px-6 flex h-full items-center justify-between">
           <Link href={`/${lang}`} className="shrink-0">
             <Image
-              src="/logo.svg"
+              src={siteImages.logo.horizontal}
               alt="EL WAHEED SHOES"
               width={scrolled ? 100 : 120}
               height={scrolled ? 24 : 28}
@@ -236,7 +237,7 @@ export default function Header({ lang }: { lang: Locale }) {
               className={`fixed inset-0 z-50 flex flex-col bg-bg-primary overflow-y-auto ${isAr ? '[direction:rtl]' : ''}`}
             >
               <div className="flex items-center justify-between px-4 md:px-6 py-4 border-b border-border">
-                <Image src="/logo.svg" alt="EL WAHEED SHOES" width={100} height={24} className="h-6 w-auto" />
+                <Image src={siteImages.logo.horizontal} alt="EL WAHEED SHOES" width={100} height={24} className="h-6 w-auto" />
                 <button
                   onClick={() => setMobileOpen(false)}
                   className="p-2 text-text-muted hover:text-white min-h-[44px] min-w-[44px] flex items-center justify-center"
