@@ -51,19 +51,27 @@ export async function POST(request: NextRequest) {
 
   const payload = await getPayload({ config })
 
-  await payload.create({
-    collection: 'inquiries',
-    data: {
-      companyName: String(sanitized.companyName),
-      country: String(sanitized.country),
-      contactPerson: String(sanitized.contactPerson),
-      email: String(sanitized.email),
-      phone: String(sanitized.phone || ''),
-      message: String(sanitized.message),
-      priority: 'high',
-    },
-    overrideAccess: true,
-  })
+  try {
+    await payload.create({
+      collection: 'inquiries',
+      data: {
+        companyName: String(sanitized.companyName),
+        country: String(sanitized.country),
+        contactPerson: String(sanitized.contactPerson),
+        email: String(sanitized.email),
+        phone: String(sanitized.phone || ''),
+        message: String(sanitized.message),
+        priority: 'high',
+      },
+      overrideAccess: true,
+    })
+  } catch (error) {
+    console.error('Failed to create quote inquiry:', error)
+    return NextResponse.json(
+      { error: 'Failed to submit quote request. Please try again later.' },
+      { status: 500 }
+    )
+  }
 
   return NextResponse.json(
     { success: true, message: 'Quote request submitted successfully' },

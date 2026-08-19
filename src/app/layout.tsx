@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Cairo } from 'next/font/google'
+import { cookies } from 'next/headers'
 import './globals.css'
 import AdminAccessButton from '@/components/admin/AdminAccessButton'
 
@@ -51,16 +52,17 @@ export const metadata: Metadata = {
   },
 }
 
-// NOTE: lang/dir are hardcoded here because Next.js App Router only allows one <html> tag in root layout.
-// The frontend layout at (frontend)/[lang]/layout.tsx sets lang/dir on a wrapping <div> instead.
-// For full SSR-level lang/dir support, use Next.js i18n routing or middleware to set these dynamically.
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('NEXT_LOCALE')?.value || 'en'
+  const dir = locale === 'ar' ? 'rtl' : 'ltr'
+
   return (
-    <html lang="en" dir="ltr" className={`${inter.variable} ${cairo.variable}`}>
+    <html lang={locale} dir={dir} className={`${inter.variable} ${cairo.variable}`}>
       <head>
         <meta name="theme-color" content="#060606" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

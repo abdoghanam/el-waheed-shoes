@@ -41,24 +41,24 @@ export function ProductsGrid({ products, lang }: { products: ProductDoc[]; lang:
   return (
     <>
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-        <p className="text-sm text-gray-500">
+        <p className="body-sm text-text-muted">
           {isAr ? `عرض ${products.length} من ${products.length} منتجات` : `Showing ${products.length} of ${products.length} products`}
         </p>
         <div className="flex items-center gap-3">
           <select
             value={sortBy}
             onChange={e => setSortBy(e.target.value)}
-            className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-600 focus:border-gold focus:outline-none"
+            className="rounded-lg border border-border bg-bg-card px-3 py-2 text-sm text-text-secondary focus:border-gold focus:outline-none"
           >
             <option value="newest">{isAr ? 'الأحدث' : 'Newest'}</option>
             <option value="price-low">{isAr ? 'السعر: من الأقل' : 'Price: Low → High'}</option>
             <option value="price-high">{isAr ? 'السعر: من الأعلى' : 'Price: High → Low'}</option>
             <option value="popular">{isAr ? 'الأكثر شعبية' : 'Most Popular'}</option>
           </select>
-          <div className="flex rounded-lg border border-gray-200 overflow-hidden">
+          <div className="flex rounded-lg border border-border overflow-hidden">
             <button
               onClick={() => setViewMode('grid')}
-              className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-gold/10 text-gold' : 'text-gray-400 hover:text-gray-600'}`}
+              className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-gold/10 text-gold' : 'text-text-muted hover:text-text-secondary'}`}
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
@@ -66,7 +66,7 @@ export function ProductsGrid({ products, lang }: { products: ProductDoc[]; lang:
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`px-3 py-2 ${viewMode === 'list' ? 'bg-gold/10 text-gold' : 'text-gray-400 hover:text-gray-600'}`}
+              className={`px-3 py-2 ${viewMode === 'list' ? 'bg-gold/10 text-gold' : 'text-text-muted hover:text-text-secondary'}`}
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
@@ -92,9 +92,9 @@ export function ProductsGrid({ products, lang }: { products: ProductDoc[]; lang:
             >
               <Link
                 href={`/${lang}/products/${product.slug}`}
-                className="group block rounded-xl bg-white border border-gray-100 overflow-hidden hover:border-gold/30 hover:shadow-lg transition-all"
+                className="group block rounded-xl bg-bg-card border border-border overflow-hidden hover:border-gold/30 hover:shadow-lg transition-all"
               >
-                <div className="aspect-square bg-gray-50 flex items-center justify-center p-8 group-hover:bg-gold/5 transition-colors">
+                <div className="aspect-square bg-bg-secondary flex items-center justify-center p-8 group-hover:bg-gold/5 transition-colors">
                   <Image
                     src={imageUrl}
                     alt={product.title}
@@ -109,11 +109,11 @@ export function ProductsGrid({ products, lang }: { products: ProductDoc[]; lang:
                       {catSlug}
                     </span>
                   )}
-                  <h3 className="text-lg font-bold text-black mt-1 mb-2">
+                  <h3 className="heading-sm text-text-primary mt-1 mb-2">
                     {product.title}
                   </h3>
                   {product.shortDescription && (
-                    <p className="text-sm text-gray-500 line-clamp-2 mb-4">
+                    <p className="body-sm text-text-muted line-clamp-2 mb-4">
                       {product.shortDescription}
                     </p>
                   )}
@@ -136,15 +136,15 @@ export function ProductsGrid({ products, lang }: { products: ProductDoc[]; lang:
             >
               <Link
                 href={`/${lang}/products/${product.slug}`}
-                className="group flex items-center gap-6 rounded-xl bg-white border border-gray-100 p-4 hover:border-gold/30 hover:shadow-md transition-all"
+                className="group flex items-center gap-6 rounded-xl bg-bg-card border border-border p-4 hover:border-gold/30 hover:shadow-md transition-all"
               >
-                <div className="h-24 w-24 shrink-0 rounded-lg bg-gray-50 flex items-center justify-center p-2">
+                <div className="h-24 w-24 shrink-0 rounded-lg bg-bg-secondary flex items-center justify-center p-2">
                   <Image src={imageUrl} alt={product.title} width={80} height={80} className="object-contain" />
                 </div>
                 <div className="flex-1 min-w-0">
                   {catSlug && <span className="text-xs font-medium text-gold uppercase tracking-wider">{catSlug}</span>}
-                  <h3 className="text-lg font-bold text-black truncate">{product.title}</h3>
-                  {product.shortDescription && <p className="text-sm text-gray-500 truncate">{product.shortDescription}</p>}
+                  <h3 className="heading-sm text-text-primary truncate">{product.title}</h3>
+                  {product.shortDescription && <p className="body-sm text-text-muted truncate">{product.shortDescription}</p>}
                 </div>
                 <svg className="h-5 w-5 text-gold shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

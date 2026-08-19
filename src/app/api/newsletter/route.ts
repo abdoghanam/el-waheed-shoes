@@ -35,27 +35,35 @@ export async function POST(request: NextRequest) {
 
   const payload = await getPayload({ config })
 
-  const existing = await payload.find({
-    collection: 'inquiries',
-    where: {
-      and: [{ email: { equals: email } }, { companyName: { equals: '__newsletter__' } }],
-    },
-    limit: 1,
-  })
-
-  if (existing.docs.length === 0) {
-    await payload.create({
+  try {
+    const existing = await payload.find({
       collection: 'inquiries',
-      data: {
-        companyName: '__newsletter__',
-        country: 'N/A',
-        contactPerson: email,
-        email,
-        message: 'Newsletter subscription',
-        priority: 'low',
+      where: {
+        and: [{ email: { equals: email } }, { companyName: { equals: '__newsletter__' } }],
       },
-      overrideAccess: true,
+      limit: 1,
     })
+
+    if (existing.docs.length === 0) {
+      await payload.create({
+        collection: 'inquiries',
+        data: {
+          companyName: '__newsletter__',
+          country: 'N/A',
+          contactPerson: email,
+          email,
+          message: 'Newsletter subscription',
+          priority: 'low',
+        },
+        overrideAccess: true,
+      })
+    }
+  } catch (error) {
+    console.error('Failed to process newsletter subscription:', error)
+    return NextResponse.json(
+      { error: 'Failed to subscribe. Please try again later.' },
+      { status: 500 }
+    )
   }
 
   return NextResponse.json(

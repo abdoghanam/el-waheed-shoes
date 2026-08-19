@@ -10,7 +10,6 @@ import { PageTransition } from '@/components/ui/PageTransition'
 import { GoogleAnalytics } from '@/components/ui/GoogleAnalytics'
 import PerformanceHints from '@/components/ui/PerformanceHints'
 import { QuoteProvider } from '@/lib/QuoteContext'
-import { LangSetter } from '@/components/ui/LangSetter'
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }))
@@ -50,7 +49,6 @@ export default async function LangLayout({
 
   return (
     <div lang={lang} dir={dir} className="scroll-smooth">
-      <LangSetter lang={lang} dir={dir} />
       <QuoteProvider>
         <GoogleAnalytics />
         <Header lang={lang} />

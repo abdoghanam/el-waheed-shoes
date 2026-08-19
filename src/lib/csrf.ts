@@ -1,6 +1,9 @@
 import crypto from 'crypto'
 
-const CSRF_SECRET = process.env.CSRF_SECRET || process.env.PAYLOAD_SECRET || 'fallback-csrf-secret'
+const CSRF_SECRET = process.env.CSRF_SECRET || process.env.PAYLOAD_SECRET
+if (!CSRF_SECRET) {
+  throw new Error('CSRF_SECRET or PAYLOAD_SECRET environment variable must be set')
+}
 const CSRF_COOKIE = '_csrf'
 const CSRF_HEADER = 'x-csrf-token'
 const TOKEN_TTL_MS = 60 * 60 * 1000

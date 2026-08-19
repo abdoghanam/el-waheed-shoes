@@ -41,19 +41,27 @@ export async function POST(request: NextRequest) {
 
   const payload = await getPayload({ config })
 
-  await payload.create({
-    collection: 'inquiries',
-    data: {
-      companyName: String(sanitized.company),
-      country: String(sanitized.country),
-      contactPerson: String(sanitized.name),
-      email: String(sanitized.email),
-      phone: String(sanitized.phone || ''),
-      message: String(sanitized.message),
-      priority: 'medium',
-    },
-    overrideAccess: true,
-  })
+  try {
+    await payload.create({
+      collection: 'inquiries',
+      data: {
+        companyName: String(sanitized.company),
+        country: String(sanitized.country),
+        contactPerson: String(sanitized.name),
+        email: String(sanitized.email),
+        phone: String(sanitized.phone || ''),
+        message: String(sanitized.message),
+        priority: 'medium',
+      },
+      overrideAccess: true,
+    })
+  } catch (error) {
+    console.error('Failed to create contact inquiry:', error)
+    return NextResponse.json(
+      { error: 'Failed to submit inquiry. Please try again later.' },
+      { status: 500 }
+    )
+  }
 
   return NextResponse.json(
     { success: true, message: 'Inquiry submitted successfully' },
