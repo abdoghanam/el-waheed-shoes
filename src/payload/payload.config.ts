@@ -27,12 +27,9 @@ const databaseUri = (process.env.DATABASE_URI || process.env.POSTGRES_PRISMA_URL
 const dbAdapter = databaseUri && !databaseUri.startsWith('file:')
   ? postgresAdapter({
       pool: {
-        connectionString: databaseUri.includes('?') 
-          ? databaseUri + '&sslmode=require' 
-          : databaseUri + '?sslmode=require',
-        ssl: {
-          rejectUnauthorized: false,
-        },
+        connectionString: databaseUri.includes('sslmode=') 
+          ? databaseUri.replace(/sslmode=\w+/, 'sslmode=no-verify') 
+          : databaseUri + (databaseUri.includes('?') ? '&' : '?') + 'sslmode=no-verify',
       },
     })
   : sqliteAdapter({
