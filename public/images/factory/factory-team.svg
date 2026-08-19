@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="goldGradFT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#111"/>
+
+  <!-- Factory background wall -->
+  <rect x="0" y="0" width="800" height="320" fill="#0d0d0d"/>
+
+  <!-- Wall details -->
+  <g stroke="#D4AF37" stroke-width="0.3" opacity="0.1">
+    <line x1="0" y1="50" x2="800" y2="50"/><line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="200" y1="0" x2="200" y2="320"/><line x1="400" y1="0" x2="400" y2="320"/>
+    <line x1="600" y1="0" x2="600" y2="320"/>
+  </g>
+
+  <!-- Fluorescent lights on wall -->
+  <g stroke="#D4AF37" stroke-width="1" opacity="0.3" filter="url(#softGlow)">
+    <line x1="100" y1="30" x2="250" y2="30"/>
+    <line x1="350" y1="30" x2="500" y2="30"/>
+    <line x1="550" y1="30" x2="700" y2="30"/>
+  </g>
+
+  <!-- Floor -->
+  <rect x="0" y="320" width="800" height="180" fill="#0a0a0a"/>
+  <g stroke="#D4AF37" stroke-width="0.3" opacity="0.08">
+    <line x1="0" y1="340" x2="800" y2="340"/><line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="0" y1="380" x2="800" y2="380"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="420" x2="800" y2="420"/><line x1="0" y1="440" x2="800" y2="440"/>
+    <line x1="0" y1="460" x2="800" y2="460"/><line x1="0" y1="480" x2="800" y2="480"/>
+  </g>
+
+  <!-- Production line table -->
+  <rect x="50" y="300" width="700" height="15" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8"/>
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.3">
+    <line x1="80" y1="315" x2="80" y2="380"/><line x1="200" y1="315" x2="200" y2="380"/>
+    <line x1="350" y1="315" x2="350" y2="380"/><line x1="500" y1="315" x2="500" y2="380"/>
+    <line x1="650" y1="315" x2="650" y2="380"/>
+  </g>
+
+  <!-- Worker silhouettes - back row (standing, taller) -->
+  <g>
+    <!-- Worker 1 - Supervisor/Team Lead (gold highlight) -->
+    <g transform="translate(100,120)">
+      <ellipse cx="0" cy="0" rx="15" ry="18" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.2"/>
+      <rect x="-18" y="18" width="36" height="55" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1" rx="3"/>
+      <!-- Apron -->
+      <path d="M-12,25 L12,25 L14,65 L-14,65 Z" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+      <!-- Arms -->
+      <line x1="-18" y1="30" x2="-28" y2="55" stroke="#D4AF37" stroke-width="1.2"/>
+      <line x1="18" y1="30" x2="28" y2="55" stroke="#D4AF37" stroke-width="1.2"/>
+      <!-- Tool in hand -->
+      <rect x="25" y="50" width="15" height="3" fill="#D4AF37" opacity="0.4" rx="1"/>
+      <!-- Legs -->
+      <line x1="-8" y1="73" x2="-10" y2="110" stroke="#D4AF37" stroke-width="1.2"/>
+      <line x1="8" y1="73" x2="10" y2="110" stroke="#D4AF37" stroke-width="1.2"/>
+      <!-- Gold badge on chest -->
+      <circle cx="0" cy="35" r="4" fill="#D4AF37" opacity="0.5"/>
+    </g>
+
+    <!-- Worker 2 -->
+    <g transform="translate(240,125)">
+      <ellipse cx="0" cy="0" rx="14" ry="17" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+      <rect x="-16" y="17" width="32" height="50" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8" rx="2"/>
+      <path d="M-10,23 L10,23 L12,60 L-12,60 Z" fill="none" stroke="#D4AF37" stroke-width="0.6"/>
+      <line x1="-16" y1="28" x2="-25" y2="50" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="16" y1="28" x2="25" y2="50" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="-7" y1="67" x2="-9" y2="105" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="7" y1="67" x2="9" y2="105" stroke="#D4AF37" stroke-width="0.8"/>
+    </g>
+
+    <!-- Worker 3 - focused posture -->
+    <g transform="translate(380,128)">
+      <ellipse cx="0" cy="0" rx="14" ry="17" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+      <rect x="-16" y="17" width="32" height="50" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8" rx="2"/>
+      <path d="M-10,23 L10,23 L12,60 L-12,60 Z" fill="none" stroke="#D4AF37" stroke-width="0.6"/>
+      <!-- Arms bent working -->
+      <line x1="-16" y1="28" x2="-22" y2="42" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="-22" y1="42" x2="-15" y2="52" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="16" y1="28" x2="22" y2="42" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="22" y1="42" x2="15" y2="52" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="-7" y1="67" x2="-9" y2="102" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="7" y1="67" x2="9" y2="102" stroke="#D4AF37" stroke-width="0.8"/>
+    </g>
+
+    <!-- Worker 4 -->
+    <g transform="translate(520,125)">
+      <ellipse cx="0" cy="0" rx="14" ry="17" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+      <rect x="-16" y="17" width="32" height="50" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8" rx="2"/>
+      <path d="M-10,23 L10,23 L12,60 L-12,60 Z" fill="none" stroke="#D4AF37" stroke-width="0.6"/>
+      <line x1="-16" y1="28" x2="-26" y2="48" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="16" y1="28" x2="26" y2="48" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="-7" y1="67" x2="-9" y2="105" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="7" y1="67" x2="9" y2="105" stroke="#D4AF37" stroke-width="0.8"/>
+    </g>
+
+    <!-- Worker 5 - gold highlighted team lead -->
+    <g transform="translate(660,118)">
+      <ellipse cx="0" cy="0" rx="15" ry="18" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.2"/>
+      <rect x="-18" y="18" width="36" height="55" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1" rx="3"/>
+      <path d="M-12,25 L12,25 L14,65 L-14,65 Z" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="-18" y1="30" x2="-28" y2="52" stroke="#D4AF37" stroke-width="1.2"/>
+      <line x1="18" y1="30" x2="28" y2="52" stroke="#D4AF37" stroke-width="1.2"/>
+      <!-- Clipboard -->
+      <rect x="24" y="45" width="12" height="16" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+      <line x1="26" y1="49" x2="34" y2="49" stroke="#D4AF37" stroke-width="0.3"/>
+      <line x1="26" y1="52" x2="34" y2="52" stroke="#D4AF37" stroke-width="0.3"/>
+      <line x1="26" y1="55" x2="34" y2="55" stroke="#D4AF37" stroke-width="0.3"/>
+      <line x1="-8" y1="73" x2="-10" y2="112" stroke="#D4AF37" stroke-width="1.2"/>
+      <line x1="8" y1="73" x2="10" y2="112" stroke="#D4AF37" stroke-width="1.2"/>
+      <circle cx="0" cy="35" r="4" fill="#D4AF37" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Shoe components on table -->
+  <g fill="#D4AF37" opacity="0.15">
+    <path d="M130,290 L160,290 L162,298 L128,298 Z"/>
+    <path d="M270,290 L300,290 L302,298 L268,298 Z"/>
+    <path d="M410,290 L440,290 L442,298 L408,298 Z"/>
+    <path d="M560,290 L590,290 L592,298 L558,298 Z"/>
+  </g>
+
+  <!-- Ambient gold glow -->
+  <rect x="0" y="310" width="800" height="20" fill="#D4AF37" opacity="0.03"/>
+</svg>

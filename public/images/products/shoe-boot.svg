@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bootLeather" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2520"/><stop offset="40%" stop-color="#1f1a15"/>
+      <stop offset="70%" stop-color="#2d2822"/><stop offset="100%" stop-color="#1a1510"/>
+    </linearGradient>
+    <linearGradient id="goldGradB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="#111"/>
+  <circle cx="200" cy="210" r="140" fill="#D4AF37" opacity="0.03"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="330" rx="120" ry="12" fill="#000" opacity="0.45"/>
+
+  <g transform="translate(200,185)">
+    <!-- Rugged sole -->
+    <path d="M-130,100 C-130,100 -115,115 -60,120 L10,122 C70,123 115,118 130,108 L130,95 C115,105 70,112 10,113 C-60,112 -115,106 -128,98 Z"
+          fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.2"/>
+
+    <!-- Sole lug pattern -->
+    <g fill="#D4AF37" opacity="0.2">
+      <rect x="-120" y="108" width="10" height="5" rx="1"/>
+      <rect x="-100" y="110" width="10" height="5" rx="1"/>
+      <rect x="-80" y="112" width="10" height="5" rx="1"/>
+      <rect x="-60" y="113" width="10" height="5" rx="1"/>
+      <rect x="-40" y="114" width="10" height="5" rx="1"/>
+      <rect x="-20" y="114" width="10" height="5" rx="1"/>
+      <rect x="0" y="114" width="10" height="5" rx="1"/>
+      <rect x="20" y="114" width="10" height="5" rx="1"/>
+      <rect x="40" y="113" width="10" height="5" rx="1"/>
+      <rect x="60" y="112" width="10" height="5" rx="1"/>
+      <rect x="80" y="110" width="10" height="5" rx="1"/>
+      <rect x="100" y="108" width="10" height="5" rx="1"/>
+    </g>
+
+    <!-- Midsole -->
+    <path d="M-125,95 C-115,102 -60,108 10,109 C70,108 115,102 125,95 L125,88 C115,95 70,102 10,103 C-60,102 -115,96 -123,90 Z"
+          fill="#D4AF37" opacity="0.6"/>
+
+    <!-- Boot shaft (tall) -->
+    <path d="M-125,90 C-125,50 -120,0 -110,-40 C-100,-75 -85,-100 -65,-118
+             C-45,-132 -20,-140 10,-142 C40,-140 65,-132 85,-118
+             C105,-100 118,-70 125,-35 L125,88"
+          fill="url(#bootLeather)" stroke="#D4AF37" stroke-width="1.5"/>
+
+    <!-- Boot shaft top opening -->
+    <path d="M-65,-118 C-45,-128 -20,-134 10,-136 C40,-134 65,-128 85,-118"
+          fill="#1a1510" stroke="#D4AF37" stroke-width="1"/>
+
+    <!-- Pull tab at back -->
+    <path d="M118,-95 C122,-100 125,-108 125,-115 C125,-120 122,-125 118,-128"
+          fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Ankle area stitching -->
+    <path d="M-100,20 C-70,10 -20,5 20,4 C60,5 95,12 118,25"
+          fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.4"/>
+
+    <!-- Heel counter -->
+    <path d="M105,-60 C115,-40 120,-15 122,15 C123,40 125,65 125,88"
+          fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+
+    <!-- Lace system - gold eyelets -->
+    <g>
+      <!-- Eyelets - left column -->
+      <circle cx="-80" cy="-90" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="-75" cy="-65" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="-70" cy="-40" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="-65" cy="-15" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="-60" cy="10" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="-55" cy="35" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="-50" cy="58" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="-45" cy="78" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+
+      <!-- Eyelets - right column -->
+      <circle cx="15" cy="-95" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="20" cy="-70" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="25" cy="-45" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="30" cy="-20" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="35" cy="5" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="40" cy="30" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="45" cy="53" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="50" cy="73" r="3.5" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+    </g>
+
+    <!-- Laces -->
+    <g stroke="#D4AF37" stroke-width="1" opacity="0.6">
+      <line x1="-80" y1="-90" x2="15" y2="-95"/>
+      <line x1="-75" y1="-65" x2="20" y2="-70"/>
+      <line x1="-70" y1="-40" x2="25" y2="-45"/>
+      <line x1="-65" y1="-15" x2="30" y2="-20"/>
+      <line x1="-60" y1="10" x2="35" y2="5"/>
+      <line x1="-55" y1="35" x2="40" y2="30"/>
+      <line x1="-50" y1="58" x2="45" y2="53"/>
+      <line x1="-45" y1="78" x2="50" y2="73"/>
+    </g>
+
+    <!-- Tongue -->
+    <path d="M-32,-140 C-25,-150 -10,-155 5,-153 C20,-151 30,-143 28,-132"
+          fill="#1a1510" stroke="#D4AF37" stroke-width="0.8" opacity="0.7"/>
+
+    <!-- Decorative strap across shaft -->
+    <path d="M-100,-50 C-60,-55 0,-56 60,-53 C90,-50 110,-45 120,-38"
+          fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Buckle on strap -->
+    <g transform="translate(-90,-52)">
+      <rect x="-6" y="-5" width="12" height="10" rx="1" fill="#D4AF37" opacity="0.8"/>
+      <rect x="-4" y="-3" width="8" height="6" rx="0.5" fill="#1a1510"/>
+    </g>
+
+    <!-- Heavy stitching -->
+    <g stroke="#F0D68A" stroke-width="0.5" opacity="0.25" fill="none" stroke-dasharray="4,3">
+      <path d="M-118,85 C-80,72 -20,65 20,63 C60,64 100,70 122,82"/>
+    </g>
+
+    <!-- Panel seams -->
+    <path d="M-50,-120 C-48,-80 -45,-40 -42,0 C-40,40 -38,70 -35,95"
+          fill="none" stroke="#D4AF37" stroke-width="0.6" opacity="0.3"/>
+    <path d="M60,-115 C62,-75 64,-35 65,5 C66,40 67,70 68,92"
+          fill="none" stroke="#D4AF37" stroke-width="0.6" opacity="0.3"/>
+  </g>
+
+  <!-- Corner elements -->
+  <g stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.2">
+    <path d="M20,20 L20,50 M20,20 L50,20"/>
+    <path d="M380,20 L380,50 M380,20 L350,20"/>
+    <path d="M20,380 L20,350 M20,380 L50,380"/>
+    <path d="M380,380 L380,350 M380,380 L350,380"/>
+  </g>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="leatherShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a2a"/><stop offset="40%" stop-color="#1f1f1f"/>
+      <stop offset="60%" stop-color="#2d2d2d"/><stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="goldGradFo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+    <filter id="polish"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="400" height="400" fill="#111"/>
+  <circle cx="200" cy="210" r="140" fill="#D4AF37" opacity="0.03"/>
+
+  <!-- Shadow -->
+  <ellipse cx="195" cy="310" rx="145" ry="14" fill="#000" opacity="0.5"/>
+
+  <g transform="translate(195,200)">
+    <!-- Sole - leather sole -->
+    <path d="M-150,72 C-150,72 -135,85 -80,90 L-10,92 C60,93 120,90 148,80 L148,68 C130,78 80,85 -10,86 C-80,85 -135,78 -148,70 Z"
+          fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.2"/>
+
+    <!-- Sole edge detail -->
+    <path d="M-148,70 C-140,75 -80,82 -10,83 C80,82 140,75 148,68"
+          fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.4"/>
+
+    <!-- Heel -->
+    <path d="M100,72 L148,68 L148,80 L110,82 Z" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8"/>
+    <path d="M100,72 L148,68 L148,72 L105,74 Z" fill="#D4AF37" opacity="0.2"/>
+
+    <!-- Upper - polished leather -->
+    <path d="M-148,68 C-148,35 -138,-10 -118,-45 C-98,-78 -72,-98 -40,-108
+             C-10,-115 20,-115 48,-106 C75,-96 98,-72 112,-42
+             C122,-18 130,15 138,45 L148,68"
+          fill="url(#leatherShine)" stroke="#D4AF37" stroke-width="1.5"/>
+
+    <!-- Polished shine effect -->
+    <g filter="url(#polish)">
+      <path d="M-100,20 C-80,5 -40,-10 10,-15 C50,-18 80,-10 100,5"
+            fill="none" stroke="#444" stroke-width="3" opacity="0.3"/>
+      <path d="M-80,-30 C-60,-40 -20,-50 20,-50 C50,-48 75,-40 90,-25"
+            fill="none" stroke="#444" stroke-width="2" opacity="0.2"/>
+    </g>
+
+    <!-- Cap toe -->
+    <path d="M-148,68 C-145,50 -135,25 -120,5 C-105,-15 -85,-30 -65,-38"
+          fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.6"/>
+
+    <!-- Toe cap gold tip -->
+    <path d="M-135,65 C-133,55 -128,40 -120,28 C-112,16 -100,8 -88,2"
+          fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.7" filter="url(#polish)"/>
+
+    <!-- Heel counter -->
+    <path d="M112,-38 C120,-22 126,0 130,25 C133,40 136,55 138,65"
+          fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- Collar -->
+    <path d="M48,-106 C65,-95 80,-78 90,-58 C98,-42 104,-28 108,-12"
+          fill="none" stroke="#D4AF37" stroke-width="1.2"/>
+
+    <!-- Opening/piping -->
+    <path d="M-20,-108 C0,-110 20,-108 38,-102"
+          fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- Lace area -->
+    <g>
+      <!-- Eyelet tabs -->
+      <path d="M-70,-80 L-55,-85 L-50,-70 L-65,-68 Z" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.6" opacity="0.6"/>
+      <path d="M-40,-88 L-25,-92 L-20,-78 L-35,-75 Z" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.6" opacity="0.6"/>
+      <path d="M-10,-92 L5,-95 L10,-82 L-5,-78 Z" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.6" opacity="0.6"/>
+      <path d="M20,-90 L35,-92 L38,-80 L24,-76 Z" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.6" opacity="0.6"/>
+
+      <!-- Eyelets -->
+      <circle cx="-62" cy="-75" r="2.5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+      <circle cx="-32" cy="-83" r="2.5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+      <circle cx="-2" cy="-87" r="2.5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+      <circle cx="28" cy="-84" r="2.5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+
+      <!-- Thin formal laces -->
+      <g stroke="#D4AF37" stroke-width="0.7" opacity="0.6">
+        <line x1="-62" y1="-75" x2="-32" y2="-83"/>
+        <line x1="-32" y1="-83" x2="-2" y2="-87"/>
+        <line x1="-2" y1="-87" x2="28" y2="-84"/>
+      </g>
+    </g>
+
+    <!-- Fine stitching -->
+    <g stroke="#F0D68A" stroke-width="0.3" opacity="0.25" fill="none" stroke-dasharray="2,2">
+      <path d="M-138,60 C-100,48 -50,40 0,38 C60,37 100,42 135,55"/>
+      <path d="M-110,-10 C-80,-25 -30,-35 10,-36 C50,-35 85,-25 105,-10"/>
+    </g>
+  </g>
+
+  <!-- Subtle light reflection on floor -->
+  <ellipse cx="195" cy="320" rx="80" ry="5" fill="#D4AF37" opacity="0.04"/>
+
+  <!-- Corner elements -->
+  <g stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.2">
+    <path d="M20,20 L20,50 M20,20 L50,20"/>
+    <path d="M380,20 L380,50 M380,20 L350,20"/>
+    <path d="M20,380 L20,350 M20,380 L50,380"/>
+    <path d="M380,380 L380,350 M380,380 L350,380"/>
+  </g>
+</svg>

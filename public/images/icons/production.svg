@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="goldGradPr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="120" height="120" fill="#111"/>
+
+  <!-- Stacked shoe boxes -->
+  <g>
+    <!-- Box 1 (bottom) -->
+    <path d="M20,85 L50,95 L100,85 L70,75 Z" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1"/>
+    <path d="M20,85 L20,75 L70,65 L70,75 Z" fill="#151515" stroke="#D4AF37" stroke-width="0.8"/>
+    <path d="M70,75 L70,65 L100,75 L100,85 Z" fill="#121212" stroke="#D4AF37" stroke-width="0.8"/>
+
+    <!-- Box 2 (middle) -->
+    <path d="M25,75 L52,83 L98,75 L70,68 Z" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+    <path d="M25,75 L25,66 L70,58 L70,68 Z" fill="#151515" stroke="#D4AF37" stroke-width="0.6"/>
+    <path d="M70,68 L70,58 L98,66 L98,75 Z" fill="#121212" stroke="#D4AF37" stroke-width="0.6"/>
+
+    <!-- Box 3 (top) -->
+    <path d="M30,66 L53,73 L95,66 L72,60 Z" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+    <path d="M30,66 L30,58 L72,52 L72,60 Z" fill="#151515" stroke="#D4AF37" stroke-width="0.6"/>
+    <path d="M72,60 L72,52 L95,58 L95,66 Z" fill="#121212" stroke="#D4AF37" stroke-width="0.6"/>
+
+    <!-- Gold label on each box -->
+    <rect x="35" y="70" width="20" height="5" fill="#D4AF37" opacity="0.2" rx="0.5" transform="skewX(-8)"/>
+    <rect x="37" y="62" width="18" height="4" fill="#D4AF37" opacity="0.2" rx="0.5" transform="skewX(-8)"/>
+    <rect x="39" y="55" width="16" height="4" fill="#D4AF37" opacity="0.2" rx="0.5" transform="skewX(-8)"/>
+  </g>
+
+  <!-- Conveyor belt suggestion -->
+  <g stroke="#D4AF37" stroke-width="0.8" opacity="0.3">
+    <line x1="10" y1="90" x2="110" y2="90"/>
+    <!-- Rollers -->
+    <circle cx="25" cy="93" r="3" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="60" cy="93" r="3" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="95" cy="93" r="3" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+  </g>
+
+  <!-- Arrow up (production going up) -->
+  <g stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.5">
+    <line x1="105" y1="90" x2="105" y2="50"/>
+    <polygon points="100,52 110,52 105,42" fill="#D4AF37" opacity="0.5"/>
+  </g>
+
+  <!-- "25K+" text -->
+  <text x="60" y="112" text-anchor="middle" fill="#D4AF37" font-size="16" font-family="Georgia, serif" font-weight="bold">25K+</text>
+  <text x="60" y="120" text-anchor="middle" fill="#D4AF37" font-size="6" font-family="Arial" letter-spacing="1" opacity="0.6">PAIRS/MONTH</text>
+</svg>

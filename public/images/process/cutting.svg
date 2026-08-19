@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="goldGradCu" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="200" height="200" fill="#111"/>
+
+  <!-- Leather material -->
+  <rect x="25" y="40" width="150" height="120" fill="#1a1510" stroke="#D4AF37" stroke-width="0.8" rx="3"/>
+  <!-- Leather texture -->
+  <g stroke="#D4AF37" stroke-width="0.2" opacity="0.08">
+    <line x1="30" y1="50" x2="170" y2="50"/><line x1="30" y1="65" x2="170" y2="65"/>
+    <line x1="30" y1="80" x2="170" y2="80"/><line x1="30" y1="95" x2="170" y2="95"/>
+    <line x1="30" y1="110" x2="170" y2="110"/><line x1="30" y1="125" x2="170" y2="125"/>
+    <line x1="30" y1="140" x2="170" y2="140"/><line x1="30" y1="155" x2="170" y2="155"/>
+  </g>
+
+  <!-- Pattern pieces with gold guidelines -->
+  <g stroke="#D4AF37" stroke-width="1.2" fill="none" opacity="0.7">
+    <!-- Upper piece -->
+    <path d="M35,55 C35,48 45,42 60,40 C75,38 90,42 100,50 C110,58 115,65 115,72 L115,85 C115,90 110,92 105,92 L40,92 C37,92 35,88 35,85 Z"/>
+    <!-- Toe piece -->
+    <path d="M30,100 C30,95 38,90 50,88 C62,86 70,90 70,98 L70,115 C70,120 65,122 60,122 L35,122 C32,122 30,118 30,115 Z"/>
+    <!-- Heel piece -->
+    <path d="M80,100 C80,95 88,92 98,92 C108,92 115,95 118,100 L118,125 C118,130 112,132 106,132 L85,132 C82,132 80,128 80,125 Z"/>
+    <!-- Sole piece -->
+    <path d="M125,55 C125,50 132,46 142,45 C152,44 162,48 168,55 L168,80 C168,85 162,88 155,88 L130,88 C127,88 125,84 125,80 Z"/>
+    <!-- Tongue piece -->
+    <path d="M130,98 C130,95 135,92 142,90 C149,88 155,92 155,98 L155,118 C155,122 150,124 145,124 L135,124 C132,124 130,120 130,118 Z"/>
+  </g>
+
+  <!-- Cutting guidelines / dashed -->
+  <g stroke="#D4AF37" stroke-width="0.4" stroke-dasharray="3,2" opacity="0.3">
+    <path d="M42,58 L42,88"/><path d="M90,58 L90,88"/>
+    <path d="M33,103 L33,118"/><path d="M62,103 L62,118"/>
+    <path d="M88,103 L88,128"/><path d="M112,103 L112,128"/>
+  </g>
+
+  <!-- Cutting die/blade -->
+  <g transform="translate(155,135) rotate(-30)">
+    <rect x="-3" y="0" width="6" height="35" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1" rx="1"/>
+    <polygon points="-4,35 4,35 1,45 -1,45" fill="#D4AF37" opacity="0.8"/>
+    <!-- Handle -->
+    <rect x="-5" y="-8" width="10" height="10" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1" rx="2"/>
+  </g>
+
+  <!-- Scissors -->
+  <g transform="translate(40,155)">
+    <!-- Blade 1 -->
+    <path d="M0,0 L35,-15" stroke="#D4AF37" stroke-width="2" fill="none"/>
+    <path d="M0,0 L33,-12 L35,-15 L3,-3 Z" fill="#D4AF37" opacity="0.3"/>
+    <!-- Blade 2 -->
+    <path d="M0,0 L35,15" stroke="#D4AF37" stroke-width="2" fill="none"/>
+    <path d="M0,0 L33,12 L35,15 L3,3 Z" fill="#D4AF37" opacity="0.3"/>
+    <!-- Pivot -->
+    <circle cx="0" cy="0" r="3" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1"/>
+    <!-- Handles -->
+    <path d="M-3,5 C-10,12 -18,12 -20,5 C-22,-2 -15,-5 -10,0" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+    <path d="M-3,-5 C-10,-12 -18,-12 -20,-5 C-22,-2 -15,2 -10,0" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Measurement marks -->
+  <g fill="#D4AF37" opacity="0.5">
+    <text x="40" y="65" font-size="6" font-family="Arial">A</text>
+    <text x="35" y="110" font-size="6" font-family="Arial">B</text>
+    <text x="88" y="110" font-size="6" font-family="Arial">C</text>
+    <text x="130" y="70" font-size="6" font-family="Arial">D</text>
+    <text x="133" y="112" font-size="6" font-family="Arial">E</text>
+  </g>
+</svg>

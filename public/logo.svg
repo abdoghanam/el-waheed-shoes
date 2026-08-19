@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#F0D68A"/>
+      <stop offset="100%" stop-color="#B8960C"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield / Sole Icon -->
+  <path d="M30 4 C18 4, 6 10, 6 22 C6 36, 18 48, 30 52 C42 48, 54 36, 54 22 C54 10, 42 4, 30 4Z" fill="none" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <path d="M20 20 Q30 12, 40 20 Q44 28, 38 34 L30 38 L22 34 Q16 28, 20 20Z" fill="url(#goldGrad)" opacity="0.9"/>
+  <path d="M26 24 L34 24 L35 30 L30 33 L25 30Z" fill="#000" opacity="0.3"/>
+  <!-- Text -->
+  <text x="64" y="26" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="white" letter-spacing="2">EL WAHEED</text>
+  <text x="64" y="46" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="400" fill="#D4AF37" letter-spacing="4">SHOES</text>
+</svg>

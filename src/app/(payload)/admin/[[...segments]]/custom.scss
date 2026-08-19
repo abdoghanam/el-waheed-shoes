@@ -1,0 +1,90 @@
+/* ============================================================
+   EL WAHEED SHOES — Custom Payload Admin Theme
+   ============================================================ */
+
+/* Brand colors */
+:root {
+  --payload-theme-bg: #0a0a0a;
+  --payload-theme-surface: #111111;
+  --payload-theme-surface-elevated: #161616;
+  --payload-theme-border: rgba(255, 255, 255, 0.06);
+  --payload-theme-text: #fafafa;
+  --payload-theme-text-muted: #666666;
+  --payload-theme-accent: #c8a951;
+  --payload-theme-accent-light: #e8d5a3;
+}
+
+/* Override Payload's default light theme variables */
+:root {
+  --payload-default-bg: #0a0a0a !important;
+  --payload-theme-bg: #0a0a0a !important;
+}
+
+/* Ensure dark sidebar */
+.payload-admin {
+  background: #0a0a0a !important;
+}
+
+/* Brand accent on active sidebar items */
+.po-sidebar-list__link--active,
+.po-sidebar-list__link--active .po-sidebar-list__link-label {
+  color: #c8a951 !important;
+}
+
+/* Admin nav links gold accent on hover */
+.po-sidebar-list__link:hover .po-sidebar-list__link-label {
+  color: #c8a951 !important;
+}
+
+/* Primary button brand color override */
+.po-button--primary {
+  background-color: #c8a951 !important;
+  color: #0a0a0a !important;
+  font-weight: 600 !important;
+}
+
+.po-button--primary:hover {
+  background-color: #e8d5a3 !important;
+}
+
+/* Step nav active indicator */
+.po-step-nav__list-item--active {
+  border-color: #c8a951 !important;
+}
+
+/* Collection list header accent */
+.po-doc-list__header {
+  border-bottom-color: rgba(200, 169, 81, 0.15) !important;
+}
+
+/* Checkbox / toggle brand color */
+.po-checkbox__input:checked {
+  background-color: #c8a951 !important;
+  border-color: #c8a951 !important;
+}
+
+/* Link styling in admin */
+a.payload-admin a,
+.payload-admin .po-link {
+  color: #c8a951 !important;
+}
+
+/* Login page accent */
+.po-login__form .po-button--primary {
+  background-color: #c8a951 !important;
+}
+
+/* Scrollbar styling for admin panels */
+.payload-admin ::-webkit-scrollbar {
+  width: 6px;
+}
+.payload-admin ::-webkit-scrollbar-track {
+  background: transparent;
+}
+.payload-admin ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+.payload-admin ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}

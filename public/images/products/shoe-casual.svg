@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="goldGradC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+    <linearGradient id="shoeUpper" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a2a"/><stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <filter id="shine"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="sparkle"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="#111"/>
+
+  <!-- Subtle radial glow behind shoe -->
+  <circle cx="200" cy="220" r="150" fill="#D4AF37" opacity="0.04"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="310" rx="140" ry="15" fill="#000" opacity="0.4"/>
+
+  <!-- Main shoe group -->
+  <g transform="translate(200,200)">
+    <!-- Sole -->
+    <path d="M-140,70 C-140,70 -130,85 -80,90 L-20,92 C40,93 100,90 140,82 L140,68 C120,78 80,85 20,86 C-40,87 -100,82 -130,75 Z"
+          fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.5"/>
+
+    <!-- Sole tread -->
+    <g stroke="#D4AF37" stroke-width="0.5" opacity="0.3">
+      <line x1="-120" y1="88" x2="-115" y2="92"/><line x1="-100" y1="90" x2="-95" y2="93"/>
+      <line x1="-80" y1="91" x2="-75" y2="94"/><line x1="-60" y1="92" x2="-55" y2="94"/>
+      <line x1="-40" y1="92" x2="-35" y2="95"/><line x1="-20" y1="93" x2="-15" y2="95"/>
+      <line x1="0" y1="93" x2="5" y2="95"/><line x1="20" y1="93" x2="25" y2="95"/>
+      <line x1="40" y1="92" x2="45" y2="94"/><line x1="60" y1="91" x2="65" y2="93"/>
+      <line x1="80" y1="90" x2="85" y2="92"/><line x1="100" y1="88" x2="105" y2="90"/>
+      <line x1="120" y1="85" x2="125" y2="87"/>
+    </g>
+
+    <!-- Midsole - gold accent -->
+    <path d="M-135,65 C-120,72 -80,78 20,80 C100,79 130,74 140,68 L140,60 C130,67 100,74 20,75 C-60,75 -115,68 -130,62 Z"
+          fill="#D4AF37" opacity="0.8"/>
+
+    <!-- Upper shoe body -->
+    <path d="M-130,62 C-130,30 -120,-20 -100,-55 C-80,-85 -55,-105 -25,-115
+             C5,-120 35,-120 60,-110 C85,-100 105,-75 118,-45
+             C128,-20 135,10 138,40 L140,60"
+          fill="url(#shoeUpper)" stroke="#D4AF37" stroke-width="1.5"/>
+
+    <!-- Toe cap area -->
+    <path d="M-130,62 C-128,45 -120,20 -108,0 C-96,-20 -80,-35 -65,-42"
+          fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- Heel counter -->
+    <path d="M120,-40 C130,-25 135,0 138,30 C139,45 140,55 140,60"
+          fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.6"/>
+
+    <!-- Collar/opening -->
+    <path d="M60,-110 C75,-102 90,-85 100,-65 C108,-48 114,-32 118,-15"
+          fill="none" stroke="#D4AF37" stroke-width="1.2"/>
+
+    <!-- Tongue -->
+    <path d="M-25,-115 C-15,-128 5,-135 25,-132 C45,-129 55,-118 50,-105
+             C45,-92 30,-82 15,-78"
+          fill="#1a1a1a" stroke="#D4AF37" stroke-width="1" opacity="0.8"/>
+
+    <!-- Eyelets -->
+    <circle cx="-65" cy="-88" r="3.5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.2"/>
+    <circle cx="-35" cy="-98" r="3.5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.2"/>
+    <circle cx="-5" cy="-102" r="3.5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.2"/>
+    <circle cx="25" cy="-100" r="3.5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.2"/>
+    <circle cx="50" cy="-92" r="3.5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.2"/>
+    <circle cx="72" cy="-78" r="3.5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.2"/>
+
+    <!-- Laces -->
+    <g stroke="#D4AF37" stroke-width="1" opacity="0.7">
+      <line x1="-65" y1="-88" x2="-35" y2="-98"/>
+      <line x1="-35" y1="-98" x2="-5" y2="-102"/>
+      <line x1="-5" y1="-102" x2="25" y2="-100"/>
+      <line x1="25" y1="-100" x2="50" y2="-92"/>
+      <line x1="50" y1="-92" x2="72" y2="-78"/>
+    </g>
+
+    <!-- Lace bow -->
+    <path d="M-5,-102 C-15,-115 -25,-118 -20,-108 C-18,-103 -10,-100 -5,-102" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.6"/>
+    <path d="M-5,-102 C5,-115 15,-118 10,-108 C8,-103 0,-100 -5,-102" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Stitching details -->
+    <g stroke="#F0D68A" stroke-width="0.5" opacity="0.35" fill="none" stroke-dasharray="3,3">
+      <path d="M-120,55 C-100,45 -60,35 0,32 C60,30 100,35 130,50"/>
+      <path d="M-90,-50 C-70,-60 -40,-65 -10,-65 C20,-65 50,-60 70,-50"/>
+      <path d="M-110,20 C-90,10 -50,5 0,3 C50,1 90,5 125,20"/>
+    </g>
+
+    <!-- Panel details on upper -->
+    <path d="M-80,10 C-60,-15 -30,-35 0,-40 C30,-35 55,-20 70,0"
+          fill="none" stroke="#D4AF37" stroke-width="0.6" opacity="0.3"/>
+  </g>
+
+  <!-- Sparkle effects -->
+  <g filter="url(#sparkle)">
+    <circle cx="105" cy="165" r="2" fill="#F0D68A" opacity="0.8"/>
+    <circle cx="295" cy="155" r="1.5" fill="#F0D68A" opacity="0.6"/>
+    <circle cx="150" cy="280" r="1.8" fill="#F0D68A" opacity="0.5"/>
+    <circle cx="260" cy="290" r="1.5" fill="#F0D68A" opacity="0.7"/>
+  </g>
+
+  <!-- Decorative corner elements -->
+  <g stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.2">
+    <path d="M20,20 L20,50 M20,20 L50,20"/>
+    <path d="M380,20 L380,50 M380,20 L350,20"/>
+    <path d="M20,380 L20,350 M20,380 L50,380"/>
+    <path d="M380,380 L380,350 M380,380 L350,380"/>
+  </g>
+</svg>

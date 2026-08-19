@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="goldGradAv3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="50" cy="50" r="46" fill="#111" stroke="url(#goldGradAv3)" stroke-width="2.5"/>
+  <circle cx="50" cy="50" r="43" fill="#1a1a1a"/>
+
+  <!-- Person silhouette - bearded, glasses suggestion -->
+  <g transform="translate(50,48)">
+    <!-- Head -->
+    <ellipse cx="0" cy="-12" rx="12" ry="14" fill="#2a2a2a" stroke="#D4AF37" stroke-width="0.8"/>
+    <!-- Hair - textured -->
+    <path d="M-11,-22 C-12,-27 -7,-30 0,-30 C7,-30 12,-27 11,-22 C10,-24 5,-26 0,-26 C-5,-26 -10,-24 -11,-22"
+          fill="#2a2a2a" stroke="#D4AF37" stroke-width="0.6" opacity="0.5"/>
+    <!-- Beard -->
+    <path d="M-8,-4 C-8,0 -6,5 0,7 C6,5 8,0 8,-4" fill="#2a2a2a" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+    <!-- Glasses -->
+    <circle cx="-5" cy="-12" r="5" fill="none" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+    <circle cx="5" cy="-12" r="5" fill="none" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+    <line x1="0" y1="-12" x2="0" y2="-12" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+    <!-- Shoulders - casual -->
+    <path d="M-20,8 C-15,2 -8,0 0,0 C8,0 15,2 20,8 L20,25 L-20,25 Z" fill="#2a2a2a" stroke="#D4AF37" stroke-width="0.8"/>
+    <!-- V-neck -->
+    <path d="M-5,2 L0,8 L5,2" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+  </g>
+</svg>

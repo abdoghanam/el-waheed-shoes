@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <rect width="200" height="80" fill="transparent"/>
+  <!-- Abstract line logo -->
+  <g transform="translate(40,40)">
+    <path d="M-20,15 L-10,-15 L0,15 L10,-15 L20,15" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="0" cy="-15" r="3" fill="#ffffff" opacity="0.3"/>
+  </g>
+  <text x="108" y="38" fill="#ffffff" font-size="22" font-family="Arial, sans-serif" font-weight="100" opacity="0.7">GH</text>
+  <text x="108" y="55" fill="#ffffff" font-size="6" font-family="Arial, sans-serif" font-weight="100" letter-spacing="4" opacity="0.4">VENTURES</text>
+</svg>

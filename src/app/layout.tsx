@@ -1,0 +1,76 @@
+import type { Metadata } from 'next'
+import { Inter, Cairo } from 'next/font/google'
+import './globals.css'
+import AdminAccessButton from '@/components/admin/AdminAccessButton'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const cairo = Cairo({
+  subsets: ['latin', 'arabic'],
+  variable: '--font-cairo',
+  display: 'swap',
+})
+
+export const metadata: Metadata = {
+  title: {
+    default: 'EL WAHEED SHOES - Egyptian Footwear Manufacturer',
+    template: '%s | EL WAHEED SHOES',
+  },
+  description:
+    'Premium Egyptian footwear manufacturer since 2010. 15+ years of manufacturing excellence. Wholesale, OEM, and private label footwear production.',
+  icons: {
+    icon: '/favicon.svg',
+  },
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://elwaheedshoes.com'
+  ),
+  openGraph: {
+    title: 'EL WAHEED SHOES',
+    description:
+      'Premium Egyptian footwear manufacturer since 2010',
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: 'ar_EG',
+  },
+  alternates: {
+    languages: {
+      en: '/en',
+      ar: '/ar',
+    },
+  },
+  other: {
+    'theme-color': '#060606',
+    'og:image': '/og-image.png',
+  },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || '',
+  },
+}
+
+// NOTE: lang/dir are hardcoded here because Next.js App Router only allows one <html> tag in root layout.
+// The frontend layout at (frontend)/[lang]/layout.tsx sets lang/dir on a wrapping <div> instead.
+// For full SSR-level lang/dir support, use Next.js i18n routing or middleware to set these dynamically.
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" dir="ltr" className={`${inter.variable} ${cairo.variable}`}>
+      <head>
+        <meta name="theme-color" content="#060606" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
+      <body className="antialiased overflow-x-hidden">
+        <AdminAccessButton />
+        <a href="#main-content" className="skip-to-content">Skip to main content</a>
+        {children}
+      </body>
+    </html>
+  )
+}

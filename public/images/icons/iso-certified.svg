@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="goldGradI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="120" height="120" fill="#111"/>
+
+  <!-- Outer seal circle -->
+  <circle cx="60" cy="55" r="42" fill="#0d0d0d" stroke="url(#goldGradI)" stroke-width="2"/>
+
+  <!-- Scalloped edge -->
+  <g fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5">
+    <circle cx="60" cy="55" r="38"/>
+    <circle cx="60" cy="55" r="34"/>
+  </g>
+
+  <!-- Ribbon tails -->
+  <g fill="#D4AF37" opacity="0.6">
+    <path d="M40,90 L35,110 L42,105 L48,112 L45,90 Z"/>
+    <path d="M80,90 L85,110 L78,105 L72,112 L75,90 Z"/>
+  </g>
+
+  <!-- Stars around seal -->
+  <g fill="#D4AF37" opacity="0.6">
+    <polygon points="60,18 61.5,22 66,22 62.5,24.5 64,28.5 60,26 56,28.5 57.5,24.5 54,22 58.5,22" transform="scale(0.7) translate(26,10)"/>
+    <polygon points="60,18 61.5,22 66,22 62.5,24.5 64,28.5 60,26 56,28.5 57.5,24.5 54,22 58.5,22" transform="scale(0.5) translate(60,-10)"/>
+    <polygon points="60,18 61.5,22 66,22 62.5,24.5 64,28.5 60,26 56,28.5 57.5,24.5 54,22 58.5,22" transform="scale(0.5) translate(-10,-10)"/>
+  </g>
+
+  <!-- "ISO" text -->
+  <text x="60" y="48" text-anchor="middle" fill="#D4AF37" font-size="18" font-family="Georgia, serif" font-weight="bold">ISO</text>
+
+  <!-- Certification number -->
+  <text x="60" y="62" text-anchor="middle" fill="#D4AF37" font-size="8" font-family="Arial" opacity="0.7">9001:2015</text>
+
+  <!-- "CERTIFIED" text -->
+  <text x="60" y="75" text-anchor="middle" fill="#D4AF37" font-size="7" font-family="Arial" letter-spacing="2" opacity="0.6">CERTIFIED</text>
+
+  <!-- Decorative laurel -->
+  <g fill="#D4AF37" opacity="0.3">
+    <ellipse cx="32" cy="55" rx="2" ry="5" transform="rotate(-30,32,55)"/>
+    <ellipse cx="30" cy="48" rx="2" ry="5" transform="rotate(-15,30,48)"/>
+    <ellipse cx="88" cy="55" rx="2" ry="5" transform="rotate(30,88,55)"/>
+    <ellipse cx="90" cy="48" rx="2" ry="5" transform="rotate(15,90,48)"/>
+  </g>
+</svg>

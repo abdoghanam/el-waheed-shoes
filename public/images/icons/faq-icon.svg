@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="goldGradFQ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="120" height="120" fill="#111"/>
+
+  <!-- Circular badge -->
+  <circle cx="60" cy="60" r="45" fill="#0d0d0d" stroke="url(#goldGradFQ)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="40" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Question mark -->
+  <text x="60" y="72" text-anchor="middle" fill="#D4AF37" font-size="50" font-family="Georgia, serif" font-weight="bold">?</text>
+
+  <!-- Decorative dots around circle -->
+  <g fill="#D4AF37" opacity="0.4">
+    <circle cx="60" cy="12" r="2"/><circle cx="60" cy="108" r="2"/>
+    <circle cx="12" cy="60" r="2"/><circle cx="108" cy="60" r="2"/>
+    <circle cx="26" cy="26" r="1.5"/><circle cx="94" cy="26" r="1.5"/>
+    <circle cx="26" cy="94" r="1.5"/><circle cx="94" cy="94" r="1.5"/>
+  </g>
+
+  <!-- Subtle glow behind question mark -->
+  <circle cx="60" cy="55" r="20" fill="#D4AF37" opacity="0.05"/>
+</svg>

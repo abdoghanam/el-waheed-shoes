@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="goldGradT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="120" height="120" fill="#111"/>
+
+  <!-- Circle background -->
+  <circle cx="60" cy="55" r="45" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1.5"/>
+
+  <!-- Back row of workers (3) -->
+  <g opacity="0.4">
+    <g transform="translate(32,30)">
+      <ellipse cx="0" cy="0" rx="7" ry="9" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.6"/>
+      <rect x="-8" y="9" width="16" height="22" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5" rx="2"/>
+    </g>
+    <g transform="translate(60,28)">
+      <ellipse cx="0" cy="0" rx="7" ry="9" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.6"/>
+      <rect x="-8" y="9" width="16" height="22" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5" rx="2"/>
+    </g>
+    <g transform="translate(88,30)">
+      <ellipse cx="0" cy="0" rx="7" ry="9" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.6"/>
+      <rect x="-8" y="9" width="16" height="22" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5" rx="2"/>
+    </g>
+  </g>
+
+  <!-- Front row - team leads with gold highlight (3) -->
+  <g>
+    <g transform="translate(22,48)">
+      <ellipse cx="0" cy="0" rx="9" ry="11" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+      <rect x="-10" y="11" width="20" height="28" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.7" rx="2"/>
+      <!-- Gold badge -->
+      <circle cx="0" cy="18" r="2.5" fill="#D4AF37" opacity="0.5"/>
+    </g>
+    <!-- Center - team lead (larger, gold) -->
+    <g transform="translate(60,44)">
+      <ellipse cx="0" cy="0" rx="11" ry="13" fill="#1a1a1a" stroke="url(#goldGradT)" stroke-width="1.2"/>
+      <rect x="-12" y="13" width="24" height="32" fill="#1a1a1a" stroke="url(#goldGradT)" stroke-width="1" rx="3"/>
+      <!-- Gold badge -->
+      <circle cx="0" cy="20" r="3" fill="#D4AF37" opacity="0.6"/>
+      <!-- Apron -->
+      <path d="M-8,18 L8,18 L9,42 L-9,42 Z" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(98,48)">
+      <ellipse cx="0" cy="0" rx="9" ry="11" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+      <rect x="-10" y="11" width="20" height="28" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.7" rx="2"/>
+      <circle cx="0" cy="18" r="2.5" fill="#D4AF37" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Connection lines -->
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.2">
+    <line x1="32" y1="42" x2="22" y2="50"/>
+    <line x1="60" y1="40" x2="60" y2="46"/>
+    <line x1="88" y1="42" x2="98" y2="50"/>
+  </g>
+
+  <!-- "50+" text below -->
+  <text x="60" y="110" text-anchor="middle" fill="#D4AF37" font-size="14" font-family="Georgia, serif" font-weight="bold" opacity="0.8">50+</text>
+</svg>

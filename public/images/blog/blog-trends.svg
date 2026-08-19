@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="darkOverlayT" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111" stop-opacity="0.5"/><stop offset="100%" stop-color="#0a0a0a" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="#0a0a0a"/>
+
+  <!-- Abstract fashion/shoe trends -->
+  <g opacity="0.4">
+    <!-- Large shoe silhouette -->
+    <path d="M80,200 C80,160 100,110 130,80 C160,50 200,35 240,35 C280,35 315,50 345,80
+             C375,110 395,150 400,190 L400,220 C380,200 340,185 240,182 C140,185 100,195 80,210 Z"
+          fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <!-- Sole -->
+    <path d="M75,215 C75,215 85,230 130,235 L350,237 C390,235 398,225 400,220"
+          fill="none" stroke="#D4AF37" stroke-width="1"/>
+  </g>
+
+  <!-- Trend lines / wave patterns -->
+  <g stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.2">
+    <path d="M0,300 C100,280 200,320 300,290 C400,260 500,310 600,280"/>
+    <path d="M0,320 C100,300 200,340 300,310 C400,280 500,330 600,300"/>
+    <path d="M0,340 C100,320 200,360 300,330 C400,300 500,350 600,320"/>
+  </g>
+
+  <!-- Color palette dots -->
+  <g transform="translate(420,80)">
+    <circle cx="0" cy="0" r="12" fill="#2a2a2a" stroke="#D4AF37" stroke-width="0.8"/>
+    <circle cx="30" cy="0" r="12" fill="#D4AF37" opacity="0.3" stroke="#D4AF37" stroke-width="0.8"/>
+    <circle cx="60" cy="0" r="12" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+    <circle cx="90" cy="0" r="12" fill="#B8960C" opacity="0.3" stroke="#D4AF37" stroke-width="0.8"/>
+    <circle cx="120" cy="0" r="12" fill="#F0D68A" opacity="0.2" stroke="#D4AF37" stroke-width="0.8"/>
+  </g>
+
+  <!-- Geometric pattern overlays -->
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.1">
+    <circle cx="150" cy="150" r="60"/><circle cx="150" cy="150" r="50"/>
+    <circle cx="150" cy="150" r="40"/>
+    <rect x="350" y="120" width="80" height="80" transform="rotate(15,390,160)"/>
+    <rect x="360" y="130" width="60" height="60" transform="rotate(15,390,160)"/>
+  </g>
+
+  <!-- Small shoe outlines -->
+  <g fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.2">
+    <path d="M450,200 C450,190 455,180 465,175 C475,170 485,172 490,178 C495,184 498,192 500,200 L500,205 L450,205 Z"/>
+    <path d="M480,250 C480,242 484,234 492,230 C500,226 508,228 512,233 C516,238 518,244 520,250 L520,254 L480,254 Z"/>
+  </g>
+
+  <!-- Grid/matrix pattern -->
+  <g stroke="#D4AF37" stroke-width="0.3" opacity="0.08">
+    <line x1="0" y1="50" x2="600" y2="50"/><line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="150" x2="600" y2="150"/><line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="250" x2="600" y2="250"/><line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="350" x2="600" y2="350"/>
+    <line x1="100" y1="0" x2="100" y2="400"/><line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/><line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="500" y1="0" x2="500" y2="400"/>
+  </g>
+
+  <!-- Dark overlay -->
+  <rect width="600" height="400" fill="url(#darkOverlayT)"/>
+
+  <!-- Title -->
+  <rect x="0" y="320" width="600" height="80" fill="#0a0a0a" opacity="0.8"/>
+  <line x1="40" y1="330" x2="100" y2="330" stroke="#D4AF37" stroke-width="2"/>
+  <text x="40" y="360" fill="#ffffff" font-size="18" font-family="Georgia, serif" opacity="0.9">Footwear Trends 2025</text>
+  <text x="40" y="380" fill="#D4AF37" font-size="10" font-family="Arial" letter-spacing="1" opacity="0.6">WHAT'S NEXT IN FASHION</text>
+</svg>

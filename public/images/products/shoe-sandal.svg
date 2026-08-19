@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="goldGradSn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="#111"/>
+  <circle cx="200" cy="210" r="130" fill="#D4AF37" opacity="0.03"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="310" rx="130" ry="12" fill="#000" opacity="0.4"/>
+
+  <g transform="translate(200,200)">
+    <!-- Comfort sole -->
+    <path d="M-140,75 C-140,75 -125,90 -70,95 L10,97 C80,98 125,92 140,82 L140,70 C125,80 80,87 10,88 C-70,87 -125,80 -138,72 Z"
+          fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.2"/>
+
+    <!-- Sole cushion detail -->
+    <path d="M-120,82 C-80,88 20,90 80,88 C110,86 128,82 135,78"
+          fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Footbed -->
+    <path d="M-135,72 C-135,65 -130,58 -120,55 C-100,50 -60,48 0,47
+             C60,48 100,52 125,58 C135,62 138,68 140,70"
+          fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+
+    <!-- Toe post (thong part) -->
+    <path d="M-60,55 C-55,40 -45,20 -35,0 C-25,-15 -15,-20 -10,-18"
+          fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.8"/>
+
+    <!-- Strap 1 - across toes -->
+    <path d="M-130,52 C-110,35 -80,22 -50,18 C-20,15 10,18 40,25 C70,32 95,42 115,52"
+          fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.5"/>
+
+    <!-- Strap 2 - across midfoot -->
+    <path d="M-125,60 C-105,48 -75,38 -45,35 C-15,33 15,35 45,40 C75,46 100,54 120,60"
+          fill="#1a1a1a" stroke="#D4AF37" stroke-width="1.5"/>
+
+    <!-- Strap 3 - ankle strap -->
+    <path d="M80,48 C95,40 108,30 118,18 C125,10 130,0 132,-10"
+          fill="none" stroke="#D4AF37" stroke-width="1.8"/>
+
+    <!-- Ankle strap continues -->
+    <path d="M132,-10 C128,-18 120,-22 112,-20 C104,-18 100,-10 102,0"
+          fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+
+    <!-- Gold buckle details -->
+    <g transform="translate(115,-15)">
+      <rect x="-8" y="-6" width="16" height="12" rx="2" fill="#D4AF37" opacity="0.9"/>
+      <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#1a1a1a"/>
+      <line x1="0" y1="-3" x2="0" y2="3" stroke="#D4AF37" stroke-width="1"/>
+    </g>
+
+    <!-- Second buckle on toe post -->
+    <g transform="translate(-45,25)">
+      <rect x="-5" y="-4" width="10" height="8" rx="1" fill="#D4AF37" opacity="0.7"/>
+      <rect x="-3" y="-2" width="6" height="4" rx="0.5" fill="#1a1a1a"/>
+    </g>
+
+    <!-- Decorative studs on straps -->
+    <circle cx="-80" cy="30" r="2" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="-20" cy="22" r="2" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="40" cy="28" r="2" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="90" cy="42" r="2" fill="#D4AF37" opacity="0.6"/>
+
+    <circle cx="-70" cy="44" r="2" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="-10" cy="38" r="2" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="50" cy="42" r="2" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="100" cy="54" r="2" fill="#D4AF37" opacity="0.6"/>
+
+    <!-- Strap stitching -->
+    <g stroke="#F0D68A" stroke-width="0.3" opacity="0.3" fill="none" stroke-dasharray="2,2">
+      <path d="M-125,50 C-105,35 -75,25 -45,22 C-15,20 15,22 45,28 C75,34 100,44 118,54"/>
+      <path d="M-120,58 C-100,48 -70,40 -40,37 C-10,35 20,37 50,42 C80,48 105,55 122,62"/>
+    </g>
+
+    <!-- Heel cup outline -->
+    <path d="M115,52 C122,45 128,35 130,22 C132,12 133,2 132,-8"
+          fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.4"/>
+  </g>
+
+  <!-- Sparkle effects -->
+  <g fill="#F0D68A" opacity="0.6">
+    <circle cx="295" cy="165" r="1.5"/>
+    <circle cx="120" cy="240" r="1.2"/>
+    <circle cx="280" cy="250" r="1"/>
+  </g>
+
+  <!-- Corner elements -->
+  <g stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.2">
+    <path d="M20,20 L20,50 M20,20 L50,20"/>
+    <path d="M380,20 L380,50 M380,20 L350,20"/>
+    <path d="M20,380 L20,350 M20,380 L50,380"/>
+    <path d="M380,380 L380,350 M380,380 L350,380"/>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="goldGradD" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="200" height="200" fill="#111"/>
+
+  <!-- Design paper -->
+  <rect x="35" y="30" width="110" height="130" fill="#1a1a1a" stroke="#D4AF37" stroke-width="1" rx="2" transform="rotate(-5, 90, 95)"/>
+  <rect x="38" y="33" width="110" height="130" fill="#151515" stroke="#D4AF37" stroke-width="0.5" rx="2" transform="rotate(-5, 90, 95)"/>
+
+  <!-- Grid lines on paper -->
+  <g stroke="#D4AF37" stroke-width="0.3" opacity="0.15" transform="rotate(-5, 90, 95)">
+    <line x1="45" y1="50" x2="138" y2="50"/><line x1="45" y1="70" x2="138" y2="70"/>
+    <line x1="45" y1="90" x2="138" y2="90"/><line x1="45" y1="110" x2="138" y2="110"/>
+    <line x1="45" y1="130" x2="138" y2="130"/><line x1="45" y1="150" x2="138" y2="150"/>
+    <line x1="60" y1="38" x2="60" y2="155"/><line x1="80" y1="38" x2="80" y2="155"/>
+    <line x1="100" y1="38" x2="100" y2="155"/><line x1="120" y1="38" x2="120" y2="155"/>
+  </g>
+
+  <!-- Shoe sketch on paper - gold design lines -->
+  <g stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.8" transform="rotate(-5, 90, 95)">
+    <!-- Shoe outline -->
+    <path d="M55,120 C55,105 60,85 70,75 C80,65 90,60 100,58 C110,56 120,58 128,65 C135,72 138,82 140,95 L140,115"/>
+    <!-- Sole -->
+    <path d="M52,118 C52,118 55,125 70,128 L110,130 C130,129 138,125 140,120"/>
+    <!-- Collar -->
+    <path d="M128,65 C132,68 136,75 138,82"/>
+    <!-- Lace area -->
+    <circle cx="85" cy="82" r="2"/><circle cx="95" cy="78" r="2"/>
+    <circle cx="105" cy="76" r="2"/><circle cx="115" cy="78" r="2"/>
+    <!-- Dimension lines -->
+    <line x1="55" y1="140" x2="140" y2="140" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <line x1="55" y1="138" x2="55" y2="142" stroke-width="0.5"/>
+    <line x1="140" y1="138" x2="140" y2="142" stroke-width="0.5"/>
+  </g>
+
+  <!-- Pencil -->
+  <g transform="translate(140,45) rotate(35)">
+    <rect x="0" y="0" width="6" height="55" fill="#D4AF37" opacity="0.7" rx="1"/>
+    <polygon points="0,55 6,55 3,65" fill="#F0D68A" opacity="0.8"/>
+    <rect x="0" y="0" width="6" height="8" fill="#B8960C" rx="1"/>
+  </g>
+
+  <!-- Ruler -->
+  <g transform="translate(25,155) rotate(-15)">
+    <rect x="0" y="0" width="80" height="8" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8" rx="1"/>
+    <g stroke="#D4AF37" stroke-width="0.4" opacity="0.5">
+      <line x1="10" y1="0" x2="10" y2="4"/><line x1="20" y1="0" x2="20" y2="4"/>
+      <line x1="30" y1="0" x2="30" y2="4"/><line x1="40" y1="0" x2="40" y2="4"/>
+      <line x1="50" y1="0" x2="50" y2="4"/><line x1="60" y1="0" x2="60" y2="4"/>
+      <line x1="70" y1="0" x2="70" y2="4"/>
+    </g>
+  </g>
+
+  <!-- Color swatches -->
+  <g transform="translate(145,130)">
+    <rect x="0" y="0" width="15" height="15" fill="#2a2a2a" stroke="#D4AF37" stroke-width="0.5" rx="2"/>
+    <rect x="18" y="0" width="15" height="15" fill="#D4AF37" opacity="0.6" stroke="#D4AF37" stroke-width="0.5" rx="2"/>
+    <rect x="36" y="0" width="15" height="15" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5" rx="2"/>
+    <rect x="0" y="18" width="15" height="15" fill="#B8960C" opacity="0.4" stroke="#D4AF37" stroke-width="0.5" rx="2"/>
+    <rect x="18" y="18" width="15" height="15" fill="#F0D68A" opacity="0.3" stroke="#D4AF37" stroke-width="0.5" rx="2"/>
+  </g>
+</svg>

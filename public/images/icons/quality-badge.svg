@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="goldGradQB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="120" height="120" fill="#111"/>
+
+  <!-- Diamond/shield shape -->
+  <path d="M60,10 L95,35 L95,70 L60,100 L25,70 L25,35 Z"
+        fill="#0d0d0d" stroke="url(#goldGradQB)" stroke-width="2"/>
+
+  <!-- Inner diamond -->
+  <path d="M60,20 L85,40 L85,65 L60,90 L35,65 L35,40 Z"
+        fill="#111" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+
+  <!-- Checkmark -->
+  <path d="M42,55 L55,68 L80,38" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Small sparkle on checkmark -->
+  <g fill="#F0D68A" opacity="0.6">
+    <circle cx="78" cy="40" r="2"/>
+    <circle cx="74" cy="36" r="1"/>
+  </g>
+
+  <!-- Corner decorations -->
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.3">
+    <line x1="35" y1="42" x2="42" y2="42"/>
+    <line x1="35" y1="42" x2="35" y2="48"/>
+    <line x1="85" y1="42" x2="78" y2="42"/>
+    <line x1="85" y1="42" x2="85" y2="48"/>
+  </g>
+
+  <!-- "QUALITY" text -->
+  <text x="60" y="110" text-anchor="middle" fill="#D4AF37" font-size="8" font-family="Arial" letter-spacing="2" opacity="0.7">PREMIUM QUALITY</text>
+</svg>

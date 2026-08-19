@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="goldGradBM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+    <linearGradient id="darkOverlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111" stop-opacity="0.7"/><stop offset="100%" stop-color="#0a0a0a" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="#0a0a0a"/>
+
+  <!-- Factory machinery scene -->
+  <g>
+    <!-- Large machine -->
+    <rect x="50" y="100" width="180" height="180" fill="#111" stroke="#D4AF37" stroke-width="1" rx="5"/>
+    <!-- Machine details -->
+    <g stroke="#D4AF37" stroke-width="0.5" opacity="0.3">
+      <rect x="60" y="115" width="50" height="35" fill="#1a1a1a"/><rect x="120" y="115" width="50" height="35" fill="#1a1a1a"/>
+      <rect x="60" y="160" width="110" height="25" fill="#1a1a1a"/>
+      <rect x="60" y="195" width="80" height="25" fill="#1a1a1a"/><rect x="150" y="195" width="60" height="25" fill="#1a1a1a"/>
+      <rect x="60" y="230" width="160" height="35" fill="#1a1a1a"/>
+    </g>
+    <!-- Control panel -->
+    <g transform="translate(75,120)">
+      <circle cx="10" cy="10" r="4" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+      <circle cx="25" cy="10" r="4" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+      <rect x="38" y="6" width="20" height="8" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <!-- Gear -->
+    <g transform="translate(190,160)">
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4"/>
+      <circle cx="0" cy="0" r="8" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+      <g stroke="#D4AF37" stroke-width="1.5" opacity="0.3">
+        <line x1="0" y1="-20" x2="0" y2="-26"/><line x1="20" y1="0" x2="26" y2="0"/>
+        <line x1="0" y1="20" x2="0" y2="26"/><line x1="-20" y1="0" x2="-26" y2="0"/>
+        <line x1="14" y1="-14" x2="18" y2="-18"/><line x1="14" y1="14" x2="18" y2="18"/>
+        <line x1="-14" y1="-14" x2="-18" y2="-18"/><line x1="-14" y1="14" x2="-18" y2="18"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Second machine -->
+  <g transform="translate(280,80)">
+    <rect x="0" y="0" width="120" height="200" fill="#111" stroke="#D4AF37" stroke-width="0.8" rx="3"/>
+    <rect x="10" y="15" width="100" height="60" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <g stroke="#D4AF37" stroke-width="0.3" opacity="0.2">
+      <line x1="10" y1="30" x2="110" y2="30"/><line x1="10" y1="45" x2="110" y2="45"/>
+      <line x1="10" y1="60" x2="110" y2="60"/>
+    </g>
+    <!-- Press mechanism -->
+    <rect x="30" y="85" width="60" height="80" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <rect x="45" y="95" width="30" height="30" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.4"/>
+    <!-- Shoe being pressed -->
+    <path d="M50,140 L80,140 L82,148 L48,148 Z" fill="#D4AF37" opacity="0.15"/>
+  </g>
+
+  <!-- Conveyor belt -->
+  <g stroke="#D4AF37" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="310" x2="600" y2="310"/>
+    <line x1="0" y1="315" x2="600" y2="315"/>
+  </g>
+  <g fill="#D4AF37" opacity="0.15">
+    <circle cx="50" cy="318" r="5" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="150" cy="318" r="5" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="250" cy="318" r="5" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="350" cy="318" r="5" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="450" cy="318" r="5" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="550" cy="318" r="5" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+  </g>
+
+  <!-- Overlay for text readability -->
+  <rect width="600" height="400" fill="url(#darkOverlay)"/>
+
+  <!-- Title area -->
+  <rect x="0" y="320" width="600" height="80" fill="#0a0a0a" opacity="0.8"/>
+  <line x1="40" y1="330" x2="100" y2="330" stroke="#D4AF37" stroke-width="2"/>
+  <text x="40" y="360" fill="#ffffff" font-size="18" font-family="Georgia, serif" opacity="0.9">Modern Manufacturing</text>
+  <text x="40" y="380" fill="#D4AF37" font-size="10" font-family="Arial" letter-spacing="1" opacity="0.6">INSIDE OUR FACTORY</text>
+</svg>

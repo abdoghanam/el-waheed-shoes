@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="goldGradFF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+    <filter id="lightGlow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="pendantLight" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.4"/><stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#111"/>
+
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="80" fill="#0d0d0d"/>
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.2">
+    <line x1="0" y1="20" x2="800" y2="20"/><line x1="0" y1="40" x2="800" y2="40"/>
+    <line x1="0" y1="60" x2="800" y2="60"/>
+  </g>
+
+  <!-- Ceiling beams -->
+  <g stroke="#D4AF37" stroke-width="1.5" opacity="0.3" fill="none">
+    <line x1="0" y1="78" x2="800" y2="78"/>
+    <line x1="160" y1="0" x2="160" y2="80"/><line x1="400" y1="0" x2="400" y2="80"/>
+    <line x1="640" y1="0" x2="640" y2="80"/>
+  </g>
+
+  <!-- Industrial pendant lights -->
+  <g>
+    <!-- Light 1 -->
+    <line x1="120" y1="80" x2="120" y2="120" stroke="#D4AF37" stroke-width="1"/>
+    <polygon points="105,120 135,120 130,135 110,135" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1"/>
+    <ellipse cx="120" cy="170" rx="50" ry="35" fill="url(#pendantLight)"/>
+    <circle cx="120" cy="128" r="3" fill="#F0D68A" opacity="0.8" filter="url(#lightGlow)"/>
+
+    <!-- Light 2 -->
+    <line x1="300" y1="80" x2="300" y2="120" stroke="#D4AF37" stroke-width="1"/>
+    <polygon points="285,120 315,120 310,135 290,135" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1"/>
+    <ellipse cx="300" cy="170" rx="50" ry="35" fill="url(#pendantLight)"/>
+    <circle cx="300" cy="128" r="3" fill="#F0D68A" opacity="0.8" filter="url(#lightGlow)"/>
+
+    <!-- Light 3 -->
+    <line x1="500" y1="80" x2="500" y2="120" stroke="#D4AF37" stroke-width="1"/>
+    <polygon points="485,120 515,120 510,135 490,135" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1"/>
+    <ellipse cx="500" cy="170" rx="50" ry="35" fill="url(#pendantLight)"/>
+    <circle cx="500" cy="128" r="3" fill="#F0D68A" opacity="0.8" filter="url(#lightGlow)"/>
+
+    <!-- Light 4 -->
+    <line x1="680" y1="80" x2="680" y2="120" stroke="#D4AF37" stroke-width="1"/>
+    <polygon points="665,120 695,120 690,135 670,135" fill="#0d0d0d" stroke="#D4AF37" stroke-width="1"/>
+    <ellipse cx="680" cy="170" rx="50" ry="35" fill="url(#pendantLight)"/>
+    <circle cx="680" cy="128" r="3" fill="#F0D68A" opacity="0.8" filter="url(#lightGlow)"/>
+  </g>
+
+  <!-- Floor -->
+  <rect x="0" y="380" width="800" height="120" fill="#0d0d0d"/>
+
+  <!-- Floor grid lines - perspective -->
+  <g stroke="#D4AF37" stroke-width="0.4" opacity="0.12">
+    <line x1="0" y1="390" x2="800" y2="390"/><line x1="0" y1="410" x2="800" y2="410"/>
+    <line x1="0" y1="430" x2="800" y2="430"/><line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="0" y1="470" x2="800" y2="470"/><line x1="0" y1="490" x2="800" y2="490"/>
+    <!-- Perspective vertical lines -->
+    <line x1="0" y1="380" x2="100" y2="500"/><line x1="100" y1="380" x2="200" y2="500"/>
+    <line x1="200" y1="380" x2="300" y2="500"/><line x1="300" y1="380" x2="400" y2="500"/>
+    <line x1="400" y1="380" x2="400" y2="500"/><line x1="500" y1="380" x2="300" y2="500"/>
+    <line x1="600" y1="380" x2="200" y2="500"/><line x1="700" y1="380" x2="100" y2="500"/>
+    <line x1="800" y1="380" x2="0" y2="500"/>
+  </g>
+
+  <!-- Sewing machine workstations - Row 1 (closer) -->
+  <g transform="translate(0,260)">
+    <!-- Workstation 1 -->
+    <rect x="40" y="80" width="120" height="40" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8" rx="2"/>
+    <!-- Sewing machine -->
+    <rect x="70" y="55" width="30" height="30" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+    <rect x="80" y="45" width="10" height="15" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="85" cy="65" r="5" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+    <!-- Thread spool -->
+    <rect x="105" y="48" width="8" height="12" fill="#D4AF37" opacity="0.3" stroke="#D4AF37" stroke-width="0.5"/>
+    <!-- Chair -->
+    <rect x="80" y="130" width="30" height="5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <line x1="85" y1="135" x2="85" y2="150" stroke="#D4AF37" stroke-width="0.5"/>
+    <line x1="105" y1="135" x2="105" y2="150" stroke="#D4AF37" stroke-width="0.5"/>
+    <!-- Worker silhouette -->
+    <ellipse cx="85" cy="115" rx="8" ry="10" fill="#D4AF37" opacity="0.12"/>
+
+    <!-- Workstation 2 -->
+    <rect x="220" y="80" width="120" height="40" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8" rx="2"/>
+    <rect x="250" y="55" width="30" height="30" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+    <rect x="260" y="45" width="10" height="15" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="265" cy="65" r="5" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+    <rect x="285" y="48" width="8" height="12" fill="#D4AF37" opacity="0.3" stroke="#D4AF37" stroke-width="0.5"/>
+    <rect x="260" y="130" width="30" height="5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <ellipse cx="265" cy="115" rx="8" ry="10" fill="#D4AF37" opacity="0.12"/>
+
+    <!-- Workstation 3 -->
+    <rect x="400" y="80" width="120" height="40" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8" rx="2"/>
+    <rect x="430" y="55" width="30" height="30" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+    <rect x="440" y="45" width="10" height="15" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="445" cy="65" r="5" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+    <rect x="465" y="48" width="8" height="12" fill="#D4AF37" opacity="0.3" stroke="#D4AF37" stroke-width="0.5"/>
+    <rect x="440" y="130" width="30" height="5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <ellipse cx="445" cy="115" rx="8" ry="10" fill="#D4AF37" opacity="0.12"/>
+
+    <!-- Workstation 4 -->
+    <rect x="580" y="80" width="120" height="40" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8" rx="2"/>
+    <rect x="610" y="55" width="30" height="30" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.8"/>
+    <rect x="620" y="45" width="10" height="15" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="625" cy="65" r="5" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+    <rect x="645" y="48" width="8" height="12" fill="#D4AF37" opacity="0.3" stroke="#D4AF37" stroke-width="0.5"/>
+    <rect x="620" y="130" width="30" height="5" fill="#1a1a1a" stroke="#D4AF37" stroke-width="0.5"/>
+    <ellipse cx="625" cy="115" rx="8" ry="10" fill="#D4AF37" opacity="0.12"/>
+  </g>
+
+  <!-- Conveyor belt (back wall) -->
+  <g transform="translate(0,180)">
+    <!-- Belt track -->
+    <line x1="50" y1="50" x2="750" y2="50" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+    <line x1="50" y1="55" x2="750" y2="55" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+    <!-- Belt rollers -->
+    <circle cx="80" cy="52" r="4" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8"/>
+    <circle cx="200" cy="52" r="4" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8"/>
+    <circle cx="320" cy="52" r="4" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8"/>
+    <circle cx="440" cy="52" r="4" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8"/>
+    <circle cx="560" cy="52" r="4" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8"/>
+    <circle cx="680" cy="52" r="4" fill="#0d0d0d" stroke="#D4AF37" stroke-width="0.8"/>
+    <!-- Shoe silhouettes on belt -->
+    <g fill="#D4AF37" opacity="0.25">
+      <path d="M120,40 L145,40 L148,48 L118,48 Z M125,38 C125,35 130,33 135,33 C140,33 143,35 143,38"/>
+      <path d="M280,40 L305,40 L308,48 L278,48 Z M285,38 C285,35 290,33 295,33 C300,33 303,35 303,38"/>
+      <path d="M440,40 L465,40 L468,48 L438,48 Z M445,38 C445,35 450,33 455,33 C460,33 463,35 463,38"/>
+      <path d="M600,40 L625,40 L628,48 L598,48 Z M605,38 C605,35 610,33 615,33 C620,33 623,35 623,38"/>
+    </g>
+  </g>
+
+  <!-- Wall shelves with materials -->
+  <g stroke="#D4AF37" stroke-width="0.8" opacity="0.3" fill="none">
+    <rect x="20" y="100" width="60" height="30"/>
+    <rect x="20" y="140" width="60" height="30"/>
+    <rect x="720" y="100" width="60" height="30"/>
+    <rect x="720" y="140" width="60" height="30"/>
+  </g>
+  <!-- Material rolls on shelves -->
+  <g fill="#D4AF37" opacity="0.1">
+    <ellipse cx="35" cy="115" rx="8" ry="10"/><ellipse cx="55" cy="115" rx="8" ry="10"/>
+    <ellipse cx="35" cy="155" rx="8" ry="10"/><ellipse cx="55" cy="155" rx="8" ry="10"/>
+    <ellipse cx="735" cy="115" rx="8" ry="10"/><ellipse cx="755" cy="115" rx="8" ry="10"/>
+  </g>
+
+  <!-- Safety signage -->
+  <g transform="translate(760,100)" stroke="#D4AF37" stroke-width="0.8">
+    <rect x="0" y="0" width="30" height="30" fill="#1a1a1a"/>
+    <text x="15" y="20" text-anchor="middle" fill="#D4AF37" font-size="14" font-family="Arial" opacity="0.5">!</text>
+  </g>
+</svg>

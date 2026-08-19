@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8960C"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#F0D68A"/>
+    </linearGradient>
+    <linearGradient id="shoeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#D4AF37" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="spotLight" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#0a0a0a"/>
+
+  <!-- Radial spot light -->
+  <rect width="1920" height="1080" fill="url(#spotLight)"/>
+
+  <!-- Precision grid -->
+  <g opacity="0.06" stroke="#D4AF37" stroke-width="0.5" fill="none">
+    <line x1="0" y1="108" x2="1920" y2="108"/>
+    <line x1="0" y1="216" x2="1920" y2="216"/>
+    <line x1="0" y1="324" x2="1920" y2="324"/>
+    <line x1="0" y1="432" x2="1920" y2="432"/>
+    <line x1="0" y1="540" x2="1920" y2="540"/>
+    <line x1="0" y1="648" x2="1920" y2="648"/>
+    <line x1="0" y1="756" x2="1920" y2="756"/>
+    <line x1="0" y1="864" x2="1920" y2="864"/>
+    <line x1="0" y1="972" x2="1920" y2="972"/>
+    <line x1="192" y1="0" x2="192" y2="1080"/>
+    <line x1="384" y1="0" x2="384" y2="1080"/>
+    <line x1="576" y1="0" x2="576" y2="1080"/>
+    <line x1="768" y1="0" x2="768" y2="1080"/>
+    <line x1="960" y1="0" x2="960" y2="1080"/>
+    <line x1="1152" y1="0" x2="1152" y2="1080"/>
+    <line x1="1344" y1="0" x2="1344" y2="1080"/>
+    <line x1="1536" y1="0" x2="1536" y2="1080"/>
+    <line x1="1728" y1="0" x2="1728" y2="1080"/>
+  </g>
+
+  <!-- Smaller sub-grid -->
+  <g opacity="0.03" stroke="#D4AF37" stroke-width="0.3" fill="none">
+    <line x1="0" y1="54" x2="1920" y2="54"/><line x1="0" y1="162" x2="1920" y2="162"/>
+    <line x1="0" y1="270" x2="1920" y2="270"/><line x1="0" y1="378" x2="1920" y2="378"/>
+    <line x1="0" y1="486" x2="1920" y2="486"/><line x1="0" y1="594" x2="1920" y2="594"/>
+    <line x1="0" y1="702" x2="1920" y2="702"/><line x1="0" y1="810" x2="1920" y2="810"/>
+    <line x1="0" y1="918" x2="1920" y2="918"/><line x1="0" y1="1026" x2="1920" y2="1026"/>
+    <line x1="96" y1="0" x2="96" y2="1080"/><line x1="288" y1="0" x2="288" y2="1080"/>
+    <line x1="480" y1="0" x2="480" y2="1080"/><line x1="672" y1="0" x2="672" y2="1080"/>
+    <line x1="864" y1="0" x2="864" y2="1080"/><line x1="1056" y1="0" x2="1056" y2="1080"/>
+    <line x1="1248" y1="0" x2="1248" y2="1080"/><line x1="1440" y1="0" x2="1440" y2="1080"/>
+    <line x1="1632" y1="0" x2="1632" y2="1080"/><line x1="1824" y1="0" x2="1824" y2="1080"/>
+  </g>
+
+  <!-- Abstract shoe silhouette - geometric wireframe -->
+  <g transform="translate(960,500)" filter="url(#glow)">
+    <!-- Sole -->
+    <path d="M-280,80 C-280,80 -260,100 -200,105 L-60,110 C0,112 80,110 160,105 C220,100 260,90 280,80 L280,65 C260,75 220,85 160,90 C80,95 0,96 -60,95 L-200,90 C-260,88 -275,82 -280,80 Z" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+    <!-- Midsole line -->
+    <path d="M-270,70 C-250,78 -200,85 -60,88 C80,90 200,85 270,70" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.7"/>
+    <!-- Upper shoe body -->
+    <path d="M-260,70 C-260,40 -250,0 -230,-40 C-210,-80 -180,-110 -140,-130 C-100,-148 -60,-155 -20,-155 C20,-155 60,-148 100,-130 C140,-110 170,-80 190,-40 C210,0 240,30 260,50 L260,70" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+    <!-- Toe cap -->
+    <path d="M-230,-40 C-220,-50 -200,-55 -180,-50 C-160,-45 -150,-30 -145,-15" fill="none" stroke="#D4AF37" stroke-width="1.2" opacity="0.6"/>
+    <!-- Heel counter -->
+    <path d="M200,-30 C215,-25 235,-10 250,15 C258,30 262,50 260,70" fill="none" stroke="#D4AF37" stroke-width="1.2" opacity="0.6"/>
+    <!-- Collar/opening -->
+    <path d="M100,-130 C120,-125 145,-110 165,-85 C180,-65 190,-45 195,-25" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <!-- Tongue -->
+    <path d="M-20,-155 C-10,-170 10,-180 30,-178 C50,-176 60,-165 55,-150 C50,-135 35,-125 20,-120" fill="none" stroke="#D4AF37" stroke-width="1.2" opacity="0.5"/>
+    <!-- Lace holes -->
+    <circle cx="-80" cy="-105" r="3" fill="#D4AF37" opacity="0.8"/>
+    <circle cx="-50" cy="-115" r="3" fill="#D4AF37" opacity="0.8"/>
+    <circle cx="-15" cy="-120" r="3" fill="#D4AF37" opacity="0.8"/>
+    <circle cx="20" cy="-118" r="3" fill="#D4AF37" opacity="0.8"/>
+    <circle cx="55" cy="-108" r="3" fill="#D4AF37" opacity="0.8"/>
+    <circle cx="85" cy="-95" r="3" fill="#D4AF37" opacity="0.8"/>
+    <!-- Lace lines -->
+    <line x1="-80" y1="-105" x2="-50" y2="-115" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+    <line x1="-50" y1="-115" x2="-15" y2="-120" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+    <line x1="-15" y1="-120" x2="20" y2="-118" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+    <line x1="20" y1="-118" x2="55" y2="-108" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+    <line x1="55" y1="-108" x2="85" y2="-95" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+    <!-- Sole tread pattern -->
+    <g stroke="#D4AF37" stroke-width="0.6" opacity="0.3">
+      <line x1="-250" y1="100" x2="-240" y2="108"/><line x1="-220" y1="102" x2="-210" y2="110"/>
+      <line x1="-190" y1="104" x2="-180" y2="110"/><line x1="-160" y1="106" x2="-150" y2="112"/>
+      <line x1="-130" y1="107" x2="-120" y2="112"/><line x1="-100" y1="108" x2="-90" y2="112"/>
+      <line x1="-70" y1="109" x2="-60" y2="112"/><line x1="-40" y1="110" x2="-30" y2="112"/>
+      <line x1="-10" y1="110" x2="0" y2="112"/><line x1="20" y1="110" x2="30" y2="111"/>
+      <line x1="50" y1="109" x2="60" y2="111"/><line x1="80" y1="108" x2="90" y2="110"/>
+      <line x1="110" y1="107" x2="120" y2="110"/><line x1="140" y1="106" x2="150" y2="109"/>
+      <line x1="170" y1="104" x2="180" y2="108"/><line x1="200" y1="102" x2="210" y2="106"/>
+      <line x1="230" y1="98" x2="240" y2="102"/><line x1="255" y1="92" x2="265" y2="96"/>
+    </g>
+    <!-- Stitching detail -->
+    <path d="M-255,70 L-240,70 M-230,68 L-215,68 M-205,66 L-190,66 M-180,64 L-165,64 M-155,62 L-140,62" stroke="#F0D68A" stroke-width="0.5" opacity="0.4"/>
+  </g>
+
+  <!-- Gold particles - scattered dots creating depth -->
+  <g fill="#D4AF37">
+    <!-- Large particles -->
+    <circle cx="150" cy="200" r="2.5" opacity="0.6"/><circle cx="320" cy="150" r="2" opacity="0.4"/>
+    <circle cx="500" cy="300" r="3" opacity="0.3"/><circle cx="680" cy="180" r="2" opacity="0.5"/>
+    <circle cx="850" cy="400" r="2.5" opacity="0.35"/><circle cx="1050" cy="120" r="2" opacity="0.5"/>
+    <circle cx="1200" cy="350" r="3" opacity="0.25"/><circle cx="1400" cy="200" r="2" opacity="0.45"/>
+    <circle cx="1580" cy="380" r="2.5" opacity="0.3"/><circle cx="1750" cy="150" r="2" opacity="0.5"/>
+    <circle cx="200" cy="800" r="2" opacity="0.4"/><circle cx="400" cy="700" r="2.5" opacity="0.35"/>
+    <circle cx="600" cy="850" r="2" opacity="0.3"/><circle cx="800" cy="750" r="3" opacity="0.25"/>
+    <circle cx="1000" cy="800" r="2" opacity="0.4"/><circle cx="1200" cy="700" r="2.5" opacity="0.3"/>
+    <circle cx="1400" cy="850" r="2" opacity="0.35"/><circle cx="1600" cy="780" r="3" opacity="0.2"/>
+    <circle cx="1800" cy="700" r="2" opacity="0.45"/>
+    <!-- Medium particles -->
+    <circle cx="100" cy="450" r="1.5" opacity="0.5"/><circle cx="250" cy="550" r="1.5" opacity="0.4"/>
+    <circle cx="450" cy="480" r="1.5" opacity="0.35"/><circle cx="650" cy="600" r="1.5" opacity="0.45"/>
+    <circle cx="850" cy="520" r="1.5" opacity="0.3"/><circle cx="1050" cy="650" r="1.5" opacity="0.5"/>
+    <circle cx="1250" cy="500" r="1.5" opacity="0.35"/><circle cx="1450" cy="620" r="1.5" opacity="0.4"/>
+    <circle cx="1650" cy="550" r="1.5" opacity="0.3"/><circle cx="1850" cy="480" r="1.5" opacity="0.45"/>
+    <circle cx="350" cy="900" r="1.5" opacity="0.3"/><circle cx="550" cy="950" r="1.5" opacity="0.4"/>
+    <circle cx="750" cy="920" r="1.5" opacity="0.25"/><circle cx="950" cy="960" r="1.5" opacity="0.35"/>
+    <circle cx="1150" cy="930" r="1.5" opacity="0.3"/><circle cx="1350" cy="970" r="1.5" opacity="0.4"/>
+    <circle cx="1550" cy="940" r="1.5" opacity="0.25"/><circle cx="1750" cy="900" r="1.5" opacity="0.35"/>
+    <!-- Small particles -->
+    <circle cx="80" cy="100" r="1" opacity="0.6"/><circle cx="280" cy="350" r="1" opacity="0.5"/>
+    <circle cx="480" cy="150" r="1" opacity="0.4"/><circle cx="680" cy="450" r="1" opacity="0.55"/>
+    <circle cx="880" cy="250" r="1" opacity="0.4"/><circle cx="1080" cy="500" r="1" opacity="0.5"/>
+    <circle cx="1280" cy="150" r="1" opacity="0.45"/><circle cx="1480" cy="450" r="1" opacity="0.5"/>
+    <circle cx="1680" cy="250" r="1" opacity="0.4"/><circle cx="1880" cy="550" r="1" opacity="0.55"/>
+    <circle cx="130" cy="650" r="1" opacity="0.4"/><circle cx="330" cy="750" r="1" opacity="0.5"/>
+    <circle cx="530" cy="620" r="1" opacity="0.35"/><circle cx="730" cy="800" r="1" opacity="0.45"/>
+    <circle cx="930" cy="700" r="1" opacity="0.4"/><circle cx="1130" cy="850" r="1" opacity="0.5"/>
+    <circle cx="1330" cy="750" r="1" opacity="0.35"/><circle cx="1530" cy="680" r="1" opacity="0.45"/>
+    <circle cx="1730" cy="800" r="1" opacity="0.5"/><circle cx="1900" cy="900" r="1" opacity="0.4"/>
+    <!-- Tiny dust particles -->
+    <circle cx="50" cy="300" r="0.5" opacity="0.7"/><circle cx="180" cy="500" r="0.5" opacity="0.6"/>
+    <circle cx="370" cy="400" r="0.5" opacity="0.5"/><circle cx="570" cy="250" r="0.5" opacity="0.65"/>
+    <circle cx="770" cy="650" r="0.5" opacity="0.55"/><circle cx="970" cy="350" r="0.5" opacity="0.6"/>
+    <circle cx="1170" cy="250" r="0.5" opacity="0.5"/><circle cx="1370" cy="550" r="0.5" opacity="0.65"/>
+    <circle cx="1570" cy="450" r="0.5" opacity="0.55"/><circle cx="1770" cy="350" r="0.5" opacity="0.6"/>
+    <circle cx="230" cy="950" r="0.5" opacity="0.5"/><circle cx="430" cy="1000" r="0.5" opacity="0.55"/>
+    <circle cx="630" cy="1050" r="0.5" opacity="0.45"/><circle cx="830" cy="1020" r="0.5" opacity="0.5"/>
+    <circle cx="1030" cy="1050" r="0.5" opacity="0.55"/><circle cx="1230" cy="1000" r="0.5" opacity="0.45"/>
+    <circle cx="1430" cy="1050" r="0.5" opacity="0.5"/><circle cx="1630" cy="1020" r="0.5" opacity="0.55"/>
+  </g>
+
+  <!-- Decorative geometric lines radiating from shoe -->
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.15" fill="none">
+    <line x1="960" y1="500" x2="300" y2="200"/>
+    <line x1="960" y1="500" x2="1620" y2="200"/>
+    <line x1="960" y1="500" x2="300" y2="800"/>
+    <line x1="960" y1="500" x2="1620" y2="800"/>
+    <line x1="960" y1="500" x2="100" y2="500"/>
+    <line x1="960" y1="500" x2="1820" y2="500"/>
+    <line x1="960" y1="500" x2="600" y2="100"/>
+    <line x1="960" y1="500" x2="1320" y2="100"/>
+    <line x1="960" y1="500" x2="600" y2="950"/>
+    <line x1="960" y1="500" x2="1320" y2="950"/>
+  </g>
+
+  <!-- Horizontal accent lines -->
+  <g stroke="#D4AF37" stroke-width="1" opacity="0.08">
+    <line x1="0" y1="540" x2="600" y2="540"/>
+    <line x1="1320" y1="540" x2="1920" y2="540"/>
+  </g>
+
+  <!-- Corner decorative elements -->
+  <g stroke="#D4AF37" stroke-width="1" fill="none" opacity="0.2">
+    <path d="M40,40 L40,100 M40,40 L100,40"/><path d="M1880,40 L1880,100 M1880,40 L1820,40"/>
+    <path d="M40,1040 L40,980 M40,1040 L100,1040"/><path d="M1880,1040 L1880,980 M1880,1040 L1820,1040"/>
+  </g>
+
+  <!-- Bottom fade gradient -->
+  <rect y="900" width="1920" height="180" fill="url(#bottomFade)" opacity="0.5"/>
+  <defs>
+    <linearGradient id="bottomFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+</svg>
