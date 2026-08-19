@@ -80,7 +80,9 @@ export default buildConfig({
   plugins: blobToken
     ? [
         vercelBlobStorage({
-          collections: ['media'],
+          collections: {
+            media: true,
+          },
           token: blobToken,
         }),
       ]
