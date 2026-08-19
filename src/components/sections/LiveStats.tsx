@@ -3,13 +3,7 @@
 import { useRef, useEffect, useState } from 'react'
 import { motion, useInView } from 'motion/react'
 import { type Locale } from '@/lib/i18n'
-
-const stats = [
-  { target: 15, suffix: '+', labelEn: 'Years of Excellence', labelAr: 'عاماً من التميز' },
-  { target: 25000, suffix: '+', labelEn: 'Pairs Per Month', labelAr: 'زوج شهرياً' },
-  { target: 20, suffix: '+', labelEn: 'Countries Served', labelAr: 'دولة نخدمها' },
-  { target: 120, suffix: '+', labelEn: 'Skilled Workers', labelAr: 'عاملاً ماهراً' },
-]
+import { dictionaries } from '@/lib/dictionaries'
 
 function formatNumber(n: number): string {
   return n >= 1000 ? n.toLocaleString('en-US') : String(n)
@@ -52,9 +46,17 @@ function AnimatedNumber({ target, suffix, inView }: { target: number; suffix: st
 }
 
 export default function LiveStats({ lang }: { lang?: Locale }) {
+  const dict = dictionaries[lang || 'en']
   const isAr = (lang || 'en') === 'ar'
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
+
+  const stats = [
+    { target: 15, suffix: '+', label: dict.stats.years },
+    { target: 25000, suffix: '+', label: dict.stats.production },
+    { target: 20, suffix: '+', label: isAr ? 'دولة نخدمها' : 'Countries Served' },
+    { target: 120, suffix: '+', label: dict.stats.workers },
+  ]
 
   return (
     <section ref={ref} className="section-padding bg-section-dark">
@@ -62,7 +64,7 @@ export default function LiveStats({ lang }: { lang?: Locale }) {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, i) => (
             <motion.div
-              key={stat.labelEn}
+              key={stat.label}
               className="text-center relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +73,7 @@ export default function LiveStats({ lang }: { lang?: Locale }) {
             >
               <AnimatedNumber target={stat.target} suffix={stat.suffix} inView={inView} />
               <p className="body-sm mt-3">
-                {isAr ? stat.labelAr : stat.labelEn}
+                {stat.label}
               </p>
               {i < stats.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-0 w-px h-12 bg-border" />

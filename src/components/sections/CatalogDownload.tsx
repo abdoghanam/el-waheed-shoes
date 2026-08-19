@@ -2,8 +2,11 @@
 
 import { useState } from 'react'
 import { motion } from 'motion/react'
+import { type Locale } from '@/lib/i18n'
+import { getDictionary } from '@/lib/dictionaries'
 
-export function CatalogDownload() {
+export function CatalogDownload({ lang }: { lang: Locale }) {
+  const dict = getDictionary(lang)
   const [formData, setFormData] = useState({ name: '', email: '', company: '' })
   const [submitted, setSubmitted] = useState(false)
 
@@ -41,18 +44,18 @@ export function CatalogDownload() {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-              Download Our 2026 Product Catalog
+              {dict.catalog.title}
             </h2>
             <p className="text-gray-400 text-base sm:text-lg mb-6">
-              Comprehensive guide featuring 200+ designs across 6 categories
+              {dict.catalog.description}
             </p>
 
             <div className="flex flex-wrap gap-6 mb-8">
               {[
-                { icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4', text: '200+ Designs' },
-                { icon: 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z', text: '6 Categories' },
-                { icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14', text: 'HD Photos' },
-                { icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', text: 'Full Specs' },
+                { icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4', text: dict.catalog.features.designs },
+                { icon: 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z', text: dict.catalog.features.categories },
+                { icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14', text: dict.catalog.features.photos },
+                { icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', text: dict.catalog.features.specs },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 text-gray-300">
                   <svg className="h-5 w-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -72,15 +75,14 @@ export function CatalogDownload() {
                 <svg className="h-12 w-12 text-gold mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <p className="text-white font-semibold">Download started!</p>
-                <p className="text-sm text-gray-400 mt-1">Check your email for the catalog link.</p>
+                <p className="text-white font-semibold">{dict.catalog.form.success}</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <input
                     type="text"
-                    placeholder="Your Name"
+                    placeholder={dict.catalog.form.name}
                     required
                     value={formData.name}
                     onChange={e => setFormData({...formData, name: e.target.value})}
@@ -88,7 +90,7 @@ export function CatalogDownload() {
                   />
                   <input
                     type="email"
-                    placeholder="Email Address"
+                    placeholder={dict.catalog.form.email}
                     required
                     value={formData.email}
                     onChange={e => setFormData({...formData, email: e.target.value})}
@@ -97,7 +99,7 @@ export function CatalogDownload() {
                 </div>
                 <input
                   type="text"
-                  placeholder="Company Name (optional)"
+                  placeholder={dict.catalog.form.company}
                   value={formData.company}
                   onChange={e => setFormData({...formData, company: e.target.value})}
                   className="w-full rounded-lg bg-gray-800 border border-gray-700 px-4 py-3 text-sm text-white placeholder-gray-500 focus:border-gold focus:outline-none"
@@ -106,10 +108,10 @@ export function CatalogDownload() {
                   type="submit"
                   className="w-full rounded-lg bg-gold px-6 py-3 min-h-[44px] text-sm font-semibold text-black transition-colors hover:bg-gold-light"
                 >
-                  Download PDF Catalog
+                  {dict.catalog.form.submit}
                 </button>
                 <p className="text-xs text-gray-500 text-center">
-                  By downloading, you agree to our Privacy Policy
+                  {dict.catalog.legal}
                 </p>
               </form>
             )}

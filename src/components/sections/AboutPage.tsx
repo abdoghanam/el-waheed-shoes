@@ -31,7 +31,7 @@ export default function AboutPage({ lang }: { lang: Locale }) {
       <Section dark={false}>
         <SectionGrid cols={2}>
           <div>
-            <p className="label-tag mb-4">{isAr ? 'مهمتنا' : 'OUR MISSION'}</p>
+            <p className="label-tag mb-4">{dict.aboutPage.mission}</p>
             <h3 className="heading-sm mb-3">{dict.about.mission}</h3>
             <p className="body-md">{dict.about.vision}</p>
           </div>
@@ -52,8 +52,8 @@ export default function AboutPage({ lang }: { lang: Locale }) {
 
       <Section>
         <SectionHeader
-          label={isAr ? 'رحلتنا' : 'OUR JOURNEY'}
-          title={isAr ? 'مسيرة النمو' : 'Growth Timeline'}
+          label={dict.aboutPage.journey}
+          title={dict.aboutPage.timeline}
           align="center"
         />
         <div className="relative max-w-2xl mx-auto">

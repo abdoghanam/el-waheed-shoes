@@ -153,7 +153,7 @@ export default function CapabilitiesPage({ lang }: { lang: Locale }) {
       <Section>
         <Breadcrumb items={[{ label: dict.nav.capabilities }]} lang={lang} />
         <SectionHeader
-          label={isAr ? 'منشأتنا' : 'OUR FACILITY'}
+          label={dict.capabilitiesPage.facility}
           title={dict.capabilities.title}
           description={dict.capabilities.subtitle}
           align="center"
@@ -174,7 +174,7 @@ export default function CapabilitiesPage({ lang }: { lang: Locale }) {
       <Section>
         <SectionHeader
           label={isAr ? 'قدراتنا' : 'CAPABILITIES'}
-          title={isAr ? 'ما نقدمه' : 'What We Offer'}
+          title={dict.capabilitiesPage.whatWeOffer}
           align="center"
         />
         <SectionGrid cols={3}>

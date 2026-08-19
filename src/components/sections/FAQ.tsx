@@ -19,8 +19,18 @@ const faqData: Record<FAQVariant, FAQItem[]> = {
         ar: 'ما هو الحد الأدنى للطلب (MOQ)؟',
       },
       answer: {
-        en: 'Our MOQ varies by product type. For standard designs, MOQ is 500 pairs per style. For custom OEM orders, MOQ starts at 1,000 pairs.',
-        ar: 'يختلف الحد الأدنى للطلب حسب نوع المنتج. للتصاميم العادية، الحد الأدنى 500 زوج لكل طراز. للطلبات المخصصة OEM، يبدأ من 1,000 زوج.',
+        en: 'Our standard MOQ is 500 pairs per style for stock orders and 1,000 pairs for OEM/private label production. We offer flexible MOQ options for sample orders and new client partnerships.',
+        ar: 'الحد الأدنى القياسي للطلب هو 500 زوج لكل طراز للطلبات المتوفرة و1,000 زوج للتصنيع بالوكالة أو بالعلامة التجارية الخاصة. نقدم خيارات مرنة للحد الأدنى فيما يتعلق بطلبات العينات والشراكات الجديدة مع العملاء.',
+      },
+    },
+    {
+      question: {
+        en: 'How do I get a quote?',
+        ar: 'كيف أحصل على عرض سعر؟',
+      },
+      answer: {
+        en: 'Submit your requirements through our quote request form or contact us directly via WhatsApp. We typically respond within 24 hours with a detailed manufacturing proposal including pricing, timeline, and sample information.',
+        ar: 'أرسل متطلباتك من خلال نموذج طلب عرض السعر أو تواصل معنا مباشرة عبر واتساب. نرد عادةً خلال 24 ساعة بعرض تصنيع مفصل يشمل الأسعار والجدول الزمني ومعلومات العينات.',
       },
     },
     {
@@ -29,18 +39,8 @@ const faqData: Record<FAQVariant, FAQItem[]> = {
         ar: 'كم يستغرق الإنتاج؟',
       },
       answer: {
-        en: 'Standard production time is 30-45 days after order confirmation. Rush orders may be available with additional cost.',
-        ar: 'وقت الإنتاج العادي 30-45 يوماً بعد تأكيد الطلب. قد تتوفر الطلبات المستعفة بتكلفة إضافية.',
-      },
-    },
-    {
-      question: {
-        en: 'Do you offer samples?',
-        ar: 'هل تقدمون عينات؟',
-      },
-      answer: {
-        en: 'Yes, we provide samples before bulk orders. Sample cost is refundable upon placing a bulk order.',
-        ar: 'نعم، نقدم عينات قبل الطلبات بالجملة. تكلفة العينة مستردة عند تقديم طلب بالجملة.',
+        en: 'Standard production takes 30-45 days from order confirmation and sample approval. OEM orders with custom designs may take 45-60 days. Rush orders are available at additional cost.',
+        ar: 'يستغرق الإنتاج القياسي من 30 إلى 45 يوماً من تاريخ تأكيد الطلب والموافقة على العينات. قد تستغرق طلبات التصنيع بالوكالة مع التصاميم المخصصة من 45 إلى 60 يوماً. تتوفر الطلبات المستعفة بتكلفة إضافية.',
       },
     },
     {
@@ -49,50 +49,50 @@ const faqData: Record<FAQVariant, FAQItem[]> = {
         ar: 'ما هي طرق الدفع المقبولة؟',
       },
       answer: {
-        en: 'We accept T/T bank transfer, L/C for large orders, and Western Union for smaller transactions.',
-        ar: 'نقبل تحويل بنكي T/T، وخطاب اعتماد L/C للطلبات الكبيرة، وويسترن يونيون للمعاملات الصغيرة.',
+        en: 'We accept T/T bank transfer (standard), Letter of Credit (L/C) for large orders, and Western Union for smaller transactions. Typical terms: 30% deposit with order, 70% balance before shipment.',
+        ar: 'نقبل التحويل البنكي (T/T) كطريقة قياسية، وخطاب الاعتماد (L/C) للطلبات الكبيرة، وويسترن يونيون للمعاملات الأصغر. الشروط المعتادة: دفعة مقدمة 30% عند الطلب، ورصيد 70% قبل الشحن.',
       },
     },
   ],
   oem: [
     {
       question: {
-        en: 'Can you manufacture our custom designs?',
-        ar: 'هل يمكنكم تصنيع تصاميمنا المخصصة؟',
+        en: 'What does your OEM process look like?',
+        ar: 'كيف تبدو عملية التصنيع بالوكالة (OEM) لديكم؟',
       },
       answer: {
-        en: 'Absolutely. Our OEM service covers everything from design consultation to final production. We work with your specs, materials, and branding.',
-        ar: 'بالطبع. تغطي خدمة OEM لدينا كل شيء من الاستشارات التصمية إلى الإنتاج النهائي. نعمل مع مواصفاتك وموادك وعلامتك التجارية.',
+        en: 'Our OEM process has 4 stages: (1) Design & Specifications — share your designs, tech packs, or samples; (2) Quote & Timeline — we provide detailed pricing and production schedule; (3) Sample & Approval — we produce samples for your review and approval; (4) Production & Delivery — full production run with quality control and shipping.',
+        ar: 'تتكون عملية التصنيع بالوكالة لدينا من 4 مراحل: (1) التصميم والمواصفات — شارك تصاميمك أو حزم المواصفات الفنية أو العينات؛ (2) عرض السعر والجدول الزمني — نقدم تسعيراً مفصلاً وجدولاً زمنياً للإنتاج؛ (3) العينات والموافقة — ننتج عينات للمراجعة والموافقة؛ (4) الإنتاج والتسليم — تشغيل إنتاجي كامل مع مراقبة الجودة والشحن.',
       },
     },
     {
       question: {
-        en: 'What materials do you work with?',
-        ar: 'ما هي المواد التي تتعاملون معها؟',
+        en: 'Can you produce under our brand label?',
+        ar: 'هل يمكنكم الإنتاج تحت علامتنا التجارية؟',
       },
       answer: {
-        en: 'We work with genuine leather, synthetic leather (PU/PVC), canvas, mesh, rubber, EVA, and many more materials based on your requirements.',
-        ar: 'نعمل مع الجلد الطبيعي، والجلد الصناعي (PU/PVC)، والقماش، والشبك، والمطاط، وEVA، والمزيد من المواد وفقاً لمتطلباتك.',
+        en: 'Yes. We offer complete private label services including custom hang tags, insole branding, box printing, and branded packaging. We can work with your existing designs or help develop new ones.',
+        ar: 'نعم. نقدم خدمات العلامة التجارية الخاصة الكاملة بما في ذلك بطاقات التعليق المخصصة، والعلامة على الجلد الداخلي للحذاء، وطباعة الصناديق، والتعبئة المعتمدة. يمكننا العمل مع تصاميمك الحالية أو المساعدة في تطوير تصاميم جديدة.',
       },
     },
     {
       question: {
-        en: 'Do you handle packaging and labeling?',
-        ar: 'هل تتولون التعبئة والوضع؟',
+        en: 'What is the typical MOQ for OEM orders?',
+        ar: 'ما هو الحد الأدنى المعتاد للطلب لطلبات التصنيع بالوكالة؟',
       },
       answer: {
-        en: 'Yes, we provide complete private label services including custom packaging, labeling, hang tags, and branded boxes.',
-        ar: 'نعم، نقدم خدمات العلامة الخاصة الكاملة بما في ذلك التعبئة المخصصة والوضع والبطاقات المعلقة والمغلفات المعتمدة.',
+        en: 'OEM orders typically require a minimum of 1,000 pairs per style. For new clients, we offer a reduced MOQ of 500 pairs for initial orders to build the partnership.',
+        ar: 'تتطلب طلبات التصنيع بالوكالة عادةً الحد الأدنى البالغ 1,000 زوج لكل طراز. بالنسبة للعملاء الجدد، نقدم الحد الأدنى المخفض وهو 500 زوج للطلبات الأولى لبناء الشراكة.',
       },
     },
     {
       question: {
-        en: 'What quality certifications do you have?',
-        ar: 'ما هي شهادات الجودة التي تمتلكونها؟',
+        en: 'Can you handle custom designs and OEM orders?',
+        ar: 'هل يمكنكم التعامل مع التصاميم المخصصة وطلبات التصنيع بالوكالة؟',
       },
       answer: {
-        en: 'We hold ISO 9001:2015 and CE certifications. Our quality control team inspects every batch.',
-        ar: 'نمتلك شهادات ISO 9001:2015 و CE. يفحص فريق مراقبة الجودة لدينا كل دفعة.',
+        en: 'Absolutely. We offer full OEM and private label services including custom design development, prototype sampling, branded packaging, and quality certification. Our in-house design team works closely with clients from concept to production.',
+        ar: 'بالتأكيد. نقدم خدمات التصنيع بالوكالة والعلامة التجارية الخاصة الكاملة بما في ذلك تطوير التصاميم المخصصة، وإنتاج العينات الأولية، والتعبئة المعتمدة، وشهادات الجودة. يعمل فريق التصميم الداخلي لدينا بشكل وثيق مع العملاء من مرحلة الفكرة إلى مرحلة الإنتاج.',
       },
     },
   ],
@@ -103,8 +103,58 @@ const faqData: Record<FAQVariant, FAQItem[]> = {
         ar: 'ما هي أنواع الأحذية التي تصنعونها؟',
       },
       answer: {
-        en: 'We produce casual shoes, sport shoes, formal shoes, safety boots, sandals, boots, and children\'s footwear.',
-        ar: 'ننتج الأحذية الكاجوية، والرياضية، والرسمية، وأحذية السلامة، والشباشب، والبوت، وأحذية الأطفال.',
+        en: 'We produce casual shoes, formal dress shoes, sport/athletic shoes, safety boots, sandals, and boots. Our product range covers men\'s, women\'s, and kids\' footwear across all major categories.',
+        ar: 'ننتج الأحذية غير الرسمية، والأحذية الرسمية، والأحذية الرياضية، وأحذية السلامة، والشباشب، والبوت. تغطي منتجاتنا أحذية الرجال والنساء والأطفال عبر جميع الفئات الرئيسية.',
+      },
+    },
+    {
+      question: {
+        en: 'Where is your factory located?',
+        ar: 'أين يقع مصنعكم؟',
+      },
+      answer: {
+        en: 'Our manufacturing facility is located in El Mahalla El Kubra, Gharbia Governorate, Egypt — one of the country\'s major industrial hubs with excellent logistics connections to Alexandria and Cairo ports.',
+        ar: 'يوجد منشأة التصنيع الخاصة بنا في مصر볐据报道 ubicada في مدينة المحلة الكبرى، محافظة الغربية، مصر — وهي واحدة من المراكز الصناعية الرئيسية في البلاد مع روابط لوجستية ممتازة إلى ميناء الإسكندرية والقاهرة.',
+      },
+    },
+    {
+      question: {
+        en: 'What materials do you work with?',
+        ar: 'ما هي المواد التي تتعاملون معها؟',
+      },
+      answer: {
+        en: 'We work with genuine leather (cowhide, nubuck, suede), PU/PVC synthetic leather, canvas, mesh, rubber, EVA foam, and various textile materials. All materials meet REACH, OEKO-TEX, and ISO 9001 standards.',
+        ar: 'نعمل مع الجلد الطبيعي (جلد البقر، والنوبوك، والسuede)، والجلد الصناعي (PU/PVC)، والقماش القطني، والشبك، والمطاط، ورغوة EVA، ومختلف مواد النسيج. تلبي جميع المواد معايير REACH وOEKO-TEX وISO 9001.',
+      },
+    },
+    {
+      question: {
+        en: 'Can I request product samples before placing a bulk order?',
+        ar: 'هل يمكنني طلب عينات من المنتجات قبل تقديم طلب بالجملة؟',
+      },
+      answer: {
+        en: 'Yes. We offer sample production for a nominal fee (typically $50-150 per sample depending on complexity). Samples are produced within 7-10 working days and shipped internationally via DHL or FedEx.',
+        ar: 'نعم. نقدم إنتاج العينات مقابل رسوم رمزية (عادةً من 50 إلى 150 دولاراً لكل عينة حسب التعقيد). تُنتج العينات خلال 7 إلى 10 أيام عمل وتشحن دولياً عبر DHL أو FedEx.',
+      },
+    },
+    {
+      question: {
+        en: 'What sizes do you produce?',
+        ar: 'ما هي الأحجام التي تنتجونها؟',
+      },
+      answer: {
+        en: 'We produce EU sizes 36-47 for adults and EU 24-35 for kids. Custom sizing is available for OEM orders. Our size guide is available on our website for reference.',
+        ar: 'ننتج أحجام EU من 36 إلى 47 للبالغين و24 إلى 35 للأطفال. تتوفر أحجام مخصصة لطلبات التصنيع بالوكالة. دليل الأحجام متاح على موقعنا الإلكتروني للمراجعة.',
+      },
+    },
+    {
+      question: {
+        en: 'What quality certifications do you hold?',
+        ar: 'ما هي شهادات الجودة التي تمتلكونها؟',
+      },
+      answer: {
+        en: 'We hold ISO 9001:2015 (Quality Management), ISO 14001 (Environmental Management), and CE certification. Our safety footwear meets S3 SRC standards. We can pursue additional certifications per client requirements.',
+        ar: 'نمتلك شهادة ISO 9001:2015 (إدارة الجودة)، وISO 14001 (إدارة البيئة)، وشهادة CE. تلبي أحذية السلامة لدينا معايير S3 SRC. يمكننا الحصول على شهادات إضافية وفقاً لمتطلبات العميل.',
       },
     },
     {
@@ -113,18 +163,38 @@ const faqData: Record<FAQVariant, FAQItem[]> = {
         ar: 'ما هي طاقتك الإنتاجية الشهرية؟',
       },
       answer: {
-        en: 'Our factory produces 25,000+ pairs per month across all product lines, with room for expansion.',
-        ar: 'ينتج مصنعنا أكثر من 25,000 زوج شهرياً عبر جميع خطوط الإنتاج، مع مجال للتوسع.',
+        en: 'Our factory produces 25,000+ pairs per month across all product lines, with a daily capacity of approximately 900 pairs. We operate with 120+ skilled workers on modern production lines.',
+        ar: 'ينتج مصنعنا أكثر من 25,000 زوج شهرياً عبر جميع خطوط الإنتاج، بطاقة يومية تبلغ حوالي 900 زوج. نعمل بأكثر من 120 عاملاً مدرباً على خطوط إنتاج حديثة.',
       },
     },
     {
       question: {
-        en: 'How do you ensure quality?',
-        ar: 'كيف تضمنون الجودة؟',
+        en: 'How do you ensure quality during production?',
+        ar: 'كيف تضمنون الجودة أثناء الإنتاج؟',
       },
       answer: {
-        en: 'We have a multi-stage QC process: raw material inspection, in-line checks, and final inspection before packing.',
-        ar: 'لدينا عملية مراقبة جودة متعددة المراحل: فحص المواد الخام، وفحوصات على خط الإنتاج، والفحص النهائي قبل التعبئة.',
+        en: 'We implement a 7-stage quality control process: raw material inspection, cutting accuracy check, stitching quality monitoring, assembly verification, in-line inspection, final product assessment, and pre-shipment audit.',
+        ar: 'نطبق عملية مراقبة جودة من 7 مراحل: فحص المواد الخام، والتحقق من دقة القطع، ومراقبة جودة الغرز، والتحقق من التجميع، والفحص على خط الإنتاج، وتقييم المنتج النهائي، والتدقيق قبل الشحن.',
+      },
+    },
+    {
+      question: {
+        en: 'Which countries do you export to?',
+        ar: 'ما هي الدول التي تصدرون إليها؟',
+      },
+      answer: {
+        en: 'We export to 20+ countries across the Middle East, Europe, Africa, and Asia. Key markets include UAE, Saudi Arabia, Germany, UK, France, Libya, and China. We handle all export documentation and logistics.',
+        ar: 'نصدر إلى أكثر من 20 دولة في الشرق الأوسط وأوروبا وأفريقيا وآسيا. تشمل الأسواق الرئيسية الإمارات العربية المتحدة، المملكة العربية السعودية، ألمانيا، المملكة المتحدة، فرنسا، ليبيا، والصين. نتولى جميع الوثائق التصديرية والخدمات اللوجستية.',
+      },
+    },
+    {
+      question: {
+        en: 'Do you handle shipping and logistics?',
+        ar: 'هل تتولون الشحن والخدمات اللوجستية؟',
+      },
+      answer: {
+        en: 'Yes. We arrange FOB and CIF shipping from Alexandria and Cairo ports. We work with major freight forwarders for sea freight, and DHL/FedEx for express sample shipments. Full export documentation is provided.',
+        ar: 'نعم. ن arranging الشحن FOB وCIF من ميناء الإسكندرية والقاهرة. نعمل مع شركات الشحن الرئيسية للشحن البحري، وDHL/FedEx لشحن العينات السريعة. نقدم جميع وثائق التصدير الكاملة.',
       },
     },
   ],
@@ -132,7 +202,7 @@ const faqData: Record<FAQVariant, FAQItem[]> = {
 
 const variantTitles: Record<FAQVariant, { en: string; ar: string }> = {
   contact: { en: 'Frequently Asked Questions', ar: 'الأسئلة الشائعة' },
-  oem: { en: 'OEM Frequently Asked Questions', ar: 'أسئلة شائعة حول التصنيع' },
+  oem: { en: 'OEM Frequently Asked Questions', ar: 'أسئلة شائعة حول التصنيع بالوكالة' },
   manufacturing: { en: 'Manufacturing FAQs', ar: 'أسئلة شائعة حول التصنيع' },
 }
 

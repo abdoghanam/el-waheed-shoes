@@ -4,9 +4,11 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
+import { dictionaries } from '@/lib/dictionaries'
 import { siteImages } from '@/lib/images'
 
 export default function VideoSection({ lang }: { lang?: Locale }) {
+  const dict = dictionaries[lang || 'en']
   const isAr = (lang || 'en') === 'ar'
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -37,7 +39,7 @@ export default function VideoSection({ lang }: { lang?: Locale }) {
             <div className="relative aspect-video">
               <Image
                 src={siteImages.factory.overview}
-                alt="Factory tour preview"
+                alt={isAr ? 'جولة داخل المصنع' : 'Factory tour preview'}
                 fill
                 className="object-cover"
               />

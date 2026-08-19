@@ -5,12 +5,12 @@ import { type Locale } from '@/lib/i18n'
 import Image from 'next/image'
 
 const clientLogos = [
-  { src: '/images/clients/client-1.svg', name: 'GlobalStep' },
-  { src: '/images/clients/client-2.svg', name: 'EuroShoe' },
-  { src: '/images/clients/client-3.svg', name: 'SoleCraft' },
-  { src: '/images/clients/client-4.svg', name: 'FootWear Pro' },
-  { src: '/images/clients/client-5.svg', name: 'StepRight' },
-  { src: '/images/clients/client-6.svg', name: 'WalkEasy' },
+  { src: '/images/clients/client-1.svg', name: 'Al Rashid Trading' },
+  { src: '/images/clients/client-2.svg', name: 'Schuhhaus Müller' },
+  { src: '/images/clients/client-3.svg', name: 'StepUp Retail' },
+  { src: '/images/clients/client-4.svg', name: 'Gulf Footwear' },
+  { src: '/images/clients/client-5.svg', name: 'Shanghai Leather' },
+  { src: '/images/clients/client-6.svg', name: 'Calzature Roma' },
 ]
 
 export default function ClientLogos({ lang }: { lang?: Locale }) {

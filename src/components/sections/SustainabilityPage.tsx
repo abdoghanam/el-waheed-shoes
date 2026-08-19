@@ -8,8 +8,8 @@ const initiatives = [
   {
     titleEn: 'Eco-Friendly Materials',
     titleAr: 'مواد صديقة للبيئة',
-    descriptionEn: 'We use recycled rubber, water-based adhesives, and vegetable-tanned leather to reduce our environmental impact.',
-    descriptionAr: 'نستخدم المطاط المعاد تدويره والمواد اللاصقة المائية والجلد المُدبغ نباتياً لتقليل تأثيرنا البيئي.',
+    descriptionEn: 'We offer a diverse range of eco-friendly materials including recycled leather, recycled rubber, and natural fibers, carefully selected to meet international environmental standards while delivering premium quality.',
+    descriptionAr: 'لدينا خيارات متنوعة من المواد الصديقة للبيئة تشمل الجلد المعاد تدويره والمطاط المعاد تدويره والألياف الطبيعية، مختارة بعناية لتلبية المعايير البيئية الدولية مع تقديم جودة متميزة.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
@@ -19,8 +19,8 @@ const initiatives = [
   {
     titleEn: 'Waste Reduction',
     titleAr: 'تقليل النفايات',
-    descriptionEn: 'Advanced cutting techniques and material optimization reduce waste by up to 30% compared to industry standards.',
-    descriptionAr: 'تقنيات القطع المتقدمة وتحسين المواد تقلل النفايات بنسبة تصل إلى 30% مقارنة بمعايير الصناعة.',
+    descriptionEn: 'We achieve a 72% waste diversion rate from landfills through comprehensive recycling programs, advanced cutting optimization, and responsible material management across all production lines.',
+    descriptionAr: 'نحقق نسبة تحويل 72% من مخلفات الإنتاج من مكبات النفايات من خلال برامج إعادة التدوير وتقنيات القطع المتقدمة وإدارة المواد المسؤولة في جميع خطوط الإنتاج.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -30,8 +30,8 @@ const initiatives = [
   {
     titleEn: 'Energy Efficiency',
     titleAr: 'كفاءة الطاقة',
-    descriptionEn: 'Solar panels and energy-efficient machinery reduce our carbon footprint significantly.',
-    descriptionAr: 'ألواح الشمس والآلات الموفرة للطاقة تقلل بصمتنا الكربنية بشكل كبير.',
+    descriptionEn: 'A 450 kW solar panel system reduces electricity consumption by 40%, powering key manufacturing operations with clean, renewable energy year-round.',
+    descriptionAr: 'نظام طاقة شمسية 450 كيلوواط يوفر 40% من استهلاك الكهرباء في المصنع، مما يدعم العمليات الإنتاجية الأساسية بطاقة نظيفة ومتجددة على مدار العام.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
@@ -41,8 +41,8 @@ const initiatives = [
   {
     titleEn: 'Water Conservation',
     titleAr: 'الحفاظ على المياه',
-    descriptionEn: 'Closed-loop water systems in our dyeing process recycle and reuse water efficiently.',
-    descriptionAr: 'أنظمة المياه المغلقة في عملية الصبغ تعيد تدوير المياه بكفاءة.',
+    descriptionEn: 'Our advanced water treatment system recycles 85% of water used in dyeing and cleaning processes, significantly reducing freshwater consumption across the facility.',
+    descriptionAr: 'نظام معالجة مياه يعاد تدوير 85% من المياه المستخدمة في عمليات الصباغة والتنظيف، مما يقلل بشكل ملحوظ استهلاك المياه العذبة في المصنع.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a8.004 8.004 0 005.279-2.056c.514-.343.871-.933.871-1.58V10.5c0-1.525-1.5-2.5-2.5-2.5S13.149 8.975 13.149 10.5v6.864c0 .647-.357 1.237-.871 1.58A8.004 8.004 0 0112 21z" />
@@ -53,10 +53,10 @@ const initiatives = [
 ]
 
 const impactNumbers = [
-  { numberEn: '30%', numberAr: '٣٠٪', labelEn: 'Waste Reduction', labelAr: 'تقليل النفايات' },
-  { numberEn: '500+', numberAr: '+٥٠٠', labelEn: 'Solar Panels', labelAr: 'لوح شمسي' },
-  { numberEn: '40%', numberAr: '٤٠٪', labelEn: 'Water Recycled', labelAr: 'مياه معاد تدويرها' },
-  { numberEn: '15%', numberAr: '١٥٪', labelEn: 'CO₂ Reduction', labelAr: 'تقليل ثاني أكسيد الكربون' },
+  { numberEn: '72%', numberAr: '٧٢٪', labelEn: 'Waste Diversion', labelAr: 'تحويل النفايات' },
+  { numberEn: '450 kW', numberAr: '٤٥٠ كيلوواط', labelEn: 'Solar Capacity', labelAr: 'الطاقة الشمسية' },
+  { numberEn: '85%', numberAr: '٨٥٪', labelEn: 'Water Recycled', labelAr: 'مياه معاد تدويرها' },
+  { numberEn: '40%', numberAr: '٤٠٪', labelEn: 'Energy Saved', labelAr: 'طاقة موفرة' },
 ]
 
 export default function SustainabilityPage({ lang }: { lang: Locale }) {

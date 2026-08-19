@@ -41,7 +41,7 @@ export default function Hero({ lang }: { lang?: Locale }) {
           transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
         >
           <p className="label-tag mb-6">
-            {isAr ? 'أحذية مصرية فاخرة' : 'PREMIUM EGYPTIAN FOOTWEAR'}
+            {dict.heroExtra.tagline}
           </p>
         </motion.div>
 
@@ -51,7 +51,7 @@ export default function Hero({ lang }: { lang?: Locale }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
         >
-          {isAr ? dict.hero.headline : 'Crafting Excellence'}
+          {dict.heroExtra.headline}
         </motion.h1>
 
         <motion.p
@@ -60,9 +60,7 @@ export default function Hero({ lang }: { lang?: Locale }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
         >
-          {isAr
-            ? dict.hero.subheadline
-            : 'Since 2010 \u00A0|\u00A0 25,000+ Pairs/Month \u00A0|\u00A0 20+ Countries'}
+          {dict.heroExtra.stats}
         </motion.p>
 
         <motion.div
@@ -90,17 +88,17 @@ export default function Hero({ lang }: { lang?: Locale }) {
         >
           <span className="text-text-muted flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            {isAr ? 'جودة ISO 9001' : 'ISO 9001 Certified'}
+            {dict.heroExtra.iso}
           </span>
           <span className="w-1 h-1 rounded-full bg-text-dim" />
           <span className="text-text-muted flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            {isAr ? 'تصدير لأكثر من 20 دولة' : 'Exported to 20+ Countries'}
+            {dict.heroExtra.exported}
           </span>
           <span className="w-1 h-1 rounded-full bg-text-dim" />
           <span className="text-text-muted flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            {isAr ? 'أكثر من 15 عاماً خبرة' : '15+ Years Experience'}
+            {dict.heroExtra.experience}
           </span>
         </motion.div>
       </div>

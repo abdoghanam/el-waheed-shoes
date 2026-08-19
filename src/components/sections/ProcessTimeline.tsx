@@ -1,6 +1,7 @@
 'use client'
 
 import { type Locale } from '@/lib/i18n'
+import { dictionaries } from '@/lib/dictionaries'
 import { Section, SectionHeader } from '@/components/ui/Section'
 
 const steps = [
@@ -43,12 +44,13 @@ const steps = [
 ]
 
 export default function ProcessTimeline({ lang }: { lang?: Locale }) {
+  const dict = dictionaries[lang || 'en']
   const isAr = (lang || 'en') === 'ar'
 
   return (
     <Section>
       <SectionHeader
-        label={isAr ? 'عملية التصنيع' : 'MANUFACTURING PROCESS'}
+        label={dict.processLabel.label}
         title={isAr ? 'عملية التصنيع لدينا' : 'Our Manufacturing Process'}
         align="center"
       />

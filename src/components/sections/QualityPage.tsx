@@ -9,22 +9,22 @@ const certifications = [
   {
     icon: '/images/icons/iso-certified.svg',
     name: { en: 'ISO 9001:2015', ar: 'ISO 9001:2015' },
-    desc: { en: 'Quality Management System', ar: 'نظام إدارة الجودة' },
+    desc: { en: 'Quality Management System certified for consistent product excellence and continuous improvement', ar: 'نظام إدارة الجودة المعتمد لضمان التميز المستمر في المنتجات والتحسين المستمر' },
   },
   {
     icon: '/images/icons/quality-badge.svg',
     name: { en: 'CE Certified', ar: 'شهادة CE' },
-    desc: { en: 'European Conformity', ar: 'التوافق الأوروبي' },
+    desc: { en: 'European Conformity marking ensuring all products meet EU safety and performance standards', ar: 'علامة التوافق الأوروبي تضمن أن جميع المنتجات تلبي معايير السلامة والأداء في الاتحاد الأوروبي' },
   },
   {
     icon: '/images/icons/eco-friendly.svg',
     name: { en: 'ISO 14001', ar: 'ISO 14001' },
-    desc: { en: 'Environmental Management', ar: 'إدارة البيئة' },
+    desc: { en: 'Environmental Management System certified for sustainable and eco-conscious manufacturing', ar: 'نظام إدارة البيئة المعتمد للتصنيع المستدام والمسؤول بيئياً' },
   },
   {
     icon: '/images/icons/export-world.svg',
     name: { en: 'Global Export', ar: 'التصدير العالمي' },
-    desc: { en: 'Export to 20+ Countries', ar: 'تصدير لأكثر من 20 دولة' },
+    desc: { en: 'Trusted footwear manufacturer exporting to over 20 countries across Europe, Africa, and the Middle East', ar: 'شركة تصنيع أحذية موثوقة تصدر لأكثر من 20 دولة في أوروبا وأفريقيا والشرق الأوسط' },
   },
 ]
 
