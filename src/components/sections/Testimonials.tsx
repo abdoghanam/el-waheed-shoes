@@ -7,7 +7,7 @@ import { Section, SectionHeader } from '@/components/ui/Section'
 
 const testimonials = [
   {
-    quote: { en: 'We switched from a Chinese supplier two years ago and haven\'t looked back. The MOQ flexibility and consistent sizing across 12,000-pair orders is exactly what we needed for our Gulf retail expansion.', ar: '换了供应商两年了，没有后悔过。他们的最低起订量灵活性和12000双订单的尺码一致性，正是我们在海湾地区零售扩张所需要的。' },
+    quote: { en: 'We switched from a Chinese supplier two years ago and haven\'t looked back. The MOQ flexibility and consistent sizing across 12,000-pair orders is exactly what we needed for our Gulf retail expansion.', ar: 'انتقلنا من مورد صيني قبل عامين ولم نتمنّع قط. مرونة الحد الأدنى للطلب وثبات المقاسات عبر طلبات 12,000 زوج هو بالضبط ما احتجناه لتوسعنا في تجارة التجزئة الخليجية.' },
     name: { en: 'Khalid Al-Mansoori', ar: 'خالد المنصوري' },
     company: { en: 'Al Rashid Trading LLC', ar: 'شركة الراشد للتجارة' },
     country: { en: 'Dubai, UAE', ar: 'دبي، الإمارات' },
@@ -31,7 +31,7 @@ const testimonials = [
     country: { en: 'Riyadh, Saudi Arabia', ar: 'الرياض، السعودية' },
   },
   {
-    quote: { en: 'Communication is smooth despite the time-zone gap. They send detailed production updates with photos at every stage. The bonded-leather collection they developed for us outsold projections by 40% in our first year.', ar: 'التواصل سلس رغم فرق التوقيت. يرسلون تحديثات إنتاج مفصلة مع صور في كل مرحلة. مجموعة الجلد الم ilkome التي طوروها لنا تجاوزت التوقعات بنسبة 40% في عامنا الأول.' },
+    quote: { en: 'Communication is smooth despite the time-zone gap. They send detailed production updates with photos at every stage. The bonded-leather collection they developed for us outsold projections by 40% in our first year.', ar: 'التواصل سلس رغم فرق التوقيت. يرسلون تحديثات إنتاج مفصلة مع صور في كل مرحلة. مجموعة الجلد الصناعي التي طوروها لنا تجاوزت التوقعات بنسبة 40% في عامنا الأول.' },
     name: { en: 'Liu Jianwei', ar: 'ليو جيانوي' },
     company: { en: 'Shanghai Leather Corp', ar: 'شانغهاي للجلد' },
     country: { en: 'Shanghai, China', ar: 'شانغهاي، الصين' },
