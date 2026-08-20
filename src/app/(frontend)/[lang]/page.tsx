@@ -1,6 +1,15 @@
 import { type Locale, locales } from '@/lib/i18n'
-import dynamic from 'next/dynamic'
 import Hero from '@/components/sections/Hero'
+import ClientLogos from '@/components/sections/ClientLogos'
+import LiveStats from '@/components/sections/LiveStats'
+import VideoSection from '@/components/sections/VideoSection'
+import WhyChooseUs from '@/components/sections/WhyChooseUs'
+import ProductHighlights from '@/components/sections/ProductHighlights'
+import ProcessTimeline from '@/components/sections/ProcessTimeline'
+import ExportMap from '@/components/sections/ExportMap'
+import Testimonials from '@/components/sections/Testimonials'
+import Certifications from '@/components/sections/Certifications'
+import CTASection from '@/components/sections/CTASection'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { SectionErrorBoundary } from '@/components/ui/SectionErrorBoundary'
@@ -9,17 +18,6 @@ import {
   localBusinessSchema,
   websiteSchema,
 } from '@/lib/structuredData'
-
-const ClientLogos = dynamic(() => import('@/components/sections/ClientLogos'), { ssr: true })
-const LiveStats = dynamic(() => import('@/components/sections/LiveStats'), { ssr: true })
-const VideoSection = dynamic(() => import('@/components/sections/VideoSection'), { ssr: false })
-const WhyChooseUs = dynamic(() => import('@/components/sections/WhyChooseUs'), { ssr: true })
-const ProductHighlights = dynamic(() => import('@/components/sections/ProductHighlights'), { ssr: true })
-const ProcessTimeline = dynamic(() => import('@/components/sections/ProcessTimeline'), { ssr: false })
-const ExportMap = dynamic(() => import('@/components/sections/ExportMap'), { ssr: false })
-const Testimonials = dynamic(() => import('@/components/sections/Testimonials'), { ssr: true })
-const Certifications = dynamic(() => import('@/components/sections/Certifications'), { ssr: false })
-const CTASection = dynamic(() => import('@/components/sections/CTASection'), { ssr: false })
 
 export async function generateMetadata({
   params,
