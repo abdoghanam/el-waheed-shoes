@@ -22,7 +22,7 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
   response.headers.set(
     'Content-Security-Policy',
     "default-src 'self'; " +
-    "script-src 'self'; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
     "style-src 'self' 'unsafe-inline'; " +
     "img-src 'self' data: blob: https:; " +
     "font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; " +
