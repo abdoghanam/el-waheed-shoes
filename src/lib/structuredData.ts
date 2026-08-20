@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://elwaheedshoes.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://el-waheed-shoes.vercel.app'
 
 export function organizationSchema() {
   return {

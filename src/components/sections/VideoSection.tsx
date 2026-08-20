@@ -74,6 +74,7 @@ export default function VideoSection({ lang }: { lang?: Locale }) {
             >
               <button
                 className="absolute top-4 right-4 z-10 w-10 h-10 min-h-[44px] min-w-[44px] rounded-full glass flex items-center justify-center text-text-primary hover:text-accent transition-colors"
+                aria-label="Close"
                 onClick={() => setIsModalOpen(false)}
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

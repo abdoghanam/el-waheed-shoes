@@ -181,6 +181,7 @@ export default function TradeShowsPage({ lang }: { lang: Locale }) {
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 placeholder={isAr ? 'الاسم' : 'Your Name'}
+                aria-label={isAr ? 'الاسم' : 'Your Name'}
                 className="px-4 py-3 rounded-xl bg-transparent border border-border text-text-primary body-md focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all"
               />
               <input
@@ -190,6 +191,7 @@ export default function TradeShowsPage({ lang }: { lang: Locale }) {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 placeholder={isAr ? 'البريد الإلكتروني' : 'Email'}
+                aria-label={isAr ? 'البريد الإلكتروني' : 'Email'}
                 className="px-4 py-3 rounded-xl bg-transparent border border-border text-text-primary body-md focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all"
               />
             </div>
@@ -200,6 +202,7 @@ export default function TradeShowsPage({ lang }: { lang: Locale }) {
               value={form.company}
               onChange={(e) => setForm({ ...form, company: e.target.value })}
               placeholder={isAr ? 'الشركة' : 'Company'}
+              aria-label={isAr ? 'الشركة' : 'Company'}
               className="w-full px-4 py-3 rounded-xl bg-transparent border border-border text-text-primary body-md focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all"
             />
             <select
@@ -207,6 +210,7 @@ export default function TradeShowsPage({ lang }: { lang: Locale }) {
               required
               value={form.event}
               onChange={(e) => setForm({ ...form, event: e.target.value })}
+              aria-label={isAr ? 'اختر المعرض' : 'Select Event'}
               className="w-full px-4 py-3 rounded-xl bg-transparent border border-border text-text-muted body-md focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all appearance-none"
             >
               <option value="">{isAr ? 'اختر المعرض' : 'Select Event'}</option>
@@ -220,6 +224,7 @@ export default function TradeShowsPage({ lang }: { lang: Locale }) {
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               placeholder={isAr ? 'رسالتك' : 'Your Message'}
+              aria-label={isAr ? 'رسالتك' : 'Your Message'}
               rows={4}
               className="w-full px-4 py-3 rounded-xl bg-transparent border border-border text-text-primary body-md focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all resize-none"
             />

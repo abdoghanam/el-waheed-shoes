@@ -305,8 +305,8 @@ export function ProductDetailClient({
                       className="mt-4 rounded-lg border border-border p-4 space-y-3"
                     >
                       <p className="text-sm font-medium text-text-primary">{isAr ? 'طلب عينة' : 'Request a Sample'}</p>
-                      <input type="text" placeholder={isAr ? 'الاسم' : 'Name'} className="w-full rounded-lg border border-border bg-bg-elevated px-3 py-2 text-sm text-text-primary focus:border-gold focus:outline-none" />
-                      <input type="email" placeholder={isAr ? 'البريد الإلكتروني' : 'Email'} className="w-full rounded-lg border border-border bg-bg-elevated px-3 py-2 text-sm text-text-primary focus:border-gold focus:outline-none" />
+                      <input type="text" placeholder={isAr ? 'الاسم' : 'Name'} aria-label={isAr ? 'الاسم' : 'Name'} className="w-full rounded-lg border border-border bg-bg-elevated px-3 py-2 text-sm text-text-primary focus:border-gold focus:outline-none" />
+                      <input type="email" placeholder={isAr ? 'البريد الإلكتروني' : 'Email'} aria-label={isAr ? 'البريد الإلكتروني' : 'Email'} className="w-full rounded-lg border border-border bg-bg-elevated px-3 py-2 text-sm text-text-primary focus:border-gold focus:outline-none" />
                       <button
                         onClick={() => {
                           setSampleRequested(true)

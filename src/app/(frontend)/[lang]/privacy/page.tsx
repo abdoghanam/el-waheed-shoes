@@ -19,6 +19,12 @@ export async function generateMetadata({
       validLang === 'ar'
         ? 'سياسة الخصوصية لشركة الوحيد للاحذية'
         : 'Privacy Policy for EL WAHEED SHOES.',
+    alternates: {
+      languages: {
+        en: '/en/privacy',
+        ar: '/ar/privacy',
+      },
+    },
   }
 }
 

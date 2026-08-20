@@ -22,6 +22,7 @@ const pages = [
   '/careers',
   '/sustainability',
   '/trade-shows',
+  '/blog',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -54,6 +55,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           en: `${baseUrl}/en${page}`,
           ar: `${baseUrl}/ar${page}`,
+        },
+      },
+    })
+  }
+
+  const blogSlugs = [
+    'egyptian-footwear-export-growth-2026',
+    'quality-control-leather-footwear-production',
+    'sustainable-footwear-manufacturing-egypt',
+    'private-label-footwear-oem-guide',
+    'premium-leather-sourcing-guide',
+    'custom-shoe-design-process',
+  ]
+
+  for (const slug of blogSlugs) {
+    entries.push({
+      url: `${baseUrl}/en/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en/blog/${slug}`,
+          ar: `${baseUrl}/ar/blog/${slug}`,
+        },
+      },
+    })
+    entries.push({
+      url: `${baseUrl}/ar/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en/blog/${slug}`,
+          ar: `${baseUrl}/ar/blog/${slug}`,
         },
       },
     })

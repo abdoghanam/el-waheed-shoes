@@ -104,6 +104,7 @@ export default function Testimonials({ lang }: { lang?: Locale }) {
 
         <button
           onClick={prev}
+          aria-label="Previous testimonial"
           className="absolute top-1/2 -left-2 md:-left-12 -translate-y-1/2 w-10 h-10 min-h-[44px] min-w-[44px] rounded-full border border-border flex items-center justify-center text-text-muted hover:text-accent hover:border-accent/30 transition-colors"
         >
           <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -112,6 +113,7 @@ export default function Testimonials({ lang }: { lang?: Locale }) {
         </button>
         <button
           onClick={next}
+          aria-label="Next testimonial"
           className="absolute top-1/2 -right-2 md:-right-12 -translate-y-1/2 w-10 h-10 min-h-[44px] min-w-[44px] rounded-full border border-border flex items-center justify-center text-text-muted hover:text-accent hover:border-accent/30 transition-colors"
         >
           <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -125,6 +127,7 @@ export default function Testimonials({ lang }: { lang?: Locale }) {
           <button
             key={i}
             onClick={() => setPage(i)}
+            aria-label={`Go to slide ${i + 1}`}
             className={`h-2 rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center ${i === page ? 'w-6 bg-accent' : 'w-2 bg-border hover:bg-border-hover'}`}
           />
         ))}

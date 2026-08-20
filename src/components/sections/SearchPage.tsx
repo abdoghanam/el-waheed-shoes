@@ -137,6 +137,7 @@ export function SearchPage({ lang, query }: { lang: Locale; query: string }) {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={isAr ? 'ابحث...' : 'Search...'}
+              aria-label={isAr ? 'بحث' : 'Search'}
               autoFocus
               className="w-full rounded-xl bg-card border border-border pl-12 pr-4 py-4 heading-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-border-gold transition-colors"
             />

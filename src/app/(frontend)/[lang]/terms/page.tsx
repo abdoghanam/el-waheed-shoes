@@ -19,6 +19,12 @@ export async function generateMetadata({
       validLang === 'ar'
         ? 'شروط الخدمة لشركة الوحيد للاحذية'
         : 'Terms of Service for EL WAHEED SHOES.',
+    alternates: {
+      languages: {
+        en: '/en/terms',
+        ar: '/ar/terms',
+      },
+    },
   }
 }
 

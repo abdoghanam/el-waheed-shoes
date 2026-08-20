@@ -17,6 +17,12 @@ export async function generateMetadata({
       validLang === 'ar'
         ? 'ابحث في موقع الوحيد'
         : 'Search the EL WAHEED SHOES website.',
+    alternates: {
+      languages: {
+        en: '/en/search',
+        ar: '/ar/search',
+      },
+    },
   }
 }
 

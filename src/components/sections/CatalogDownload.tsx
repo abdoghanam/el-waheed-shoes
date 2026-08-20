@@ -105,6 +105,7 @@ export function CatalogDownload({ lang }: { lang: Locale }) {
                   <input
                     type="text"
                     placeholder={dict.catalog.form.name}
+                    aria-label={dict.catalog.form.name}
                     required
                     value={formData.name}
                     onChange={e => setFormData({...formData, name: e.target.value})}
@@ -113,6 +114,7 @@ export function CatalogDownload({ lang }: { lang: Locale }) {
                   <input
                     type="email"
                     placeholder={dict.catalog.form.email}
+                    aria-label={dict.catalog.form.email}
                     required
                     value={formData.email}
                     onChange={e => setFormData({...formData, email: e.target.value})}
@@ -122,6 +124,7 @@ export function CatalogDownload({ lang }: { lang: Locale }) {
                 <input
                   type="text"
                   placeholder={dict.catalog.form.company}
+                  aria-label={dict.catalog.form.company}
                   value={formData.company}
                   onChange={e => setFormData({...formData, company: e.target.value})}
                   className="w-full rounded-lg bg-bg-card border border-border px-4 py-3 text-sm text-text-primary placeholder-text-muted focus:border-gold focus:outline-none"

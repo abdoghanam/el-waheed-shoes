@@ -49,7 +49,7 @@ export function SizeGuide({ isOpen, onClose, selectedSize, gender = 'men' }: Siz
           >
             <div className="sticky top-0 z-10 flex items-center justify-between border-b border-gray-800 bg-gray-900/95 backdrop-blur-sm px-6 py-4">
               <h2 className="text-xl font-bold text-white">Size Guide</h2>
-              <button onClick={onClose} className="text-gray-400 hover:text-white transition-colors">
+              <button onClick={onClose} aria-label="Close" className="text-gray-400 hover:text-white transition-colors">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>

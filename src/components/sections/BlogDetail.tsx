@@ -308,6 +308,7 @@ export default function BlogDetail({
             <input
               type="email"
               placeholder={isAr ? 'بريدك الإلكتروني' : 'Your email address'}
+              aria-label={isAr ? 'البريد الإلكتروني' : 'Email'}
               className="flex-1 rounded-l-xl bg-card border border-border border-r-0 px-4 py-3 body-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-border-gold"
             />
             <button className="btn-primary rounded-l-none">

@@ -215,9 +215,9 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <input type="text" placeholder={dict.form.name} value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="rounded-lg border border-border bg-elevated px-4 py-3 text-sm text-primary focus:border-gold focus:outline-none" />
-                  <input type="email" placeholder={dict.form.email} value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="rounded-lg border border-border bg-elevated px-4 py-3 text-sm text-primary focus:border-gold focus:outline-none" />
-                  <input type="text" placeholder={dict.form.company} value={formData.company} onChange={e => setFormData({...formData, company: e.target.value})} className="rounded-lg border border-border bg-elevated px-4 py-3 text-sm text-primary focus:border-gold focus:outline-none" />
+                  <input type="text" placeholder={dict.form.name} aria-label={dict.form.name} value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="rounded-lg border border-border bg-elevated px-4 py-3 text-sm text-primary focus:border-gold focus:outline-none" />
+                  <input type="email" placeholder={dict.form.email} aria-label={dict.form.email} value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="rounded-lg border border-border bg-elevated px-4 py-3 text-sm text-primary focus:border-gold focus:outline-none" />
+                  <input type="text" placeholder={dict.form.company} aria-label={dict.form.company} value={formData.company} onChange={e => setFormData({...formData, company: e.target.value})} className="rounded-lg border border-border bg-elevated px-4 py-3 text-sm text-primary focus:border-gold focus:outline-none" />
                 </div>
               </motion.div>
             )}

@@ -50,6 +50,12 @@ export async function generateMetadata({
       validLang === 'ar'
         ? 'الأسئلة الشائعة عن شركة الوحيد للاحذية وخدماتنا'
         : 'Frequently asked questions about EL WAHEED SHOES and our services.',
+    alternates: {
+      languages: {
+        en: '/en/faq',
+        ar: '/ar/faq',
+      },
+    },
   }
 }
 
