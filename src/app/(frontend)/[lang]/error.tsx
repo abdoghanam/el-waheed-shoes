@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import * as Sentry from '@sentry/nextjs'
 
 const errorText = {
   en: {
@@ -31,7 +30,6 @@ export default function GlobalError({
   const t = errorText[lang]
 
   useEffect(() => {
-    Sentry.captureException(error)
     console.error('[GlobalError]', error.message, error.digest)
   }, [error])
 

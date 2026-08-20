@@ -1,5 +1,4 @@
 import { withPayload } from '@payloadcms/next/withPayload'
-import { withSentryConfig } from '@sentry/nextjs'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -20,19 +19,6 @@ const nextConfig = {
       },
     ],
   },
-  sentry: {
-    hideSourceMaps: true,
-    disableLogger: true,
-  },
 }
 
-export default withSentryConfig(withPayload(nextConfig), {
-  org: 'el-waheed-shoes',
-  project: 'javascript-nextjs',
-  silent: true,
-  widenClientFileUpload: true,
-  disableLogger: true,
-  tunnelRoute: '/api/sentry-tunnel',
-  disableServerWebpackPlugin: true,
-  disableClientWebpackPlugin: true,
-})
+export default withPayload(nextConfig)
