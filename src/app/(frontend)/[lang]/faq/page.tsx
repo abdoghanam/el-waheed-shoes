@@ -1,7 +1,7 @@
 import { type Locale, locales } from '@/lib/i18n'
 import { FAQPage } from '@/components/sections/FAQPage'
 import { JsonLd } from '@/components/ui/JsonLd'
-import { faqSchema } from '@/lib/structuredData'
+import { faqSchema, breadcrumbSchema } from '@/lib/structuredData'
 
 export const revalidate = 86400
 
@@ -64,7 +64,15 @@ export default async function Page({
 
   return (
     <>
-      <JsonLd data={faqSchema([...faqs])} />
+      <JsonLd
+        data={[
+          faqSchema([...faqs]),
+          breadcrumbSchema([
+            { name: validLang === 'ar' ? 'الرئيسية' : 'Home', url: `/${validLang}` },
+            { name: validLang === 'ar' ? 'الأسئلة الشائعة' : 'FAQ', url: `/${validLang}/faq` },
+          ]),
+        ]}
+      />
       <FAQPage lang={validLang} />
     </>
   )

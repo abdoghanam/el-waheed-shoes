@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
@@ -9,12 +10,36 @@ import { dictionaries } from '@/lib/dictionaries'
 export default function Footer({ lang }: { lang: Locale }) {
   const dict = dictionaries[lang]
   const isAr = lang === 'ar'
+  const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  async function handleNewsletter(e: React.FormEvent) {
+    e.preventDefault()
+    if (!email) return
+    setLoading(true)
+    try {
+      const csrfRes = await fetch('/api/csrf-token')
+      const { token } = await csrfRes.json()
+      await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-csrf-token': token },
+        body: JSON.stringify({ email }),
+      })
+      setSubscribed(true)
+      setEmail('')
+    } catch {
+      // silently fail
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <footer className="bg-bg-primary border-t border-border">
       <div className="section-narrow px-4 md:px-6 py-12 md:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
-          <div className="lg:col-span-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-6">
+          <div className="lg:col-span-3">
             <Image src={siteImages.logo.horizontal} alt="EL WAHEED SHOES" width={130} height={30} className="mb-6 h-7 w-auto" />
             <p className="body-sm max-w-xs mb-8">
               {dict.footer.tagline}
@@ -33,6 +58,36 @@ export default function Footer({ lang }: { lang: Locale }) {
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
               </a>
             </div>
+          </div>
+
+          <div className="lg:col-span-3">
+            <h3 className="text-[11px] font-semibold text-text-muted uppercase tracking-widest mb-4 md:mb-6">
+              {isAr ? 'النشرة البريدية' : 'Newsletter'}
+            </h3>
+            <p className="text-sm text-text-secondary mb-4">
+              {isAr ? 'اشترك للحصول على آخر أخبار المنتجات والعروض' : 'Subscribe for product updates and offers'}
+            </p>
+            {subscribed ? (
+              <p className="text-sm text-gold">{isAr ? 'تم الاشتراك بنجاح!' : 'Subscribed successfully!'}</p>
+            ) : (
+              <form onSubmit={handleNewsletter} className="flex flex-col gap-2">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={isAr ? 'بريدك الإلكتروني' : 'Your email'}
+                  required
+                  className="bg-white/[0.04] border border-border rounded-lg px-3 py-2 text-sm text-white placeholder:text-text-muted focus:outline-none focus:border-gold transition-colors"
+                />
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="bg-gold text-black text-sm font-semibold rounded-lg px-4 py-2 hover:bg-gold-light transition-colors disabled:opacity-50"
+                >
+                  {loading ? '...' : isAr ? 'اشترك' : 'Subscribe'}
+                </button>
+              </form>
+            )}
           </div>
 
           <div className="lg:col-span-2">
@@ -78,7 +133,7 @@ export default function Footer({ lang }: { lang: Locale }) {
             </ul>
           </div>
 
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-2">
             <h3 className="text-[11px] font-semibold text-text-muted uppercase tracking-widest mb-4 md:mb-6">
               {isAr ? 'تواصل معنا' : 'Contact'}
             </h3>

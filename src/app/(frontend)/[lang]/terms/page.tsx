@@ -1,5 +1,7 @@
 import { locales, type Locale } from '@/lib/i18n'
 import { TermsPage } from '@/components/sections/TermsPage'
+import { JsonLd } from '@/components/ui/JsonLd'
+import { breadcrumbSchema } from '@/lib/structuredData'
 
 export const revalidate = 86400
 
@@ -27,5 +29,16 @@ export default async function Page({
 }) {
   const { lang: rawLang } = await params
   const validLang = (locales.includes(rawLang as Locale) ? rawLang : 'en') as Locale
-  return <TermsPage lang={validLang} />
+
+  return (
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: validLang === 'ar' ? 'الرئيسية' : 'Home', url: `/${validLang}` },
+          { name: validLang === 'ar' ? 'الشروط' : 'Terms', url: `/${validLang}/terms` },
+        ])}
+      />
+      <TermsPage lang={validLang} />
+    </>
+  )
 }
