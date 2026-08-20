@@ -66,7 +66,7 @@ export function PricingTable({ lang }: { lang?: string }) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <span className="text-gold text-sm font-medium">{isAr ? 'الأسعار' : 'Pricing'}</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-black">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-primary">
             {isAr ? 'الحد الأدنى للطلب والأسعار' : 'MOQ & Pricing Tiers'}
           </h2>
           <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
@@ -84,8 +84,8 @@ export function PricingTable({ lang }: { lang?: string }) {
               transition={{ delay: i * 0.1 }}
               className={`relative flex flex-col rounded-xl border-2 p-6 transition-all ${
                 tier.featured
-                  ? 'border-gold bg-white shadow-lg'
-                  : 'border-gray-100 bg-white hover:border-gold/30 hover:shadow-md'
+                  ? 'border-gold bg-card shadow-lg'
+                  : 'border-border bg-card hover:border-gold/30 hover:shadow-md'
               }`}
             >
               {tier.featured && (
@@ -98,7 +98,7 @@ export function PricingTable({ lang }: { lang?: string }) {
               <p className="text-xs text-gray-400 mb-4">{isAr ? tier.tier : tier.tierAr}</p>
 
               <div className="mb-4">
-                <span className="text-3xl font-bold text-black">{tier.moq}</span>
+                <span className="text-3xl font-bold text-primary">{tier.moq}</span>
                 <span className="text-sm text-gray-500 ml-1">{isAr ? 'زوج كحد أدنى' : 'pairs min'}</span>
               </div>
 

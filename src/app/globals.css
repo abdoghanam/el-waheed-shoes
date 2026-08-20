@@ -89,6 +89,18 @@ body {
   }
 }
 
+/* === PRINT STYLES === */
+@media print {
+  body { background: white !important; color: black !important; }
+  header, footer, nav, .skip-to-content, [aria-hidden="true"],
+  .fixed, button:not(.print-visible), .no-print { display: none !important; }
+  a { color: black !important; text-decoration: underline !important; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666 !important; }
+  h1, h2, h3 { break-after: avoid; }
+  img { max-width: 100% !important; break-inside: avoid; }
+  main { padding: 0 !important; }
+}
+
 /* === SECTION PATTERN — Every section uses this === */
 @utility section-padding {
   padding: 6rem 1.5rem;

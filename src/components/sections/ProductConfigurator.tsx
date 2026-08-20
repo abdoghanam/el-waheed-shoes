@@ -62,11 +62,11 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
   }
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-secondary">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <span className="text-gold text-sm font-medium">{dict.title}</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-black">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-primary">
             {dict.subtitle}
           </h2>
         </div>
@@ -75,7 +75,7 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
           {[1, 2, 3].map((s) => (
             <div key={s} className="flex items-center gap-3">
               <div className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold transition-all ${
-                step === s ? 'bg-gold text-black' : step > s ? 'bg-gold/20 text-gold' : 'bg-gray-200 text-gray-500'
+                step === s ? 'bg-gold text-black' : step > s ? 'bg-gold/20 text-gold' : 'bg-elevated text-muted'
               }`}>
                 {step > s ? (
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -83,12 +83,12 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
                   </svg>
                 ) : s}
               </div>
-              {s < 3 && <div className={`w-12 h-0.5 ${step > s ? 'bg-gold' : 'bg-gray-200'}`} />}
+              {s < 3 && <div className={`w-12 h-0.5 ${step > s ? 'bg-gold' : 'bg-border'}`} />}
             </div>
           ))}
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-6 sm:p-8 min-h-[400px]">
+        <div className="rounded-xl border border-border bg-card p-6 sm:p-8 min-h-[400px]">
           <AnimatePresence mode="wait">
             {submitted ? (
               <motion.div
@@ -102,9 +102,9 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-black mb-2">{dict.success}</h3>
-                <p className="text-gray-500 mb-1">Reference: #CQ-{Math.random().toString(36).slice(2, 8).toUpperCase()}</p>
-                <p className="text-sm text-gray-400">{dict.successDesc}</p>
+                <h3 className="text-2xl font-bold text-primary mb-2">{dict.success}</h3>
+                <p className="text-secondary mb-1">Reference: #CQ-{Math.random().toString(36).slice(2, 8).toUpperCase()}</p>
+                <p className="text-sm text-muted">{dict.successDesc}</p>
               </motion.div>
             ) : step === 1 ? (
               <motion.div
@@ -113,7 +113,7 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
               >
-                <h3 className="text-lg font-bold text-black mb-6">{dict.step1}</h3>
+                <h3 className="text-lg font-bold text-primary mb-6">{dict.step1}</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {categoryKeys.map((key) => (
                     <button
@@ -122,13 +122,13 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
                       className={`flex flex-col items-center gap-3 rounded-xl border-2 p-6 transition-all ${
                         selectedCategory === key
                           ? 'border-gold bg-gold/5'
-                          : 'border-gray-100 hover:border-gold/30'
+                            : 'border-border hover:border-gold/30'
                       }`}
                     >
                       <svg className="h-10 w-10 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={categoryIcons[key]} />
                       </svg>
-                      <span className="font-medium text-black text-sm">{dict.categories[key as keyof typeof dict.categories]}</span>
+                      <span className="font-medium text-primary text-sm">{dict.categories[key as keyof typeof dict.categories]}</span>
                     </button>
                   ))}
                 </div>
@@ -142,7 +142,7 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
                 className="space-y-8"
               >
                 <div>
-                  <h3 className="text-lg font-bold text-black mb-4">{dict.material}</h3>
+                  <h3 className="text-lg font-bold text-primary mb-4">{dict.material}</h3>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     {materialKeys.map((key) => (
                       <button
@@ -151,18 +151,18 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
                         className={`flex items-center gap-3 rounded-lg border-2 p-3 transition-all ${
                           selectedMaterial === key
                             ? 'border-gold bg-gold/5'
-                            : 'border-gray-100 hover:border-gold/30'
+                          : 'border-border hover:border-gold/30'
                         }`}
                       >
                         <div className="h-8 w-8 rounded-full shrink-0" style={{ backgroundColor: materialColors[key] }} />
-                        <span className="text-sm font-medium text-black">{dict.materials[key as keyof typeof dict.materials]}</span>
+                        <span className="text-sm font-medium text-primary">{dict.materials[key as keyof typeof dict.materials]}</span>
                       </button>
                     ))}
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-black mb-4">{dict.color}</h3>
+                  <h3 className="text-lg font-bold text-primary mb-4">{dict.color}</h3>
                   <div className="flex flex-wrap gap-3">
                     {colorKeys.map((key) => (
                       <button
@@ -173,14 +173,14 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
                         <div className={`h-10 w-10 rounded-full transition-all ${
                           selectedColor === key ? 'ring-2 ring-gold ring-offset-2 scale-110' : 'hover:scale-110'
                         }`} style={{ backgroundColor: colorHex[key] }} />
-                        <span className="text-xs text-gray-500">{dict.colors[key as keyof typeof dict.colors]}</span>
+                        <span className="text-xs text-muted">{dict.colors[key as keyof typeof dict.colors]}</span>
                       </button>
                     ))}
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-black mb-4">{dict.soleType}</h3>
+                  <h3 className="text-lg font-bold text-primary mb-4">{dict.soleType}</h3>
                   <div className="flex gap-3">
                     {soleKeys.map((key) => (
                       <button
@@ -189,7 +189,7 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
                         className={`rounded-lg border-2 px-6 py-3 text-sm font-medium transition-all ${
                           selectedSole === key
                             ? 'border-gold bg-gold/5 text-gold'
-                            : 'border-gray-100 text-gray-600 hover:border-gold/30'
+                            : 'border-border text-secondary hover:border-gold/30'
                         }`}
                       >
                         {dict.soles[key as keyof typeof dict.soles]}
@@ -206,18 +206,18 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
                 exit={{ opacity: 0, x: 20 }}
                 className="space-y-6"
               >
-                <h3 className="text-lg font-bold text-black mb-4">{dict.step4}</h3>
-                <div className="rounded-lg bg-gray-50 p-4 space-y-2 text-sm">
-                  <div className="flex justify-between"><span className="text-gray-500">{dict.step1.split(':')[1]?.trim() || 'Category'}:</span><span className="font-medium text-black">{selectedCategory ? dict.categories[selectedCategory as keyof typeof dict.categories] : '—'}</span></div>
-                  <div className="flex justify-between"><span className="text-gray-500">{dict.material}:</span><span className="font-medium text-black">{selectedMaterial ? dict.materials[selectedMaterial as keyof typeof dict.materials] : '—'}</span></div>
-                  <div className="flex justify-between"><span className="text-gray-500">{dict.color}:</span><span className="font-medium text-black">{selectedColor ? dict.colors[selectedColor as keyof typeof dict.colors] : '—'}</span></div>
-                  <div className="flex justify-between"><span className="text-gray-500">{dict.soleType}:</span><span className="font-medium text-black">{selectedSole ? dict.soles[selectedSole as keyof typeof dict.soles] : '—'}</span></div>
+                <h3 className="text-lg font-bold text-primary mb-4">{dict.step4}</h3>
+                <div className="rounded-lg bg-elevated p-4 space-y-2 text-sm">
+                  <div className="flex justify-between"><span className="text-secondary">{dict.step1.split(':')[1]?.trim() || 'Category'}:</span><span className="font-medium text-primary">{selectedCategory ? dict.categories[selectedCategory as keyof typeof dict.categories] : '—'}</span></div>
+                  <div className="flex justify-between"><span className="text-secondary">{dict.material}:</span><span className="font-medium text-primary">{selectedMaterial ? dict.materials[selectedMaterial as keyof typeof dict.materials] : '—'}</span></div>
+                  <div className="flex justify-between"><span className="text-secondary">{dict.color}:</span><span className="font-medium text-primary">{selectedColor ? dict.colors[selectedColor as keyof typeof dict.colors] : '—'}</span></div>
+                  <div className="flex justify-between"><span className="text-secondary">{dict.soleType}:</span><span className="font-medium text-primary">{selectedSole ? dict.soles[selectedSole as keyof typeof dict.soles] : '—'}</span></div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <input type="text" placeholder={dict.form.name} value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="rounded-lg border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none" />
-                  <input type="email" placeholder={dict.form.email} value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="rounded-lg border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none" />
-                  <input type="text" placeholder={dict.form.company} value={formData.company} onChange={e => setFormData({...formData, company: e.target.value})} className="rounded-lg border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none" />
+                  <input type="text" placeholder={dict.form.name} value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="rounded-lg border border-border bg-elevated px-4 py-3 text-sm text-primary focus:border-gold focus:outline-none" />
+                  <input type="email" placeholder={dict.form.email} value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="rounded-lg border border-border bg-elevated px-4 py-3 text-sm text-primary focus:border-gold focus:outline-none" />
+                  <input type="text" placeholder={dict.form.company} value={formData.company} onChange={e => setFormData({...formData, company: e.target.value})} className="rounded-lg border border-border bg-elevated px-4 py-3 text-sm text-primary focus:border-gold focus:outline-none" />
                 </div>
               </motion.div>
             )}
@@ -229,7 +229,7 @@ export function ProductConfigurator({ lang }: { lang: Locale }) {
             <button
               onClick={handleBack}
               disabled={step === 1}
-              className="flex items-center gap-2 rounded-lg border border-gray-200 px-6 py-3 text-sm font-semibold text-gray-500 transition-all hover:border-gold/50 disabled:opacity-30"
+              className="flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-semibold text-secondary transition-all hover:border-gold/50 disabled:opacity-30"
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

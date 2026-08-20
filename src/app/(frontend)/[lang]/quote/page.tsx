@@ -3,6 +3,8 @@ import QuotePage from '@/components/sections/QuotePage'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { breadcrumbSchema } from '@/lib/structuredData'
 
+export const revalidate = 3600
+
 export async function generateMetadata({
   params,
 }: {

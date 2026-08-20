@@ -133,7 +133,7 @@ export function ProductDetailClient({
                   transition={{ duration: 0.6 }}
                   className="space-y-4"
                 >
-                  <div className="aspect-square rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden">
+                  <div className="aspect-square rounded-xl bg-bg-elevated flex items-center justify-center overflow-hidden">
                     <Image
                       src={galleryImages[activeImage]}
                       alt={productName}
@@ -148,8 +148,8 @@ export function ProductDetailClient({
                       <button
                         key={i}
                         onClick={() => setActiveImage(i)}
-                        className={`h-20 w-20 rounded-lg bg-gray-50 border-2 overflow-hidden transition-all ${
-                          activeImage === i ? 'border-gold' : 'border-transparent hover:border-gray-200'
+                        className={`h-20 w-20 rounded-lg bg-bg-elevated border-2 overflow-hidden transition-all ${
+                          activeImage === i ? 'border-gold' : 'border-transparent hover:border-border-hover'
                         }`}
                       >
                         <Image src={img} alt={`Product thumbnail ${i + 1}`} width={80} height={80} className="object-contain w-full h-full p-2" />
@@ -174,8 +174,8 @@ export function ProductDetailClient({
                     )}
                   </div>
 
-                  <h2 className="text-2xl font-bold text-black mb-4">{productName}</h2>
-                  <p className="text-gray-500 mb-6 leading-relaxed">
+                  <h2 className="text-2xl font-bold text-text-primary mb-4">{productName}</h2>
+                  <p className="text-text-muted mb-6 leading-relaxed">
                     {shortDescription ||
                       (isAr
                         ? `${productName} عالي الجودة مصنوع في مصنعنا الحديث في المحلة الكبرى، مصر. متاح للجملة وOEM والعلامة الخاصة.`
@@ -183,13 +183,13 @@ export function ProductDetailClient({
                   </p>
 
                   {materials.length > 0 && (
-                    <div className="rounded-lg bg-gray-50 border border-gray-100 p-4 mb-6">
-                      <h3 className="text-sm font-bold text-black mb-2">
+                    <div className="rounded-lg bg-bg-elevated border border-border p-4 mb-6">
+                      <h3 className="text-sm font-bold text-text-primary mb-2">
                         {isAr ? 'المواد' : 'Materials'}
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         {materials.map((mat) => (
-                          <span key={mat} className="rounded-full bg-white border border-gray-200 px-3 py-1 text-xs text-gray-600">
+                          <span key={mat} className="rounded-full bg-bg-card border border-border px-3 py-1 text-xs text-text-secondary">
                             {mat}
                           </span>
                         ))}
@@ -199,7 +199,7 @@ export function ProductDetailClient({
 
                   <div className="space-y-4 mb-8">
                     <div className="flex items-start gap-3">
-                      <span className="text-sm font-medium text-gray-700 w-24 shrink-0 pt-1">{dict.products.sizes}:</span>
+                      <span className="text-sm font-medium text-text-secondary w-24 shrink-0 pt-1">{dict.products.sizes}:</span>
                       <div className="flex flex-wrap gap-2 items-center">
                         {displaySizes.map((size) => (
                           <button
@@ -208,7 +208,7 @@ export function ProductDetailClient({
                             className={`h-10 min-w-[2.5rem] px-2 rounded-lg border text-sm font-medium transition-all ${
                               selectedSize === size
                                 ? 'border-gold bg-gold text-black'
-                                : 'border-gray-200 text-gray-600 hover:border-gold/50 hover:bg-gold/5'
+                                : 'border-border text-text-secondary hover:border-gold/50 hover:bg-gold/5'
                             }`}
                           >
                             {size}
@@ -224,7 +224,7 @@ export function ProductDetailClient({
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <span className="text-sm font-medium text-gray-700 w-24 shrink-0 pt-1">{dict.products.colors}:</span>
+                      <span className="text-sm font-medium text-text-secondary w-24 shrink-0 pt-1">{dict.products.colors}:</span>
                       <div className="flex gap-3">
                         {displayColors.map((color) => (
                           <button
@@ -238,7 +238,7 @@ export function ProductDetailClient({
                             style={{ backgroundColor: color.hex }}
                             title={color.name}
                           >
-                            <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                            <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-text-muted opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                               {color.name}
                             </span>
                           </button>
@@ -302,11 +302,11 @@ export function ProductDetailClient({
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
-                      className="mt-4 rounded-lg border border-gray-200 p-4 space-y-3"
+                      className="mt-4 rounded-lg border border-border p-4 space-y-3"
                     >
-                      <p className="text-sm font-medium text-black">{isAr ? 'طلب عينة' : 'Request a Sample'}</p>
-                      <input type="text" placeholder={isAr ? 'الاسم' : 'Name'} className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-gold focus:outline-none" />
-                      <input type="email" placeholder={isAr ? 'البريد الإلكتروني' : 'Email'} className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-gold focus:outline-none" />
+                      <p className="text-sm font-medium text-text-primary">{isAr ? 'طلب عينة' : 'Request a Sample'}</p>
+                      <input type="text" placeholder={isAr ? 'الاسم' : 'Name'} className="w-full rounded-lg border border-border bg-bg-elevated px-3 py-2 text-sm text-text-primary focus:border-gold focus:outline-none" />
+                      <input type="email" placeholder={isAr ? 'البريد الإلكتروني' : 'Email'} className="w-full rounded-lg border border-border bg-bg-elevated px-3 py-2 text-sm text-text-primary focus:border-gold focus:outline-none" />
                       <button
                         onClick={() => {
                           setSampleRequested(true)
@@ -320,7 +320,7 @@ export function ProductDetailClient({
                     </motion.div>
                   )}
 
-                  <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                  <div className="flex items-center gap-3 mt-6 pt-6 border-t border-border">
                     <span className="text-xs text-gray-400">{isAr ? 'مشاركة' : 'Share'}:</span>
                     {[
                       { name: 'LinkedIn', url: `https://www.linkedin.com/sharing/share-offsite/?url=${typeof window !== 'undefined' ? window.location.href : ''}` },
@@ -332,7 +332,7 @@ export function ProductDetailClient({
                         href={s.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-full bg-gray-100 px-3 py-1.5 text-xs text-gray-600 hover:bg-gold/10 hover:text-gold transition-all"
+                        className="rounded-full bg-bg-elevated px-3 py-1.5 text-xs text-text-secondary hover:bg-gold/10 hover:text-gold transition-all"
                       >
                         {s.name}
                       </a>
@@ -342,13 +342,13 @@ export function ProductDetailClient({
               </div>
 
               <div className="mt-20">
-                <h2 className="text-2xl font-bold text-black mb-8">{isAr ? 'منتجات ذات صلة' : 'Related Products'}</h2>
+                <h2 className="text-2xl font-bold text-text-primary mb-8">{isAr ? 'منتجات ذات صلة' : 'Related Products'}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                   {relatedProducts.map((rp) => (
                     <Link
                       key={rp.slug}
                       href={`/${lang}/products/${rp.slug}`}
-                      className="group rounded-xl bg-gray-50 border border-gray-100 p-6 text-center hover:border-gold/30 hover:shadow-md transition-all"
+                      className="group rounded-xl bg-bg-elevated border border-border p-6 text-center hover:border-gold/30 hover:shadow-md transition-all"
                     >
                       <div className="mx-auto mb-4 flex h-32 w-32 items-center justify-center">
                         <Image
@@ -359,7 +359,7 @@ export function ProductDetailClient({
                           className="object-contain transition-transform group-hover:scale-110"
                         />
                       </div>
-                      <h3 className="font-bold text-black mb-1">{rp.name}</h3>
+                      <h3 className="font-bold text-text-primary mb-1">{rp.name}</h3>
                       <span className="text-sm text-gold group-hover:gap-2 inline-flex items-center gap-1">
                         {dict.products.viewDetails}
                         <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -373,7 +373,7 @@ export function ProductDetailClient({
             </>
           ) : (
             <motion.div
-              className="rounded-xl bg-gray-50 border border-gray-100 p-16 text-center max-w-2xl mx-auto"
+              className="rounded-xl bg-bg-elevated border border-border p-16 text-center max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -383,10 +383,10 @@ export function ProductDetailClient({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-black mb-3">
+              <h2 className="text-2xl font-bold text-text-primary mb-3">
                 {isAr ? 'المنتج قادم قريباً' : 'Product Coming Soon'}
               </h2>
-              <p className="text-gray-500 mb-8 max-w-md mx-auto">
+              <p className="text-text-muted mb-8 max-w-md mx-auto">
                 {isAr
                   ? 'هذا المنتج قيد الإعداد. يرجى التواصل معنا للحصول على مزيد من المعلومات.'
                   : 'This product is being set up. Please contact us for more information.'}
@@ -394,7 +394,7 @@ export function ProductDetailClient({
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   href={`/${lang}/products`}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 px-6 py-3 text-sm font-semibold text-gray-600 hover:border-gold/50 transition-all"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-semibold text-text-secondary hover:border-gold/50 transition-all"
                 >
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

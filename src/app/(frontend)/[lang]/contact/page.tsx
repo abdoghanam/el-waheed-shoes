@@ -7,6 +7,8 @@ import {
   faqSchema,
 } from '@/lib/structuredData'
 
+export const revalidate = 3600
+
 const contactFaqsEn = [
   {
     question: 'How can I request a quote?',

@@ -1,6 +1,8 @@
 import { type Locale, locales } from '@/lib/i18n'
 import { SearchPage } from '@/components/sections/SearchPage'
 
+export const revalidate = 3600
+
 export async function generateMetadata({
   params,
 }: {
