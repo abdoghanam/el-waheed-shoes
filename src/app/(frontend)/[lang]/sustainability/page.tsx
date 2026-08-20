@@ -3,6 +3,8 @@ import SustainabilityPage from '@/components/sections/SustainabilityPage'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { breadcrumbSchema } from '@/lib/structuredData'
 
+export const revalidate = 86400
+
 export async function generateMetadata({
   params,
 }: {
