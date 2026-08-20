@@ -1,0 +1,21 @@
+{
+  "name": "EL WAHEED SHOES",
+  "short_name": "ELWAHEED",
+  "description": "Premium Egyptian Footwear Manufacturer",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#060606",
+  "theme_color": "#060606",
+  "icons": [
+    {
+      "src": "/images/logo/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

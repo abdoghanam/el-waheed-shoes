@@ -1,0 +1,3 @@
+Contact: mailto:security@elwaheedshoes.com
+Preferred-Languages: en, ar
+Policy: https://el-waheed-shoes.vercel.app/en/privacy

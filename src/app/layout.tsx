@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     icon: '/favicon.svg',
   },
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://elwaheedshoes.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://el-waheed-shoes.vercel.app'
   ),
   openGraph: {
     title: 'EL WAHEED SHOES',
@@ -37,6 +37,11 @@ export const metadata: Metadata = {
     locale: 'en_US',
     alternateLocale: 'ar_EG',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EL WAHEED SHOES',
+    description: 'Premium Egyptian footwear manufacturer since 2010',
+  },
   alternates: {
     languages: {
       en: '/en',
@@ -45,7 +50,6 @@ export const metadata: Metadata = {
   },
   other: {
     'theme-color': '#060606',
-    'og:image': '/og-image.png',
   },
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || '',
@@ -65,6 +69,7 @@ export default async function RootLayout({
     <html lang={locale} dir={dir} className={`${inter.variable} ${cairo.variable}`}>
       <head>
         <meta name="theme-color" content="#060606" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
