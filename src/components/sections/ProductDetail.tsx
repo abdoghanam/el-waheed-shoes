@@ -3,18 +3,7 @@ import { getProductImage } from '@/lib/images'
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { ProductDetailClient } from './ProductDetailClient'
-
-async function getProduct(slug: string) {
-  const payload = await getPayload({ config })
-  const products = await payload.find({
-    collection: 'products',
-    where: { slug: { equals: slug } },
-    limit: 1,
-    depth: 2,
-    locale: lang,
-  })
-  return products.docs[0] || null
-}
+import { getCatalogProduct } from '@/lib/productCatalog'
 
 export default async function ProductDetail({
   lang,
@@ -23,8 +12,49 @@ export default async function ProductDetail({
   lang: Locale
   slug: string
 }) {
-  const product = await getProduct(slug)
+  let payloadProduct = null
 
+  try {
+    const payload = await getPayload({ config })
+    const result = await payload.find({
+      collection: 'products',
+      where: { slug: { equals: slug } },
+      limit: 1,
+      depth: 2,
+    })
+    payloadProduct = result.docs[0] || null
+  } catch {
+    // Fall through to catalog
+  }
+
+  if (!payloadProduct) {
+    const catalogProduct = getCatalogProduct(slug)
+    if (catalogProduct) {
+      const isAr = lang === 'ar'
+      return (
+        <ProductDetailClient
+          lang={lang}
+          slug={slug}
+          productName={isAr ? catalogProduct.titleAr : catalogProduct.title}
+          shortDescription={isAr ? catalogProduct.shortDescriptionAr : catalogProduct.shortDescription}
+          materials={catalogProduct.materials}
+          sizes={catalogProduct.sizes}
+          colors={catalogProduct.colors}
+          featuredImageUrl={catalogProduct.image}
+          categorySlug={catalogProduct.category}
+          hasProduct={true}
+          features={isAr ? catalogProduct.featuresAr : catalogProduct.features}
+          certifications={catalogProduct.certifications}
+          moq={isAr ? catalogProduct.moqAr : catalogProduct.moq}
+          leadTime={isAr ? catalogProduct.leadTimeAr : catalogProduct.leadTime}
+          weight={isAr ? catalogProduct.weightAr : catalogProduct.weight}
+          usage={isAr ? catalogProduct.usageAr : catalogProduct.usage}
+        />
+      )
+    }
+  }
+
+  const product = payloadProduct
   const productName = product?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
   const shortDesc = product?.shortDescription || ''
   const productMaterials = (product?.materials || []).map((m: Record<string, unknown>) => (m as { material: string }).material)

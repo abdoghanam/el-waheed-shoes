@@ -3,7 +3,8 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { breadcrumbSchema } from '@/lib/structuredData'
-import { ProductsPageClient, type ProductDoc } from '@/components/sections/ProductsPage'
+import { productCatalog, type ProductCatalogItem } from '@/lib/productCatalog'
+import { ProductsPageClient } from '@/components/sections/ProductsPage'
 
 export const revalidate = 3600
 
@@ -38,15 +39,15 @@ export default async function Products({
   const { lang } = await params
   const validLang = (locales.includes(lang as Locale) ? lang : 'en') as Locale
 
-  let products: ProductDoc[] = []
+  const products: ProductCatalogItem[] = [...productCatalog]
+
   try {
     const payload = await getPayload({ config })
-    const result = await payload.find({
+    await payload.find({
       collection: 'products',
       depth: 2,
       limit: 100,
     })
-    products = result.docs as ProductDoc[]
   } catch {
     // Database may not be ready during initial deployment
   }
