@@ -33,4 +33,6 @@ export default withSentryConfig(withPayload(nextConfig), {
   widenClientFileUpload: true,
   disableLogger: true,
   tunnelRoute: '/api/sentry-tunnel',
+  disableServerWebpackPlugin: true,
+  disableClientWebpackPlugin: true,
 })
