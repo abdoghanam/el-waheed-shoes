@@ -5,7 +5,6 @@ if (!_csrfSecret) {
   throw new Error('CSRF_SECRET or PAYLOAD_SECRET environment variable must be set')
 }
 const CSRF_SECRET: string = _csrfSecret
-const CSRF_COOKIE = '_csrf'
 const CSRF_HEADER = 'x-csrf-token'
 const TOKEN_TTL_MS = 60 * 60 * 1000
 

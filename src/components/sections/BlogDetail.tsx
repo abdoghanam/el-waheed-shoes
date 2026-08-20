@@ -1,10 +1,9 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
-import { dictionaries } from '@/lib/dictionaries'
 import { siteImages } from '@/lib/images'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Section, SectionHeader, SectionGrid } from '@/components/ui/Section'
@@ -169,13 +168,11 @@ export default function BlogDetail({
   slug: string
 }) {
   const [copied, setCopied] = useState(false)
-  const dict = dictionaries[lang]
   const isAr = lang === 'ar'
   const post = blogPosts.find((p) => p.slug === slug)
   const related = blogPosts.filter((p) => p.slug !== slug).slice(0, 3)
 
   const title = post?.title[lang] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
-  const category = post?.category ?? 'manufacturing'
   const categoryLabel = post?.categoryLabel[lang] ?? 'Manufacturing'
   const date = post?.date ?? '2026-08-10'
 

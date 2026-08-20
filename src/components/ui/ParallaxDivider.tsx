@@ -19,7 +19,7 @@ const heightMap: Record<ParallaxHeight, string> = {
 }
 
 export default function ParallaxDivider({
-  image,
+  image: _image,
   height = 'md',
   overlay = 0.6,
   children,

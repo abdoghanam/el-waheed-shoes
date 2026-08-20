@@ -10,8 +10,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string; slug: string }>
 }) {
-  const { lang, slug } = await params
-  const validLang = (locales.includes(lang as Locale) ? lang : 'en') as Locale
+  const { slug } = await params
   const title = slug
     .replace(/-/g, ' ')
     .replace(/\b\w/g, (c) => c.toUpperCase())

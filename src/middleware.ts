@@ -3,12 +3,12 @@ import { locales, defaultLocale } from '@/lib/i18n'
 
 const PUBLIC_FILE = /\.(.*)$/
 
-function getLocaleFromHeaders(request: NextRequest): string {
+function getLocaleFromHeaders(request: NextRequest): typeof defaultLocale {
   const acceptLanguage = request.headers.get('accept-language')
   if (!acceptLanguage) return defaultLocale
 
   const preferred = acceptLanguage.split(',')[0].split('-')[0]
-  return locales.includes(preferred as any) ? preferred : defaultLocale
+  return (locales as readonly string[]).includes(preferred) ? preferred as typeof defaultLocale : defaultLocale
 }
 
 function addSecurityHeaders(response: NextResponse): NextResponse {

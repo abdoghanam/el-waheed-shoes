@@ -9,7 +9,6 @@ import { siteImages } from '@/lib/images'
 
 export default function Hero({ lang }: { lang?: Locale }) {
   const dict = dictionaries[lang || 'en']
-  const isAr = (lang || 'en') === 'ar'
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">

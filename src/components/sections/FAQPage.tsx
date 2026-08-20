@@ -3,7 +3,6 @@
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { type Locale } from '@/lib/i18n'
-import { dictionaries } from '@/lib/dictionaries'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Section, SectionHeader } from '@/components/ui/Section'
 
@@ -220,7 +219,6 @@ const categoryOrder: FAQCategory[] = ['general', 'products', 'manufacturing', 's
 export function FAQPage({ lang }: { lang: Locale }) {
   const [activeCategory, setActiveCategory] = useState<FAQCategory>('general')
   const [openIndex, setOpenIndex] = useState<number | null>(null)
-  const dict = dictionaries[lang]
   const isAr = lang === 'ar'
 
   const filteredItems = useMemo(() => {

@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState, useEffect, useCallback } from 'react'
-import { motion, useMotionValue, useTransform, animate } from 'motion/react'
+import { motion, useMotionValue, animate } from 'motion/react'
 import { type Locale } from '@/lib/i18n'
 import { siteImages } from '@/lib/images'
 import Image from 'next/image'
@@ -21,7 +21,7 @@ export default function HorizontalGallery({ lang }: { lang: Locale }) {
   const isAr = lang === 'ar'
   const containerRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
-  const [isDragging, setIsDragging] = useState(false)
+  const [, setIsDragging] = useState(false)
   const x = useMotionValue(0)
 
   const scrollTo = useCallback((index: number) => {

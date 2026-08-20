@@ -52,7 +52,7 @@ export default function WhyChooseUs({ lang }: { lang: Locale }) {
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {features.map((feature, i) => (
+        {features.map((feature) => (
           <div
             key={feature.key}
             className="card text-center"

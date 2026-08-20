@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'motion/react'
+import { motion } from 'motion/react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
@@ -19,7 +19,7 @@ export function ProductsGrid({ products, lang }: { products: ProductDoc[]; lang:
   const isAr = lang === 'ar'
   const [sortBy, setSortBy] = useState('newest')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
-  const [quickView, setQuickView] = useState<ProductDoc | null>(null)
+  const [, setQuickView] = useState<ProductDoc | null>(null)
 
   const getMediaUrl = (img: number | Media | null | undefined): string => {
     if (!img || typeof img === 'number') return getProductImage('casual-shoes')

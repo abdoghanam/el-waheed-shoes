@@ -4,11 +4,9 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
-import { dictionaries } from '@/lib/dictionaries'
 import { siteImages } from '@/lib/images'
 
 export default function VideoSection({ lang }: { lang?: Locale }) {
-  const dict = dictionaries[lang || 'en']
   const isAr = (lang || 'en') === 'ar'
   const [isModalOpen, setIsModalOpen] = useState(false)
 

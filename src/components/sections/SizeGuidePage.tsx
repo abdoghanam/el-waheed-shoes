@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { type Locale } from '@/lib/i18n'
-import { dictionaries } from '@/lib/dictionaries'
 import { Section, SectionHeader } from '@/components/ui/Section'
 
 const sizeData = [
@@ -23,7 +22,6 @@ const sizeData = [
 ]
 
 export default function SizeGuidePage({ lang }: { lang: Locale }) {
-  const dict = dictionaries[lang]
   const isAr = lang === 'ar'
   const [activeGender, setActiveGender] = useState<'men' | 'women'>('men')
 

@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { type Locale } from '@/lib/i18n'
 import Image from 'next/image'
 

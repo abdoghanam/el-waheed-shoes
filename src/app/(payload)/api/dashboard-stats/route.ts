@@ -54,17 +54,17 @@ export async function GET(request: NextRequest) {
         categories: categoriesRes.totalDocs,
         users: usersRes.totalDocs,
       },
-      recentProducts: recentProducts.docs.map((doc: any) => ({
+      recentProducts: recentProducts.docs.map((doc: Record<string, unknown>) => ({
         id: doc.id,
         title: doc.title || 'Untitled',
         date: doc.createdAt,
       })),
-      recentPosts: recentPosts.docs.map((doc: any) => ({
+      recentPosts: recentPosts.docs.map((doc: Record<string, unknown>) => ({
         id: doc.id,
         title: doc.title || 'Untitled',
         date: doc.publishedAt || doc.createdAt,
       })),
-      recentInquiries: recentInquiries.docs.map((doc: any) => ({
+      recentInquiries: recentInquiries.docs.map((doc: Record<string, unknown>) => ({
         id: doc.id,
         title: doc.companyName || doc.contactPerson || 'Unknown',
         date: doc.createdAt,

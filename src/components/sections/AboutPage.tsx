@@ -14,7 +14,6 @@ const timeline = [
 
 export default function AboutPage({ lang }: { lang: Locale }) {
   const dict = dictionaries[lang]
-  const isAr = lang === 'ar'
 
   return (
     <>
@@ -59,7 +58,7 @@ export default function AboutPage({ lang }: { lang: Locale }) {
         <div className="relative max-w-2xl mx-auto">
           <div className="absolute left-6 top-0 bottom-0 w-px bg-border" />
           <div className="space-y-12">
-            {timeline.map((item, i) => (
+            {timeline.map((item) => (
               <div key={item.year} className="relative flex items-start gap-8">
                 <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-card border border-border">
                   <span className="heading-sm text-accent">{item.year}</span>

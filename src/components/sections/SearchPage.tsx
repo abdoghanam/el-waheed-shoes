@@ -3,7 +3,6 @@
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import { type Locale } from '@/lib/i18n'
-import { dictionaries } from '@/lib/dictionaries'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Section, SectionHeader } from '@/components/ui/Section'
 
@@ -75,7 +74,6 @@ const pages = [
 
 export function SearchPage({ lang, query }: { lang: Locale; query: string }) {
   const [searchQuery, setSearchQuery] = useState(query)
-  const dict = dictionaries[lang]
   const isAr = lang === 'ar'
 
   const results = useMemo(() => {

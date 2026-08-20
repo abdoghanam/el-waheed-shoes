@@ -4,6 +4,7 @@ import config from '@payload-config'
 import { rateLimit, getClientIp, RATE_LIMITS } from '@/lib/rate-limit'
 import { sanitize, validateQuoteForm } from '@/lib/validate'
 import { validateCsrfToken } from '@/lib/csrf'
+import { sendEmail, buildQuoteNotificationEmail } from '@/lib/email'
 
 export async function POST(request: NextRequest) {
   const ip = getClientIp(request)
@@ -64,6 +65,19 @@ export async function POST(request: NextRequest) {
         priority: 'high',
       },
       overrideAccess: true,
+    })
+
+    await sendEmail({
+      to: process.env.ADMIN_EMAIL || 'admin@elwaheedshoes.com',
+      subject: `[Quote Request] ${sanitized.companyName} — ${sanitized.contactPerson}`,
+      html: buildQuoteNotificationEmail({
+        companyName: String(sanitized.companyName),
+        country: String(sanitized.country),
+        contactPerson: String(sanitized.contactPerson),
+        email: String(sanitized.email),
+        phone: String(sanitized.phone || ''),
+        message: String(sanitized.message),
+      }),
     })
   } catch (error) {
     console.error('Failed to create quote inquiry:', error)

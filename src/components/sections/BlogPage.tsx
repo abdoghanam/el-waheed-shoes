@@ -1,11 +1,10 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
-import { dictionaries } from '@/lib/dictionaries'
 import { siteImages } from '@/lib/images'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Section, SectionHeader, SectionGrid } from '@/components/ui/Section'
@@ -102,7 +101,6 @@ function BlogThumbnailSVG({ index }: { index: number }) {
 
 export default function BlogPage({ lang }: { lang?: Locale }) {
   const resolvedLang = lang ?? 'en'
-  const dict = dictionaries[resolvedLang]
   const searchParams = useSearchParams()
   const router = useRouter()
   const pathname = usePathname()
@@ -135,13 +133,6 @@ export default function BlogPage({ lang }: { lang?: Locale }) {
     }
     if (key === 'category') params.delete('page')
     router.push(`${pathname}?${params.toString()}`, { scroll: false })
-  }
-
-  function getReadingTimeEstimate(post: typeof blogPosts[0]): number {
-    const excerptWords = post.excerpt.en.split(/\s+/).length
-    const titleWords = post.title.en.split(/\s+/).length
-    const estWords = (excerptWords + titleWords) * 12
-    return Math.max(1, Math.round(estWords / 200))
   }
 
   const formatDate = (dateStr: string) => {

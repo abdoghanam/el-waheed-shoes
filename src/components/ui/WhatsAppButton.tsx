@@ -2,9 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { usePathname } from 'next/navigation'
 import { type Locale } from '@/lib/i18n'
-import { dictionaries } from '@/lib/dictionaries'
 
 const templates = [
   { key: 'general', en: 'Hello! I am interested in your footwear products.', ar: 'مرحباً! أنا مهتم بمنتجات الأحذية الخاصة بكم.' },
@@ -12,27 +10,14 @@ const templates = [
   { key: 'oem', en: 'Hello! I am interested in OEM/private label manufacturing.', ar: 'مرحباً! أنا مهتم بالتصنيع بالوكالة/العلامة التجارية الخاصة.' },
 ]
 
-function getTemplateFromPath(pathname: string) {
-  if (pathname.includes('oem')) return 'oem'
-  if (pathname.includes('products')) return 'product'
-  return 'general'
-}
-
 export default function WhatsAppButton({ lang }: { lang?: Locale }) {
-  const dict = dictionaries[lang || 'en']
   const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '201114093000'
   const isRTL = lang === 'ar'
   const isAr = isRTL
-  const pathname = usePathname()
   const [showTooltip, setShowTooltip] = useState(false)
   const [showTemplates, setShowTemplates] = useState(false)
   const [visible, setVisible] = useState(false)
   const [messageCount] = useState(3)
-
-  const templateKey = getTemplateFromPath(pathname)
-  const template = templates.find((t) => t.key === templateKey) || templates[0]
-  const message = encodeURIComponent(isRTL ? template.ar : template.en)
-  const url = `https://wa.me/${number}?text=${message}`
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 2000)

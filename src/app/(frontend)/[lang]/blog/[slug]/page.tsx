@@ -1,5 +1,5 @@
 import { type Locale, locales } from '@/lib/i18n'
-import { dictionaries } from '@/lib/dictionaries'
+
 import BlogDetail from '@/components/sections/BlogDetail'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { blogPostSchema, breadcrumbSchema } from '@/lib/structuredData'
@@ -11,8 +11,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string; slug: string }>
 }) {
-  const { lang, slug } = await params
-  const validLang = (locales.includes(lang as Locale) ? lang : 'en') as Locale
+  const { slug } = await params
   const title = slug
     .replace(/-/g, ' ')
     .replace(/\b\w/g, (c) => c.toUpperCase())

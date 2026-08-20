@@ -1,5 +1,4 @@
 import { type Locale } from '@/lib/i18n'
-import { dictionaries } from '@/lib/dictionaries'
 import { getProductImage } from '@/lib/images'
 import { getPayload } from 'payload'
 import config from '@payload-config'
@@ -23,14 +22,13 @@ export default async function ProductDetail({
   lang: Locale
   slug: string
 }) {
-  const dict = dictionaries[lang]
   const product = await getProduct(slug)
 
   const productName = product?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
   const shortDesc = product?.shortDescription || ''
-  const productMaterials = (product?.materials || []).map((m: any) => m.material)
-  const productSizes = (product?.availableSizes || []).map((s: any) => s.size)
-  const productColors = (product?.availableColors || []).map((c: any) => ({ name: c.name, hex: c.hex }))
+  const productMaterials = (product?.materials || []).map((m: Record<string, unknown>) => (m as { material: string }).material)
+  const productSizes = (product?.availableSizes || []).map((s: Record<string, unknown>) => (s as { size: string }).size)
+  const productColors = (product?.availableColors || []).map((c: Record<string, unknown>) => ({ name: (c as { name: string }).name, hex: (c as { hex: string }).hex }))
   const featuredImageUrl = product?.featuredImage && typeof product.featuredImage !== 'number'
     ? product.featuredImage.url || getProductImage(slug)
     : getProductImage(slug)
