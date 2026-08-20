@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Cairo } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { cookies } from 'next/headers'
 import './globals.css'
 import AdminAccessButton from '@/components/admin/AdminAccessButton'
@@ -7,12 +7,6 @@ import AdminAccessButton from '@/components/admin/AdminAccessButton'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-  display: 'swap',
-})
-
-const cairo = Cairo({
-  subsets: ['latin', 'arabic'],
-  variable: '--font-cairo',
   display: 'swap',
 })
 
@@ -75,12 +69,21 @@ export default async function RootLayout({
   const dir = locale === 'ar' ? 'rtl' : 'ltr'
 
   return (
-    <html lang={locale} dir={dir} className={`${inter.variable} ${cairo.variable}`}>
+    <html lang={locale} dir={dir} className={inter.variable}>
       <head>
         <meta name="theme-color" content="#060606" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {locale === 'ar' && (
+          <>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            {/* eslint-disable-next-line @next/next/no-page-custom-font -- App Router layout, not _document */}
+            <link
+              href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap"
+              rel="stylesheet"
+            />
+          </>
+        )}
       </head>
       <body className="antialiased overflow-x-hidden">
         <a href="#main-content" className="skip-to-content">Skip to main content</a>
