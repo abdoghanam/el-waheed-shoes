@@ -335,7 +335,7 @@ export default function BlogDetail({
             >
               <div className="aspect-video mb-4 overflow-hidden rounded-lg">
                 <div className="relative w-full h-full">
-                  <Image src={siteImages.blog.quality} alt="" fill className="object-cover" />
+                  <Image src={siteImages.blog.quality} alt="Blog article image" fill className="object-cover" />
                 </div>
               </div>
               <span className="label-tag block mb-2">

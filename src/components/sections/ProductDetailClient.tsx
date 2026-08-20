@@ -152,7 +152,7 @@ export function ProductDetailClient({
                           activeImage === i ? 'border-gold' : 'border-transparent hover:border-gray-200'
                         }`}
                       >
-                        <Image src={img} alt="" width={80} height={80} className="object-contain w-full h-full p-2" />
+                        <Image src={img} alt={`Product thumbnail ${i + 1}`} width={80} height={80} className="object-contain w-full h-full p-2" />
                       </button>
                     ))}
                   </div>

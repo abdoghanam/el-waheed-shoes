@@ -86,7 +86,7 @@ const categories = [
 function BlogSVG() {
   return (
     <div className="relative w-full h-full">
-      <Image src={siteImages.blog.manufacturing} alt="" fill className="object-cover" />
+      <Image src={siteImages.blog.manufacturing} alt="Blog manufacturing article" fill className="object-cover" />
     </div>
   )
 }
@@ -95,7 +95,7 @@ function BlogThumbnailSVG({ index }: { index: number }) {
   const images = [siteImages.blog.leather, siteImages.blog.quality, siteImages.blog.export]
   return (
     <div className="relative w-full h-full">
-      <Image src={images[index % images.length]} alt="" fill className="object-cover" />
+      <Image src={images[index % images.length]} alt="Blog thumbnail" fill className="object-cover" />
     </div>
   )
 }

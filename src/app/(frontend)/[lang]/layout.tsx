@@ -10,6 +10,7 @@ import { PageTransition } from '@/components/ui/PageTransition'
 import { GoogleAnalytics } from '@/components/ui/GoogleAnalytics'
 import PerformanceHints from '@/components/ui/PerformanceHints'
 import { QuoteProvider } from '@/lib/QuoteContext'
+import { WebVitals } from '@/components/ui/WebVitals'
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }))
@@ -50,6 +51,7 @@ export default async function LangLayout({
   return (
     <div lang={lang} dir={dir} className="scroll-smooth">
       <QuoteProvider>
+        <WebVitals />
         <GoogleAnalytics />
         <Header lang={lang} />
         <main id="main-content" className="min-h-screen">
