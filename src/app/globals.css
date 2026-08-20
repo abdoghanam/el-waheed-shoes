@@ -273,8 +273,41 @@ body {
   color: var(--color-gold);
 }
 
+@utility bg-accent {
+  background-color: var(--color-gold);
+}
+
 @utility border-accent {
   border-color: var(--color-border-gold);
+}
+
+/* === COLOR ALIASES — Support both bare and prefixed names === */
+@utility bg-card {
+  background-color: var(--color-bg-card);
+}
+
+@utility bg-elevated {
+  background-color: var(--color-bg-elevated);
+}
+
+@utility bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+
+@utility text-primary {
+  color: var(--color-text-primary);
+}
+
+@utility text-secondary {
+  color: var(--color-text-secondary);
+}
+
+@utility text-muted {
+  color: var(--color-text-muted);
+}
+
+@utility text-dim {
+  color: var(--color-text-dim);
 }
 
 /* === MODAL === */

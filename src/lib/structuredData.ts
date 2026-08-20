@@ -33,7 +33,7 @@ export function localBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'EL WAHEED SHOES Factory',
-    image: `${SITE_URL}/og-image.png`,
+    image: `${SITE_URL}/og-image.svg`,
     url: SITE_URL,
     telephone: '+20-111-409-3000',
     address: {
