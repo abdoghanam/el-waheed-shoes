@@ -9,14 +9,16 @@ interface RateLimitResult {
   resetMs: number
 }
 
-async function upstashRateLimit(
+export async function rateLimit(
   key: string,
   config: RateLimitConfig,
 ): Promise<RateLimitResult> {
   const url = process.env.UPSTASH_REDIS_REST_URL
   const token = process.env.UPSTASH_REDIS_REST_TOKEN
 
-  if (!url || !token) return fallbackRateLimit(key, config)
+  if (!url || !token) {
+    return { allowed: true, remaining: config.max, resetMs: config.windowMs }
+  }
 
   const windowKey = `${key}:${Math.floor(Date.now() / config.windowMs)}`
   const redisKey = `rl:${windowKey}`
@@ -34,7 +36,9 @@ async function upstashRateLimit(
     ]),
   })
 
-  if (!res.ok) return fallbackRateLimit(key, config)
+  if (!res.ok) {
+    return { allowed: true, remaining: config.max, resetMs: config.windowMs }
+  }
 
   const data = await res.json()
   const count = data[0]?.result ?? 1
@@ -45,43 +49,6 @@ async function upstashRateLimit(
     remaining: Math.max(0, config.max - count),
     resetMs: ttl > 0 ? ttl : config.windowMs,
   }
-}
-
-const memStore = new Map<string, { count: number; resetTime: number }>()
-let lastCleanup = Date.now()
-
-function cleanup() {
-  const now = Date.now()
-  if (now - lastCleanup < 60_000) return
-  lastCleanup = now
-  for (const [k, v] of memStore) {
-    if (now > v.resetTime) memStore.delete(k)
-  }
-}
-
-function fallbackRateLimit(key: string, config: RateLimitConfig): RateLimitResult {
-  cleanup()
-  const now = Date.now()
-  const entry = memStore.get(key)
-
-  if (!entry || now > entry.resetTime) {
-    memStore.set(key, { count: 1, resetTime: now + config.windowMs })
-    return { allowed: true, remaining: config.max - 1, resetMs: config.windowMs }
-  }
-
-  if (entry.count >= config.max) {
-    return { allowed: false, remaining: 0, resetMs: entry.resetTime - now }
-  }
-
-  entry.count++
-  return { allowed: true, remaining: config.max - entry.count, resetMs: entry.resetTime - now }
-}
-
-export async function rateLimit(
-  key: string,
-  config: RateLimitConfig,
-): Promise<RateLimitResult> {
-  return upstashRateLimit(key, config)
 }
 
 export function getClientIp(request: Request): string {

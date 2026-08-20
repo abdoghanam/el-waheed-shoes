@@ -6,6 +6,8 @@ import {
   breadcrumbSchema,
 } from '@/lib/structuredData'
 
+export const revalidate = 86400
+
 export async function generateMetadata({
   params,
 }: {

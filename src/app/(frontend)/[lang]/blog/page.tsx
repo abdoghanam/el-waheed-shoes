@@ -4,6 +4,8 @@ import BlogPage from '@/components/sections/BlogPage'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { breadcrumbSchema } from '@/lib/structuredData'
 
+export const revalidate = 3600
+
 export async function generateMetadata({
   params,
 }: {

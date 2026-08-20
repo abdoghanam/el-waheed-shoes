@@ -3,6 +3,8 @@ import ProductDetail from '@/components/sections/ProductDetail'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { productSchema, breadcrumbSchema } from '@/lib/structuredData'
 
+export const revalidate = 3600
+
 export async function generateMetadata({
   params,
 }: {

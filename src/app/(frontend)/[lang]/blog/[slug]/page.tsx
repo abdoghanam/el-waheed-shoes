@@ -4,6 +4,8 @@ import BlogDetail from '@/components/sections/BlogDetail'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { blogPostSchema, breadcrumbSchema } from '@/lib/structuredData'
 
+export const revalidate = 3600
+
 export async function generateMetadata({
   params,
 }: {

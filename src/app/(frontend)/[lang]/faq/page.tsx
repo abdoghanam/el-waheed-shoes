@@ -3,6 +3,8 @@ import { FAQPage } from '@/components/sections/FAQPage'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { faqSchema } from '@/lib/structuredData'
 
+export const revalidate = 86400
+
 const faqData = {
   en: [
     {

@@ -7,6 +7,8 @@ import {
   faqSchema,
 } from '@/lib/structuredData'
 
+export const revalidate = 86400
+
 const oemFaqsEn = [
   {
     question: 'What is OEM footwear manufacturing?',

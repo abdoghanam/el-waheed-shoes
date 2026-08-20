@@ -1,6 +1,8 @@
 import { locales, type Locale } from '@/lib/i18n'
 import { PrivacyPage } from '@/components/sections/PrivacyPage'
 
+export const revalidate = 86400
+
 export async function generateMetadata({
   params,
 }: {

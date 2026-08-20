@@ -5,6 +5,8 @@ import { JsonLd } from '@/components/ui/JsonLd'
 import { breadcrumbSchema } from '@/lib/structuredData'
 import { ProductsPageClient, type ProductDoc } from '@/components/sections/ProductsPage'
 
+export const revalidate = 3600
+
 export async function generateMetadata({
   params,
 }: {

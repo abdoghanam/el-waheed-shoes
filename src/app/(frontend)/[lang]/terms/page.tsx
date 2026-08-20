@@ -1,6 +1,8 @@
 import { locales, type Locale } from '@/lib/i18n'
 import { TermsPage } from '@/components/sections/TermsPage'
 
+export const revalidate = 86400
+
 export async function generateMetadata({
   params,
 }: {
