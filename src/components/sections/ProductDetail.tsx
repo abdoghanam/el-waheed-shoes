@@ -11,6 +11,7 @@ async function getProduct(slug: string) {
     where: { slug: { equals: slug } },
     limit: 1,
     depth: 2,
+    locale: lang,
   })
   return products.docs[0] || null
 }
@@ -36,6 +37,9 @@ export default async function ProductDetail({
     ? product.category.slug
     : ''
 
+  const features = (product?.features || []).map((f: Record<string, unknown>) => (f as { feature: string }).feature)
+  const certifications = (product?.certifications || []).map((c: Record<string, unknown>) => (c as { certification: string }).certification)
+
   return (
     <ProductDetailClient
       lang={lang}
@@ -48,6 +52,12 @@ export default async function ProductDetail({
       featuredImageUrl={featuredImageUrl}
       categorySlug={categorySlug}
       hasProduct={!!product}
+      features={features}
+      certifications={certifications}
+      moq={(product as Record<string, unknown>)?.moq as string || ''}
+      leadTime={(product as Record<string, unknown>)?.leadTime as string || ''}
+      weight={(product as Record<string, unknown>)?.weight as string || ''}
+      usage={(product as Record<string, unknown>)?.usage as string || ''}
     />
   )
 }

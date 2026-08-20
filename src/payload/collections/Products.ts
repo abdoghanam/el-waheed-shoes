@@ -125,5 +125,48 @@ export const Products: CollectionConfig = {
         position: 'sidebar',
       },
     },
+    {
+      name: 'features',
+      type: 'array',
+      localized: true,
+      fields: [
+        {
+          name: 'feature',
+          type: 'text',
+          required: true,
+        },
+      ],
+    },
+    {
+      name: 'moq',
+      type: 'text',
+      localized: true,
+    },
+    {
+      name: 'leadTime',
+      type: 'text',
+      localized: true,
+    },
+    {
+      name: 'certifications',
+      type: 'array',
+      fields: [
+        {
+          name: 'certification',
+          type: 'text',
+          required: true,
+        },
+      ],
+    },
+    {
+      name: 'weight',
+      type: 'text',
+      localized: true,
+    },
+    {
+      name: 'usage',
+      type: 'text',
+      localized: true,
+    },
   ],
 }
