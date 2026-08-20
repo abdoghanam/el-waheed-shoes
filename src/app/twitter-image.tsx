@@ -1,7 +1,5 @@
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge'
-
 export default function TwitterImage() {
   return new ImageResponse(
     (
