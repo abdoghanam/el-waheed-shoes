@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://elwaheedshoes.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://el-waheed-shoes.vercel.app'
 
 const pages = [
   '',

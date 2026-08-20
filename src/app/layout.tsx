@@ -74,8 +74,8 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="antialiased overflow-x-hidden">
-        <AdminAccessButton />
         <a href="#main-content" className="skip-to-content">Skip to main content</a>
+        <AdminAccessButton />
         {children}
       </body>
     </html>

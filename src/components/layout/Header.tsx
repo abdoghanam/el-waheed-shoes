@@ -9,6 +9,7 @@ import { type Locale, localeNames, locales } from '@/lib/i18n'
 import { dictionaries } from '@/lib/dictionaries'
 import { siteImages } from '@/lib/images'
 import TopBar from './TopBar'
+import { useFocusTrap } from '@/hooks/useFocusTrap'
 
 const productCategories = [
   { key: 'casual', icon: siteImages.products.casual, desc: { en: 'Everyday comfort & style', ar: 'راحة وأناقة يومية' }, href: '/products?category=casual' },
@@ -27,6 +28,7 @@ export default function Header({ lang }: { lang: Locale }) {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
   const isAr = lang === 'ar'
+  const mobileMenuRef = useFocusTrap(mobileOpen)
 
   useEffect(() => {
     let ticking = false
@@ -101,7 +103,7 @@ export default function Header({ lang }: { lang: Locale }) {
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1" aria-label={isAr ? 'التنقل الرئيسي' : 'Main navigation'}>
             {navLinks.map((link) => {
               const active = isActive(link.href)
               if (link.hasMega) {
@@ -239,11 +241,15 @@ export default function Header({ lang }: { lang: Locale }) {
               onClick={() => setMobileOpen(false)}
             />
             <motion.div
+              ref={mobileMenuRef}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               className={`fixed inset-0 z-50 flex flex-col bg-bg-primary overflow-y-auto ${isAr ? '[direction:rtl]' : ''}`}
+              role="dialog"
+              aria-modal="true"
+              aria-label={isAr ? 'القائمة' : 'Navigation menu'}
             >
               <div className="flex items-center justify-between px-4 md:px-6 py-4 border-b border-border">
                 <Image src={siteImages.logo.horizontal} alt="EL WAHEED SHOES" width={100} height={24} className="h-6 w-auto" />
@@ -258,7 +264,7 @@ export default function Header({ lang }: { lang: Locale }) {
                 </button>
               </div>
 
-              <nav className="flex-1 flex flex-col items-center justify-center gap-6 px-6 py-8 min-h-0">
+              <nav className="flex-1 flex flex-col items-center justify-center gap-6 px-6 py-8 min-h-0" aria-label={isAr ? 'القائمة الرئيسية' : 'Main menu'}>
                 {navLinks.map((link) => {
                   const active = isActive(link.href)
                   return (
