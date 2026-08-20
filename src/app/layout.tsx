@@ -36,11 +36,20 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     alternateLocale: 'ar_EG',
+    images: [
+      {
+        url: '/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'EL WAHEED SHOES - Premium Egyptian Footwear',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'EL WAHEED SHOES',
     description: 'Premium Egyptian footwear manufacturer since 2010',
+    images: ['/og-image.svg'],
   },
   alternates: {
     languages: {
