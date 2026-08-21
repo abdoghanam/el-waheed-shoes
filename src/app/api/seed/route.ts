@@ -279,12 +279,6 @@ export async function POST() {
         await payload.update({
           collection: 'products', id: existing.docs[0].id,
           data: { features: product.features.map(f => ({ feature: f })), moq: product.moq, leadTime: product.leadTime, certifications: product.certifications.map(c => ({ certification: c })), weight: product.weight, usage: product.usage },
-          locale: 'en',
-        })
-        await payload.update({
-          collection: 'products', id: existing.docs[0].id,
-          data: { title: product.titleAr, shortDescription: product.shortDescriptionAr, features: product.featuresAr.map(f => ({ feature: f })), moq: product.moqAr, leadTime: product.leadTimeAr, weight: product.weightAr, usage: product.usageAr },
-          locale: 'ar',
         })
         results.push(`Updated: ${product.slug}`)
       } else {
@@ -292,7 +286,7 @@ export async function POST() {
           collection: 'products',
           data: {
             title: product.title, slug: product.slug, shortDescription: product.shortDescription,
-            category: categoryMap[product.categorySlug] || undefined,
+            category: typeof categoryMap[product.categorySlug] === 'number' ? categoryMap[product.categorySlug] as number : undefined,
             materials: product.materials.map(m => ({ material: m })),
             availableSizes: product.sizes.map(s => ({ size: s })),
             availableColors: product.colors.map(c => ({ name: c.name, hex: c.hex })),
@@ -302,12 +296,10 @@ export async function POST() {
             weight: product.weight, usage: product.usage,
             featured: product.featured, isActive: true, sortOrder: product.sortOrder,
           },
-          locale: 'en',
         })
         await payload.update({
           collection: 'products', id: created.id,
           data: { title: product.titleAr, shortDescription: product.shortDescriptionAr, features: product.featuresAr.map(f => ({ feature: f })), moq: product.moqAr, leadTime: product.leadTimeAr, weight: product.weightAr, usage: product.usageAr },
-          locale: 'ar',
         })
         results.push(`Created: ${product.title}`)
       }

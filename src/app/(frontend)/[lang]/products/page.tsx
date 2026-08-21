@@ -1,6 +1,4 @@
 import { type Locale, locales } from '@/lib/i18n'
-import { getPayload } from 'payload'
-import config from '@payload-config'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { breadcrumbSchema } from '@/lib/structuredData'
 import { productCatalog, type ProductCatalogItem } from '@/lib/productCatalog'
@@ -40,17 +38,6 @@ export default async function Products({
   const validLang = (locales.includes(lang as Locale) ? lang : 'en') as Locale
 
   const products: ProductCatalogItem[] = [...productCatalog]
-
-  try {
-    const payload = await getPayload({ config })
-    await payload.find({
-      collection: 'products',
-      depth: 2,
-      limit: 100,
-    })
-  } catch {
-    // Database may not be ready during initial deployment
-  }
 
   return (
     <>

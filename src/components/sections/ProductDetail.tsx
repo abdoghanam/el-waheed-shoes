@@ -57,9 +57,9 @@ export default async function ProductDetail({
   const product = payloadProduct
   const productName = product?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
   const shortDesc = product?.shortDescription || ''
-  const productMaterials = (product?.materials || []).map((m: Record<string, unknown>) => (m as { material: string }).material)
-  const productSizes = (product?.availableSizes || []).map((s: Record<string, unknown>) => (s as { size: string }).size)
-  const productColors = (product?.availableColors || []).map((c: Record<string, unknown>) => ({ name: (c as { name: string }).name, hex: (c as { hex: string }).hex }))
+  const productMaterials = (product?.materials || []).map((m) => m.material)
+  const productSizes = (product?.availableSizes || []).map((s) => s.size)
+  const productColors = (product?.availableColors || []).map((c) => ({ name: c.name, hex: c.hex }))
   const featuredImageUrl = product?.featuredImage && typeof product.featuredImage !== 'number'
     ? product.featuredImage.url || getProductImage(slug)
     : getProductImage(slug)
@@ -67,8 +67,8 @@ export default async function ProductDetail({
     ? product.category.slug
     : ''
 
-  const features = (product?.features || []).map((f: Record<string, unknown>) => (f as { feature: string }).feature)
-  const certifications = (product?.certifications || []).map((c: Record<string, unknown>) => (c as { certification: string }).certification)
+  const features = (product?.features || []).map((f) => f.feature)
+  const certifications = (product?.certifications || []).map((c) => c.certification)
 
   return (
     <ProductDetailClient
@@ -84,10 +84,10 @@ export default async function ProductDetail({
       hasProduct={!!product}
       features={features}
       certifications={certifications}
-      moq={(product as Record<string, unknown>)?.moq as string || ''}
-      leadTime={(product as Record<string, unknown>)?.leadTime as string || ''}
-      weight={(product as Record<string, unknown>)?.weight as string || ''}
-      usage={(product as Record<string, unknown>)?.usage as string || ''}
+      moq={product?.moq || ''}
+      leadTime={product?.leadTime || ''}
+      weight={product?.weight || ''}
+      usage={product?.usage || ''}
     />
   )
 }
